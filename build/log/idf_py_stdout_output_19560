@@ -1,0 +1,4 @@
+[0/1] Re-running CMake...
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+D:\esp32-idf\Espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SD:\esp32-idf\Espressif\frameworks\esp-idf-v5.4\examples\get-started\Do_an -BD:\esp32-idf\Espressif\frameworks\esp-idf-v5.4\examples\get-started\Do_an\build

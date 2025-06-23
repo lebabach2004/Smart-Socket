@@ -1,0 +1,179 @@
+OT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=1df10h (122640) map[0m
+[0;32mI (168) esp_image: segment 1: paddr=0003df38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003df5c vaddr=3ffb0000 size=020bch (  8380) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c400h (640000) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000dc428 vaddr=3ffb20bc size=01f4ch (  8012) load[0m
+[0;32mI (409) esp_image: segment 5: paddr=000de37c vaddr=40080000 size=178e0h ( 96480) load[0m
+[0;32mI (459) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (482) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (482) boot: Checking flash encryption...[0m
+[0;32mI (482) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (485) boot: Disabling RNG early entropy source...[0m
+[0;32mI (502) cpu_start: Multicore app[0m
+[0;32mI (511) cpu_start: Pro cpu start user code[0m
+[0;32mI (511) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (511) app_init: Application information:[0m
+[0;32mI (511) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (516) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (521) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (526) app_init: ELF file SHA256:  cf63ca125...[0m
+[0;32mI (531) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (536) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (540) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (544) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (548) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (554) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (559) heap_init: At 3FFB8A78 len 00027588 (157 KiB): DRAM[0m
+[0;32mI (564) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (570) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (575) heap_init: At 400978E0 len 00008720 (33 KiB): IRAM[0m
+[0;32mI (582) spi_flash: detected chip: generic[0m
+[0;32mI (584) spi_flash: flash io: dio[0m
+[0;33mW (587) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (594) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (603) main_task: Started on CPU0[0m
+[0;32mI (613) main_task: Calling app_main()[0m
+[0;32mI (613) Sonoff: [APP] Startup..[0m
+[0;32mI (613) Sonoff: [APP] Free memory: 276012 bytes[0m
+[0;32mI (613) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;33mW (613) nvs: Failed to read NVS security cfg: [0x1116] (ESP_ERR_NVS_KEYS_NOT_INITIALIZED)[0m
+[0;32mI (623) nvs: Generating NVS encr-keys...[0m
+[0;32mI (653) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (673) wifi:wifi driver task: 3ffc0b68, prio:23, stack:6656, core=0[0m
+[0;32mI (673) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (673) wifi:wifi certification version: v7.0[0m
+[0;32mI (673) wifi:config NVS flash: enabled[0m
+[0;32mI (673) wifi:config nano formatting: disabled[0m
+[0;32mI (683) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (683) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (693) wifi:Init management short buffer num: 32[0m
+[0;32mI (693) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (693) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (703) wifi:Init static rx buffer num: 10[0m
+[0;32mI (703) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (713) wifi_init: rx ba win: 6[0m
+[0;32mI (713) wifi_init: accept mbox: 6[0m
+[0;32mI (713) wifi_init: tcpip mbox: 32[0m
+[0;32mI (713) wifi_init: udp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp mbox: 6[0m
+[0;32mI (723) wifi_init: tcp tx win: 5760[0m
+[0;32mI (723) wifi_init: tcp rx win: 5760[0m
+[0;32mI (733) wifi_init: tcp mss: 1440[0m
+[0;32mI (733) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (733) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1013) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (1013) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (1073) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (1093) wifi:mode : softAP (8c:4f:00:3d:39:61)[0m
+[0;32mI (1103) wifi:Total power save buffer number: 16[0m
+[0;32mI (1103) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1103) wifi:Init max length of beacon: 752/752[0m
+[0;32mI (1103) example: Starting server on port: '80'[0m
+[0;32mI (1103) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32mI (1123) example: Registering URI handlers[0m
+[0;32mI (2683) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2693) wifi:station: 5e:61:ed:a9:36:50 join, AID=1, bgn, 20[0m
+[0;32mI (2713) TEST: station 5e:61:ed:a9:36:50 join, AID=1[0m
+[0;32mI (2863) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0;32mI (3093) wifi:<ba-add>idx:2 (ifx:1, 5e:61:ed:a9:36:50), tid:0, ssn:16, winSize:64[0m
+[0;33mW (3183) httpd_uri: httpd_uri: URI '/' not found[0m
+[0;33mW (3183) httpd_txrx: httpd_resp_send_err: 404 Not Found - Some 404 error message[0m
+Dinh Loi 2.4G/tdlhk12345
+ssid: Dinh Loi 2.4G
+password: tdlhk12345
+[0;32mI (7783) wifi:station: 5e:61:ed:a9:36:50 leave, AID = 1, reason = 2, bss_flags is 691299, bss:0x3ffcaac4[0m
+[0;32mI (7783) wifi:new:<1,0>, old:<1,0>, ap:<1,1>, sta:<255,255>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (7783) wifi:<ba-del>idx:2, tid:0[0m
+[0;32mI (7793) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (7793) wifi:enable tsf[0m
+[0;32mI (7793) TEST: station 5e:61:ed:a9:36:50 leave, AID=1, reason=2[0m
+[0;33mW (7803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (8853) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (8853) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (8873) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (8903) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (8993) wifi:connected with Dinh Loi 2.4G, aid = 3, channel 7, BW20, bssid = cc:71:90:21:2f:d0[0m
+[0;32mI (8993) wifi:security: WPA2-PSK, phy: bgn, rssi: -39[0m
+[0;32mI (9023) wifi:pm start, type: 1[0m
+
+[0;32mI (9023) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (9023) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (10273) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (10273) TEST: wifi connect[0m
+[0;32mI (10273) example: Initializing and starting SNTP[0m
+[0;32mI (12273) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (12813) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:21:2f:d0), tid:0, ssn:6, winSize:64[0m
+[0;32mI (12823) example: Notification of a time synchronization event[0m
+[0;32mI (12823) example: The current date/time in VietNam is: Mon Mar 17 23:46:50 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:50
+[0;32mI (13833) example: The current date/time in VietNam is: Mon Mar 17 23:46:51 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:51
+[0;32mI (14833) example: The current date/time in VietNam is: Mon Mar 17 23:46:52 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:52
+[0;32mI (15833) example: The current date/time in VietNam is: Mon Mar 17 23:46:53 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:53
+[0;32mI (16833) example: The current date/time in VietNam is: Mon Mar 17 23:46:54 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:54
+[0;32mI (17833) example: The current date/time in VietNam is: Mon Mar 17 23:46:55 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:55
+[0;32mI (18833) example: The current date/time in VietNam is: Mon Mar 17 23:46:56 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:56
+[0;32mI (19833) example: The current date/time in VietNam is: Mon Mar 17 23:46:57 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:57
+[0;32mI (20833) example: The current date/time in VietNam is: Mon Mar 17 23:46:58 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:58
+[0;32mI (21833) example: The current date/time in VietNam is: Mon Mar 17 23:46:59 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:46:59
+[0;32mI (22833) example: The current date/time in VietNam is: Mon Mar 17 23:47:00 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:00
+[0;32mI (23833) example: The current date/time in VietNam is: Mon Mar 17 23:47:01 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:01
+[0;32mI (24833) example: The current date/time in VietNam is: Mon Mar 17 23:47:02 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:02
+[0;32mI (25833) example: The current date/time in VietNam is: Mon Mar 17 23:47:03 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:03
+[0;32mI (26833) example: The current date/time in VietNam is: Mon Mar 17 23:47:04 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:04
+[0;32mI (27833) example: The current date/time in VietNam is: Mon Mar 17 23:47:05 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:05
+[0;32mI (28833) example: The current date/time in VietNam is: Mon Mar 17 23:47:06 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:06
+[0;32mI (29833) example: The current date/time in VietNam is: Mon Mar 17 23:47:07 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:07
+[0;32mI (30833) example: The current date/time in VietNam is: Mon Mar 17 23:47:08 2025[0m
+The current date/time in VietNam is: 2025:03:17 23:47:08

@@ -1,0 +1,149 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=1df10h (122640) map[0m
+[0;32mI (168) esp_image: segment 1: paddr=0003df38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (168) esp_image: segment 2: paddr=0003df5c vaddr=3ffb0000 size=020bch (  8380) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c400h (640000) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000dc428 vaddr=3ffb20bc size=01f4ch (  8012) load[0m
+[0;32mI (409) esp_image: segment 5: paddr=000de37c vaddr=40080000 size=178e0h ( 96480) load[0m
+[0;32mI (459) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (481) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (481) boot: Checking flash encryption...[0m
+[0;32mI (481) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (484) boot: Disabling RNG early entropy source...[0m
+[0;32mI (501) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu start user code[0m
+[0;32mI (510) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (510) app_init: Application information:[0m
+[0;32mI (510) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (515) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (520) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (525) app_init: ELF file SHA256:  cf63ca125...[0m
+[0;32mI (530) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (535) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (539) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (543) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (547) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (553) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (558) heap_init: At 3FFB8A78 len 00027588 (157 KiB): DRAM[0m
+[0;32mI (563) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (569) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (574) heap_init: At 400978E0 len 00008720 (33 KiB): IRAM[0m
+[0;32mI (581) spi_flash: detected chip: generic[0m
+[0;32mI (583) spi_flash: flash io: dio[0m
+[0;33mW (586) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (593) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (602) main_task: Started on CPU0[0m
+[0;32mI (612) main_task: Calling app_main()[0m
+[0;32mI (612) Sonoff: [APP] Startup..[0m
+[0;32mI (612) Sonoff: [APP] Free memory: 276012 bytes[0m
+[0;32mI (612) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (662) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (672) wifi:wifi driver task: 3ffc0ca4, prio:23, stack:6656, core=0[0m
+[0;32mI (692) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (692) wifi:wifi certification version: v7.0[0m
+[0;32mI (692) wifi:config NVS flash: enabled[0m
+[0;32mI (692) wifi:config nano formatting: disabled[0m
+[0;32mI (702) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (702) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (712) wifi:Init management short buffer num: 32[0m
+[0;32mI (712) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (712) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (722) wifi:Init static rx buffer num: 10[0m
+[0;32mI (722) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (732) wifi_init: rx ba win: 6[0m
+[0;32mI (732) wifi_init: accept mbox: 6[0m
+[0;32mI (732) wifi_init: tcpip mbox: 32[0m
+[0;32mI (732) wifi_init: udp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp mbox: 6[0m
+[0;32mI (742) wifi_init: tcp tx win: 5760[0m
+[0;32mI (742) wifi_init: tcp rx win: 5760[0m
+[0;32mI (752) wifi_init: tcp mss: 1440[0m
+[0;32mI (752) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (752) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (762) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (842) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (842) wifi:enable tsf[0m
+[0;32mI (862) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (862) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (902) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (972) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1082) wifi:connected with Dinh Loi 2.4G, aid = 6, channel 7, BW20, bssid = cc:71:90:21:2f:d0[0m
+[0;32mI (1082) wifi:security: WPA2-PSK, phy: bgn, rssi: -46[0m
+[0;32mI (1092) wifi:pm start, type: 1[0m
+
+[0;32mI (1092) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1122) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2332) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2332) TEST: wifi connect[0m
+[0;32mI (2332) example: Initializing and starting SNTP[0m
+[0;32mI (3792) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:21:2f:d0), tid:0, ssn:5, winSize:64[0m
+[0;32mI (4332) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (6332) example: Waiting for system time to be set... (2/15)[0m
+[0;32mI (8332) example: Waiting for system time to be set... (3/15)[0m
+[0;32mI (10332) example: Waiting for system time to be set... (4/15)[0m
+[0;32mI (12332) example: Waiting for system time to be set... (5/15)[0m
+[0;32mI (14332) example: Waiting for system time to be set... (6/15)[0m
+[0;32mI (16332) example: Waiting for system time to be set... (7/15)[0m
+[0;32mI (18332) example: Waiting for system time to be set... (8/15)[0m
+[0;32mI (20332) example: Waiting for system time to be set... (9/15)[0m
+[0;32mI (22332) example: Waiting for system time to be set... (10/15)[0m
+[0;32mI (24332) example: Waiting for system time to be set... (11/15)[0m
+[0;32mI (26332) example: Waiting for system time to be set... (12/15)[0m
+[0;32mI (28332) example: Waiting for system time to be set... (13/15)[0m
+[0;32mI (30332) example: Waiting for system time to be set... (14/15)[0m
+[0;32mI (32332) example: The current date/time in VietNam is: Thu Jan  1 07:00:31 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:31
+[0;32mI (33332) example: The current date/time in VietNam is: Thu Jan  1 07:00:32 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:32
+[0;32mI (34332) example: The current date/time in VietNam is: Thu Jan  1 07:00:33 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:33
+[0;32mI (35332) example: The current date/time in VietNam is: Thu Jan  1 07:00:34 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:34
+[0;32mI (36332) example: The current date/time in VietNam is: Thu Jan  1 07:00:35 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:35
+[0;32mI (37332) example: The current date/time in VietNam is: Thu Jan  1 07:00:36 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:36
+[0;32mI (38332) example: The current date/time in VietNam is: Thu Jan  1 07:00:37 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:37
+[0;32mI (39332) example: The current date/time in VietNam is: Thu Jan  1 07:00:38 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:38
+[0;32mI (40332) example: The current date/time in VietNam is: Thu Jan  1 07:00:39 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:39
+[0;32mI (41332) example: The current date/time in VietNam is: Thu Jan  1 07:00:40 1970[0m
+The current date/time in VietNam is: 1970:01:01 07:00:40

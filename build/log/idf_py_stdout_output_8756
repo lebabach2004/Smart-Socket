@@ -1,0 +1,79 @@
+46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 30 2025 15:15:25[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=0fb44h ( 64324) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0002fb6c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0002fb90 vaddr=3ffb0000 size=00488h (  1160) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=2d33ch (185148) map[0m
+[0;32mI (224) esp_image: segment 4: paddr=0005d364 vaddr=3ffb0488 size=0200ch (  8204) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=0005f378 vaddr=40080000 size=0e8d4h ( 59604) load[0m
+[0;32mI (259) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (281) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (281) boot: Checking flash encryption...[0m
+[0;32mI (281) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (284) boot: Disabling RNG early entropy source...[0m
+[0;32mI (301) cpu_start: Multicore app[0m
+[0;32mI (310) cpu_start: Pro cpu start user code[0m
+[0;32mI (310) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (310) app_init: Application information:[0m
+[0;32mI (310) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (315) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (320) app_init: Compile time:     Mar 30 2025 15:15:23[0m
+[0;32mI (325) app_init: ELF file SHA256:  d53f5e6b4...[0m
+[0;32mI (329) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (335) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (339) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (343) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (347) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (353) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (358) heap_init: At 3FFB3798 len 0002C868 (178 KiB): DRAM[0m
+[0;32mI (363) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (369) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (374) heap_init: At 4008E8D4 len 0001172C (69 KiB): IRAM[0m
+[0;32mI (381) spi_flash: detected chip: generic[0m
+[0;32mI (383) spi_flash: flash io: dio[0m
+[0;33mW (386) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (393) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (402) main_task: Started on CPU0[0m
+[0;32mI (412) main_task: Calling app_main()[0m
+[0;32mI (412) Sonoff: [APP] Startup..[0m
+[0;32mI (412) Sonoff: [APP] Free memory: 301792 bytes[0m
+[0;32mI (412) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (422) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (422) main_task: Returned from app_main()[0m
+[1;31mE (1462) mqtt_client: Client was not initialized[0m
+[1;31mE (1462) mqtt_client: Client was not initialized[0m

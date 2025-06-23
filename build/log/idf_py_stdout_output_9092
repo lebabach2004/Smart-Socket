@@ -1,0 +1,325 @@
+46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 30 2025 15:15:25[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=23c70h (146544) map[0m
+[0;32mI (176) esp_image: segment 1: paddr=00043c98 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (176) esp_image: segment 2: paddr=00043cbc vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (186) esp_image: segment 3: paddr=00047cdc vaddr=40080000 size=0833ch ( 33596) load[0m
+[0;32mI (201) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b583ch (743484) map[0m
+[0;32mI (464) esp_image: segment 5: paddr=00105864 vaddr=4008833c size=1058ch ( 66956) load[0m
+[0;32mI (503) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (525) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (525) boot: Checking flash encryption...[0m
+[0;32mI (525) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (528) boot: Disabling RNG early entropy source...[0m
+[0;32mI (545) cpu_start: Multicore app[0m
+[0;32mI (554) cpu_start: Pro cpu start user code[0m
+[0;32mI (554) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (554) app_init: Application information:[0m
+[0;32mI (554) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (559) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (564) app_init: Compile time:     Mar 30 2025 15:15:23[0m
+[0;32mI (569) app_init: ELF file SHA256:  db426794c...[0m
+[0;32mI (574) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (579) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (583) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (587) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (591) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (602) heap_init: At 3FFB8BD0 len 00027430 (157 KiB): DRAM[0m
+[0;32mI (607) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (613) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (618) heap_init: At 400988C8 len 00007738 (29 KiB): IRAM[0m
+[0;32mI (625) spi_flash: detected chip: generic[0m
+[0;32mI (627) spi_flash: flash io: dio[0m
+[0;33mW (630) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (637) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (646) main_task: Started on CPU0[0m
+[0;32mI (656) main_task: Calling app_main()[0m
+[0;32mI (656) Sonoff: [APP] Startup..[0m
+[0;32mI (656) Sonoff: [APP] Free memory: 275668 bytes[0m
+[0;32mI (656) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (686) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (706) wifi:wifi driver task: 3ffc1b54, prio:23, stack:6656, core=0[0m
+[0;32mI (726) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (726) wifi:wifi certification version: v7.0[0m
+[0;32mI (726) wifi:config NVS flash: enabled[0m
+[0;32mI (726) wifi:config nano formatting: disabled[0m
+[0;32mI (726) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (736) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (736) wifi:Init management short buffer num: 32[0m
+[0;32mI (736) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (746) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (756) wifi_init: rx ba win: 6[0m
+[0;32mI (756) wifi_init: accept mbox: 6[0m
+[0;32mI (766) wifi_init: tcpip mbox: 32[0m
+[0;32mI (766) wifi_init: udp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp mbox: 6[0m
+[0;32mI (766) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (776) wifi_init: tcp mss: 1440[0m
+[0;32mI (776) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (786) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (866) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (876) wifi:enable tsf[0m
+[0;32mI (886) wifi:new:<7,0>, old:<1,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (886) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (936) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (976) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1076) wifi:connected with Dinh Loi 2.4G, aid = 4, channel 7, BW20, bssid = cc:71:90:21:2f:d0[0m
+[0;32mI (1076) wifi:security: WPA2-PSK, phy: bgn, rssi: -42[0m
+[0;32mI (1086) wifi:pm start, type: 1[0m
+
+[0;32mI (1086) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1116) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2326) esp_netif_handlers: sta ip: 192.168.1.6, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2326) TEST: wifi connect[0m
+[0;32mI (2326) example: Initializing and starting SNTP[0m
+[0;32mI (4326) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (6326) example: Waiting for system time to be set... (2/15)[0m
+[0;32mI (7046) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:21:2f:d0), tid:0, ssn:4, winSize:64[0m
+[0;32mI (7066) example: Notification of a time synchronization event[0m
+[0;32mI (7076) mqtts_example: [APP] Free memory: 222700 bytes[0m
+[0;32mI (7076) mqtts_example: Other event id:7[0m
+[0;32mI (7076) example: The current date/time in VietNam is: Sun Mar 30 17:04:44 2025[0m
+Timer setting flag: 0
+[0;32mI (7086) main_task: Returned from app_main()[0m
+[0;32mI (7566) wifi:<ba-add>idx:1 (ifx:0, cc:71:90:21:2f:d0), tid:1, ssn:0, winSize:64[0m
+[0;32mI (7986) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7986) mqtts_example: sent subscribe successful, msg_id=48442[0m
+[0;33mW (7996) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (8086) example: The current date/time in VietNam is: Sun Mar 30 17:04:45 2025[0m
+Timer setting flag: 0
+[0;32mI (8396) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=59265[0m
+[0;32mI (8396) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8396) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8706) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=34737[0m
+[0;32mI (8706) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8706) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8706) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=1839[0m
+[0;32mI (8716) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8716) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8716) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=28969[0m
+[0;32mI (8726) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8726) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8736) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=48442[0m
+[0;32mI (8746) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=50561[0m
+[0;32mI (8746) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=42037[0m
+[0;32mI (9086) example: The current date/time in VietNam is: Sun Mar 30 17:04:46 2025[0m
+Timer setting flag: 0
+[0;32mI (9126) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9126) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9126) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=52767[0m
+[0;32mI (9136) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=45236[0m
+[0;32mI (9526) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9526) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9526) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9526) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9536) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9536) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10086) example: The current date/time in VietNam is: Sun Mar 30 17:04:47 2025[0m
+Timer setting flag: 0
+[0;32mI (10856) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=19341[0m
+[0;32mI (11086) example: The current date/time in VietNam is: Sun Mar 30 17:04:48 2025[0m
+Timer setting flag: 0
+[0;32mI (11156) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=13938[0m
+[0;32mI (12086) example: The current date/time in VietNam is: Sun Mar 30 17:04:49 2025[0m
+Timer setting flag: 0
+[0;32mI (12896) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=5927[0m
+[0;32mI (13086) example: The current date/time in VietNam is: Sun Mar 30 17:04:50 2025[0m
+Timer setting flag: 0
+[0;32mI (13206) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=29123[0m
+[0;32mI (14086) example: The current date/time in VietNam is: Sun Mar 30 17:04:51 2025[0m
+Timer setting flag: 0
+[0;32mI (14946) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=27254[0m
+[0;32mI (15086) example: The current date/time in VietNam is: Sun Mar 30 17:04:52 2025[0m
+Timer setting flag: 0
+[0;32mI (15356) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=14687[0m
+[0;32mI (16086) example: The current date/time in VietNam is: Sun Mar 30 17:04:53 2025[0m
+Timer setting flag: 0
+[0;32mI (16996) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=11368[0m
+[0;32mI (17086) example: The current date/time in VietNam is: Sun Mar 30 17:04:54 2025[0m
+Timer setting flag: 0
+[0;32mI (17306) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=15619[0m
+[0;32mI (18086) example: The current date/time in VietNam is: Sun Mar 30 17:04:55 2025[0m
+Timer setting flag: 0
+[0;32mI (19036) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=58313[0m
+[0;32mI (19086) example: The current date/time in VietNam is: Sun Mar 30 17:04:56 2025[0m
+Timer setting flag: 0
+[0;32mI (19346) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=7678[0m
+[0;32mI (20086) example: The current date/time in VietNam is: Sun Mar 30 17:04:57 2025[0m
+Timer setting flag: 0
+[0;32mI (21086) example: The current date/time in VietNam is: Sun Mar 30 17:04:58 2025[0m
+Timer setting flag: 0
+[0;32mI (21196) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=31838[0m
+[0;32mI (21496) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=13673[0m
+[0;32mI (22086) example: The current date/time in VietNam is: Sun Mar 30 17:04:59 2025[0m
+Timer setting flag: 0
+[0;32mI (23086) example: The current date/time in VietNam is: Sun Mar 30 17:05:00 2025[0m
+Timer setting flag: 0
+[0;32mI (23236) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=13948[0m
+[0;32mI (23546) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=28517[0m
+[0;32mI (24086) example: The current date/time in VietNam is: Sun Mar 30 17:05:01 2025[0m
+Timer setting flag: 0
+[0;32mI (25086) example: The current date/time in VietNam is: Sun Mar 30 17:05:02 2025[0m
+Timer setting flag: 0
+[0;32mI (25286) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=41432[0m
+[0;32mI (25696) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=6845[0m
+[0;32mI (26086) example: The current date/time in VietNam is: Sun Mar 30 17:05:03 2025[0m
+Timer setting flag: 0
+[0;32mI (27086) example: The current date/time in VietNam is: Sun Mar 30 17:05:04 2025[0m
+Timer setting flag: 0
+[0;32mI (27336) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=43343[0m
+[0;32mI (27646) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=49924[0m
+[0;32mI (28086) example: The current date/time in VietNam is: Sun Mar 30 17:05:05 2025[0m
+Timer setting flag: 0
+[0;32mI (29086) example: The current date/time in VietNam is: Sun Mar 30 17:05:06 2025[0m
+Timer setting flag: 0
+[0;32mI (29386) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=28439[0m
+[0;32mI (29796) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=4248[0m
+[0;32mI (30086) example: The current date/time in VietNam is: Sun Mar 30 17:05:07 2025[0m
+Timer setting flag: 0
+[0;32mI (31086) example: The current date/time in VietNam is: Sun Mar 30 17:05:08 2025[0m
+Timer setting flag: 0
+[0;32mI (31426) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=26197[0m
+[0;32mI (31746) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=56764[0m
+[0;32mI (32086) example: The current date/time in VietNam is: Sun Mar 30 17:05:09 2025[0m
+Timer setting flag: 0
+[0;32mI (33086) example: The current date/time in VietNam is: Sun Mar 30 17:05:10 2025[0m
+Timer setting flag: 0
+[0;32mI (33486) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=4674[0m
+[0;32mI (33786) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=57484[0m
+[0;32mI (34086) example: The current date/time in VietNam is: Sun Mar 30 17:05:11 2025[0m
+Timer setting flag: 0
+[0;32mI (35086) example: The current date/time in VietNam is: Sun Mar 30 17:05:12 2025[0m
+Timer setting flag: 0
+[0;32mI (35526) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=56409[0m
+[0;32mI (35936) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=8927[0m
+[0;32mI (36086) example: The current date/time in VietNam is: Sun Mar 30 17:05:13 2025[0m
+Timer setting flag: 0
+[0;32mI (37086) example: The current date/time in VietNam is: Sun Mar 30 17:05:14 2025[0m
+Timer setting flag: 0
+[0;32mI (37576) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=49815[0m
+[0;32mI (37886) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=15529[0m
+[0;32mI (38086) example: The current date/time in VietNam is: Sun Mar 30 17:05:15 2025[0m
+Timer setting flag: 0
+[0;32mI (39086) example: The current date/time in VietNam is: Sun Mar 30 17:05:16 2025[0m
+Timer setting flag: 0
+[0;32mI (39626) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=19844[0m
+[0;32mI (39926) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=23012[0m
+[0;32mI (40086) example: The current date/time in VietNam is: Sun Mar 30 17:05:17 2025[0m
+Timer setting flag: 0
+[0;32mI (41086) example: The current date/time in VietNam is: Sun Mar 30 17:05:18 2025[0m
+Timer setting flag: 0
+[0;32mI (41676) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=61652[0m
+[0;32mI (42086) example: The current date/time in VietNam is: Sun Mar 30 17:05:19 2025[0m
+[0;32mI (42086) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=50194[0m
+Timer setting flag: 0
+[0;32mI (43086) example: The current date/time in VietNam is: Sun Mar 30 17:05:20 2025[0m
+Timer setting flag: 0
+[0;32mI (43726) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=21683[0m
+[0;32mI (44086) example: The current date/time in VietNam is: Sun Mar 30 17:05:21 2025[0m
+Timer setting flag: 0
+[0;32mI (44146) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=40180[0m
+[0;32mI (45086) example: The current date/time in VietNam is: Sun Mar 30 17:05:22 2025[0m
+Timer setting flag: 0
+[0;32mI (45766) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=15527[0m
+[0;32mI (46086) example: The current date/time in VietNam is: Sun Mar 30 17:05:23 2025[0m
+Timer setting flag: 0
+[0;32mI (46176) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=60240[0m
+[0;32mI (47086) example: The current date/time in VietNam is: Sun Mar 30 17:05:24 2025[0m
+Timer setting flag: 0
+[0;32mI (47816) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=36578[0m
+[0;32mI (48086) example: The current date/time in VietNam is: Sun Mar 30 17:05:25 2025[0m
+Timer setting flag: 0
+[0;32mI (48126) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=58690[0m
+[0;32mI (49086) example: The current date/time in VietNam is: Sun Mar 30 17:05:26 2025[0m
+Timer setting flag: 0
+[0;32mI (49966) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=12155[0m
+[0;32mI (50086) example: The current date/time in VietNam is: Sun Mar 30 17:05:27 2025[0m
+Timer setting flag: 0
+[0;32mI (50276) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=48122[0m
+[0;32mI (51086) example: The current date/time in VietNam is: Sun Mar 30 17:05:28 2025[0m
+Timer setting flag: 0
+[0;32mI (51916) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=33303[0m
+[0;32mI (52086) example: The current date/time in VietNam is: Sun Mar 30 17:05:29 2025[0m
+Timer setting flag: 0
+[0;32mI (52216) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=44513[0m
+[0;32mI (53086) example: The current date/time in VietNam is: Sun Mar 30 17:05:30 2025[0m
+Timer setting flag: 0
+[0;32mI (53956) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=53970[0m
+[0;32mI (54086) example: The current date/time in VietNam is: Sun Mar 30 17:05:31 2025[0m
+Timer setting flag: 0
+[0;32mI (54266) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=855[0m
+[0;32mI (55086) example: The current date/time in VietNam is: Sun Mar 30 17:05:32 2025[0m
+Timer setting flag: 0
+[0;32mI (56006) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=58478[0m
+[0;32mI (56086) example: The current date/time in VietNam is: Sun Mar 30 17:05:33 2025[0m
+Timer setting flag: 0
+[0;32mI (56416) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=24195[0m
+[0;32mI (57086) example: The current date/time in VietNam is: Sun Mar 30 17:05:34 2025[0m
+Timer setting flag: 0
+[0;32mI (58056) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=986[0m
+[0;32mI (58086) example: The current date/time in VietNam is: Sun Mar 30 17:05:35 2025[0m
+Timer setting flag: 0
+[0;32mI (58466) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=54382[0m
+[0;32mI (59086) example: The current date/time in VietNam is: Sun Mar 30 17:05:36 2025[0m
+Timer setting flag: 0
+[0;32mI (60086) example: The current date/time in VietNam is: Sun Mar 30 17:05:37 2025[0m
+Timer setting flag: 0
+[0;32mI (60206) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=16087[0m
+[0;32mI (60516) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=60685[0m
+[0;32mI (61086) example: The current date/time in VietNam is: Sun Mar 30 17:05:38 2025[0m
+Timer setting flag: 0
+[0;32mI (62086) example: The current date/time in VietNam is: Sun Mar 30 17:05:39 2025[0m
+Timer setting flag: 0
+[0;32mI (62256) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=19345[0m
+[0;32mI (62566) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=37183[0m
+[0;32mI (63086) example: The current date/time in VietNam is: Sun Mar 30 17:05:40 2025[0m
+Timer setting flag: 0
+[0;32mI (64086) example: The current date/time in VietNam is: Sun Mar 30 17:05:41 2025[0m
+Timer setting flag: 0
+[0;32mI (64306) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=43256[0m
+[0;32mI (64606) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=52293[0m
+[0;32mI (65086) example: The current date/time in VietNam is: Sun Mar 30 17:05:42 2025[0m
+Timer setting flag: 0
+[0;32mI (66086) example: The current date/time in VietNam is: Sun Mar 30 17:05:43 2025[0m
+Timer setting flag: 0
+[0;32mI (66346) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=38963[0m

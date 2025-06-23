@@ -1,0 +1,778 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 taiets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22818h (141336) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=00042840 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00042864 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00046884 vaddr=40080000 size=09794h ( 38804) load[0m
+[0;32mI (201) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b1374h (725876) map[0m
+[0;32mI (458) esp_image: segment 5: paddr=0010139c vaddr=40089794 size=0e288h ( 57992) load[0m
+[0;32mI (493) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (512) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (512) boot: Checking flash encryption...[0m
+[0;32mI (512) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (515) boot: Disabling RNG early entropy source...[0m
+[0;32mI (532) cpu_start: Multicore app[0m
+[0;32mI (541) cpu_start: Pro cpu start user code[0m
+[0;32mI (541) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (541) app_init: Application information:[0m
+[0;32mI (541) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (546) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (551) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (556) app_init: ELF file SHA256:  586d1137a...[0m
+[0;32mI (561) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (566) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (570) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (574) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (578) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (584) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (589) heap_init: At 3FFB8BC0 len 00027440 (157 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (605) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (612) spi_flash: detected chip: generic[0m
+[0;32mI (614) spi_flash: flash io: dio[0m
+[0;33mW (617) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (624) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (633) main_task: Started on CPU0[0m
+[0;32mI (643) main_task: Calling app_main()[0m
+[0;32mI (643) Sonoff: [APP] Startup..[0m
+[0;32mI (643) Sonoff: [APP] Free memory: 275684 bytes[0m
+[0;32mI (643) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (693) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (703) wifi:wifi driver task: 3ffc0dec, prio:23, stack:6656, core=0[0m
+[0;32mI (723) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (723) wifi:wifi certification version: v7.0[0m
+[0;32mI (723) wifi:config NVS flash: enabled[0m
+[0;32mI (723) wifi:config nano formatting: disabled[0m
+[0;32mI (733) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (733) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (743) wifi:Init management short buffer num: 32[0m
+[0;32mI (743) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (743) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (753) wifi:Init static rx buffer num: 10[0m
+[0;32mI (753) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (763) wifi_init: rx ba win: 6[0m
+[0;32mI (763) wifi_init: accept mbox: 6[0m
+[0;32mI (763) wifi_init: tcpip mbox: 32[0m
+[0;32mI (773) wifi_init: udp mbox: 6[0m
+[0;32mI (773) wifi_init: tcp mbox: 6[0m
+[0;32mI (773) wifi_init: tcp tx win: 5760[0m
+[0;32mI (773) wifi_init: tcp rx win: 5760[0m
+[0;32mI (783) wifi_init: tcp mss: 1440[0m
+[0;32mI (783) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (783) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (793) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (873) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (873) wifi:enable tsf[0m
+[0;32mI (933) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (933) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1003) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1013) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1043) wifi:connected with lmht, aid = 1, channel 11, BW20, bssid = e6:7d:6f:31:af:39[0m
+[0;32mI (1043) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (1043) wifi:pm start, type: 1[0m
+
+[0;32mI (1043) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1133) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1133) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2173) esp_netif_handlers: sta ip: 192.168.161.177, mask: 255.255.255.0, gw: 192.168.161.180[0m
+[0;32mI (2173) TEST: wifi connect[0m
+[0;32mI (2173) example: Initializing and starting SNTP[0m
+[0;32mI (4173) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (4813) example: Notification of a time synchronization event[0m
+[0;32mI (4823) example: The current date/time in VietNam is: Tue Mar 18 16:48:24 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:24
+[0;32mI (4823) mqtts_example: [APP] Free memory: 221712 bytes[0m
+[0;32mI (4833) mqtts_example: Other event id:7[0m
+[0;32mI (4833) main_task: Returned from app_main()[0m
+[0;32mI (5823) example: The current date/time in VietNam is: Tue Mar 18 16:48:25 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:25
+[0;32mI (6613) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6623) mqtts_example: sent subscribe successful, msg_id=45176[0m
+[0;33mW (6623) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (6823) example: The current date/time in VietNam is: Tue Mar 18 16:48:26 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:26
+[0;32mI (7003) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=45500[0m
+[0;32mI (7013) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (7013) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (7413) wifi:<ba-add>idx:0 (ifx:0, e6:7d:6f:31:af:39), tid:0, ssn:16, winSize:64[0m
+[0;32mI (7413) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=20053[0m
+[0;32mI (7423) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (7423) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (7423) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=53910[0m
+[0;32mI (7433) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (7433) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (7433) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=45176[0m
+[0;32mI (7793) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (7793) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (7823) example: The current date/time in VietNam is: Tue Mar 18 16:48:27 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:27
+[0;32mI (8223) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (8223) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (8223) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (8223) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (8413) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (8413) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (8823) example: The current date/time in VietNam is: Tue Mar 18 16:48:28 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:28
+[0;32mI (9233) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9233) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9823) example: The current date/time in VietNam is: Tue Mar 18 16:48:29 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:29
+[0;32mI (10823) example: The current date/time in VietNam is: Tue Mar 18 16:48:30 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:30
+[0;32mI (11823) example: The current date/time in VietNam is: Tue Mar 18 16:48:31 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:31
+[0;32mI (12823) example: The current date/time in VietNam is: Tue Mar 18 16:48:32 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:32
+[0;32mI (13823) example: The current date/time in VietNam is: Tue Mar 18 16:48:33 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:33
+[0;32mI (14823) example: The current date/time in VietNam is: Tue Mar 18 16:48:34 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:34
+[0;32mI (15823) example: The current date/time in VietNam is: Tue Mar 18 16:48:35 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:35
+[0;32mI (16823) example: The current date/time in VietNam is: Tue Mar 18 16:48:36 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:36
+[0;32mI (17213) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (17213) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 16 30 0
+[0;32mI (17823) example: The current date/time in VietNam is: Tue Mar 18 16:48:37 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:37
+[0;32mI (18823) example: The current date/time in VietNam is: Tue Mar 18 16:48:38 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:38
+[0;32mI (19473) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (19473) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 40 0
+[0;32mI (19823) example: The current date/time in VietNam is: Tue Mar 18 16:48:39 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:39
+[0;32mI (20823) example: The current date/time in VietNam is: Tue Mar 18 16:48:40 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:40
+[0;32mI (21823) example: The current date/time in VietNam is: Tue Mar 18 16:48:41 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:41
+[0;32mI (22823) example: The current date/time in VietNam is: Tue Mar 18 16:48:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:42
+[0;32mI (23823) example: The current date/time in VietNam is: Tue Mar 18 16:48:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:43
+[0;32mI (24823) example: The current date/time in VietNam is: Tue Mar 18 16:48:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:44
+[0;32mI (25823) example: The current date/time in VietNam is: Tue Mar 18 16:48:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:45
+[0;32mI (26823) example: The current date/time in VietNam is: Tue Mar 18 16:48:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:46
+[0;32mI (27823) example: The current date/time in VietNam is: Tue Mar 18 16:48:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:47
+[0;32mI (28283) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (28283) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (28823) example: The current date/time in VietNam is: Tue Mar 18 16:48:48 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:48
+[0;32mI (29823) example: The current date/time in VietNam is: Tue Mar 18 16:48:49 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:49
+[0;32mI (30823) example: The current date/time in VietNam is: Tue Mar 18 16:48:50 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:50
+[0;32mI (31823) example: The current date/time in VietNam is: Tue Mar 18 16:48:51 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:51
+[0;32mI (32823) example: The current date/time in VietNam is: Tue Mar 18 16:48:52 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:52
+[0;32mI (33823) example: The current date/time in VietNam is: Tue Mar 18 16:48:53 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:53
+[0;32mI (34823) example: The current date/time in VietNam is: Tue Mar 18 16:48:54 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:54
+[0;32mI (35823) example: The current date/time in VietNam is: Tue Mar 18 16:48:55 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:55
+[0;32mI (36823) example: The current date/time in VietNam is: Tue Mar 18 16:48:56 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:56
+[0;32mI (37823) example: The current date/time in VietNam is: Tue Mar 18 16:48:57 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:57
+[0;32mI (38823) example: The current date/time in VietNam is: Tue Mar 18 16:48:58 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:58
+[0;32mI (39823) example: The current date/time in VietNam is: Tue Mar 18 16:48:59 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:48:59
+[0;32mI (40823) example: The current date/time in VietNam is: Tue Mar 18 16:49:00 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:00
+[0;32mI (41823) example: The current date/time in VietNam is: Tue Mar 18 16:49:01 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:01
+[0;32mI (42823) example: The current date/time in VietNam is: Tue Mar 18 16:49:02 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:02
+[0;32mI (43823) example: The current date/time in VietNam is: Tue Mar 18 16:49:03 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:03
+[0;32mI (44823) example: The current date/time in VietNam is: Tue Mar 18 16:49:04 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:04
+[0;32mI (45823) example: The current date/time in VietNam is: Tue Mar 18 16:49:05 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:05
+[0;32mI (46823) example: The current date/time in VietNam is: Tue Mar 18 16:49:06 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:06
+[0;32mI (47823) example: The current date/time in VietNam is: Tue Mar 18 16:49:07 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:07
+[0;32mI (48823) example: The current date/time in VietNam is: Tue Mar 18 16:49:08 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:08
+[0;32mI (49823) example: The current date/time in VietNam is: Tue Mar 18 16:49:09 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:09
+[0;32mI (50823) example: The current date/time in VietNam is: Tue Mar 18 16:49:10 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:10
+[0;32mI (51823) example: The current date/time in VietNam is: Tue Mar 18 16:49:11 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:11
+[0;32mI (52713) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (52713) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 48 0
+[0;32mI (52823) example: The current date/time in VietNam is: Tue Mar 18 16:49:12 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:12
+[0;32mI (53823) example: The current date/time in VietNam is: Tue Mar 18 16:49:13 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:13
+[0;32mI (54823) example: The current date/time in VietNam is: Tue Mar 18 16:49:14 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:14
+[0;32mI (55823) example: The current date/time in VietNam is: Tue Mar 18 16:49:15 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:15
+[0;32mI (56823) example: The current date/time in VietNam is: Tue Mar 18 16:49:16 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:16
+[0;32mI (57823) example: The current date/time in VietNam is: Tue Mar 18 16:49:17 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:17
+[0;32mI (58183) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (58183) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 49 0
+[0;32mI (58823) example: The current date/time in VietNam is: Tue Mar 18 16:49:18 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:18
+[0;32mI (59823) example: The current date/time in VietNam is: Tue Mar 18 16:49:19 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:19
+[0;32mI (60823) example: The current date/time in VietNam is: Tue Mar 18 16:49:20 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:20
+[0;32mI (61823) example: The current date/time in VietNam is: Tue Mar 18 16:49:21 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:21
+[0;32mI (62823) example: The current date/time in VietNam is: Tue Mar 18 16:49:22 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:22
+[0;32mI (63823) example: The current date/time in VietNam is: Tue Mar 18 16:49:23 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:23
+[0;32mI (64823) example: The current date/time in VietNam is: Tue Mar 18 16:49:24 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:24
+[0;32mI (65823) example: The current date/time in VietNam is: Tue Mar 18 16:49:25 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:25
+[0;32mI (66823) example: The current date/time in VietNam is: Tue Mar 18 16:49:26 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:26
+[0;32mI (67823) example: The current date/time in VietNam is: Tue Mar 18 16:49:27 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:27
+[0;32mI (68823) example: The current date/time in VietNam is: Tue Mar 18 16:49:28 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:28
+[0;32mI (69823) example: The current date/time in VietNam is: Tue Mar 18 16:49:29 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:29
+[0;32mI (70823) example: The current date/time in VietNam is: Tue Mar 18 16:49:30 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:30
+[0;32mI (71823) example: The current date/time in VietNam is: Tue Mar 18 16:49:31 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:31
+[0;32mI (72823) example: The current date/time in VietNam is: Tue Mar 18 16:49:32 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:32
+[0;32mI (73823) example: The current date/time in VietNam is: Tue Mar 18 16:49:33 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:33
+[0;32mI (74363) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (74363) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 49 0
+[0;32mI (74823) example: The current date/time in VietNam is: Tue Mar 18 16:49:34 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:34
+[0;32mI (75823) example: The current date/time in VietNam is: Tue Mar 18 16:49:35 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:35
+[0;32mI (76823) example: The current date/time in VietNam is: Tue Mar 18 16:49:36 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:36
+[0;32mI (77823) example: The current date/time in VietNam is: Tue Mar 18 16:49:37 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:37
+[0;32mI (78823) example: The current date/time in VietNam is: Tue Mar 18 16:49:38 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:38
+[0;32mI (79823) example: The current date/time in VietNam is: Tue Mar 18 16:49:39 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:39
+[0;32mI (79903) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (79903) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 50 0
+[0;32mI (80823) example: The current date/time in VietNam is: Tue Mar 18 16:49:40 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:40
+[0;32mI (81823) example: The current date/time in VietNam is: Tue Mar 18 16:49:41 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:41
+[0;32mI (82823) example: The current date/time in VietNam is: Tue Mar 18 16:49:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:42
+[0;32mI (83823) example: The current date/time in VietNam is: Tue Mar 18 16:49:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:43
+[0;32mI (84393) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (84393) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 51 0
+[0;32mI (84823) example: The current date/time in VietNam is: Tue Mar 18 16:49:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:44
+[0;32mI (85823) example: The current date/time in VietNam is: Tue Mar 18 16:49:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:45
+[0;32mI (86823) example: The current date/time in VietNam is: Tue Mar 18 16:49:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:46
+[0;32mI (86873) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (86873) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 49 0
+[0;32mI (87823) example: The current date/time in VietNam is: Tue Mar 18 16:49:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:47
+[0;32mI (88823) example: The current date/time in VietNam is: Tue Mar 18 16:49:48 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:48
+[0;32mI (89823) example: The current date/time in VietNam is: Tue Mar 18 16:49:49 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:49
+[0;32mI (90823) example: The current date/time in VietNam is: Tue Mar 18 16:49:50 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:50
+[0;32mI (91823) example: The current date/time in VietNam is: Tue Mar 18 16:49:51 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:51
+[0;32mI (92203) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (92203) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 51 0
+[0;32mI (92823) example: The current date/time in VietNam is: Tue Mar 18 16:49:52 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:52
+[0;32mI (93823) example: The current date/time in VietNam is: Tue Mar 18 16:49:53 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:53
+[0;32mI (94823) example: The current date/time in VietNam is: Tue Mar 18 16:49:54 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:54
+[0;32mI (95043) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (95043) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 49 0
+[0;32mI (95823) example: The current date/time in VietNam is: Tue Mar 18 16:49:55 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:55
+[0;32mI (96823) example: The current date/time in VietNam is: Tue Mar 18 16:49:56 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:56
+[0;32mI (97823) example: The current date/time in VietNam is: Tue Mar 18 16:49:57 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:57
+[0;32mI (98823) example: The current date/time in VietNam is: Tue Mar 18 16:49:58 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:58
+[0;32mI (99823) example: The current date/time in VietNam is: Tue Mar 18 16:49:59 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:49:59
+[0;32mI (100183) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (100183) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 49 0
+[0;32mI (100823) example: The current date/time in VietNam is: Tue Mar 18 16:50:00 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:00
+[0;32mI (101823) example: The current date/time in VietNam is: Tue Mar 18 16:50:01 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:01
+[0;32mI (102823) example: The current date/time in VietNam is: Tue Mar 18 16:50:02 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:02
+[0;32mI (103823) example: The current date/time in VietNam is: Tue Mar 18 16:50:03 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:03
+[0;32mI (103883) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (103883) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 47 0
+[0;32mI (104823) example: The current date/time in VietNam is: Tue Mar 18 16:50:04 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:04
+[0;32mI (105823) example: The current date/time in VietNam is: Tue Mar 18 16:50:05 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:05
+[0;32mI (106823) example: The current date/time in VietNam is: Tue Mar 18 16:50:06 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:06
+[0;32mI (107823) example: The current date/time in VietNam is: Tue Mar 18 16:50:07 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:07
+[0;32mI (108823) example: The current date/time in VietNam is: Tue Mar 18 16:50:08 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:08
+[0;32mI (109823) example: The current date/time in VietNam is: Tue Mar 18 16:50:09 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:09
+[0;32mI (110823) example: The current date/time in VietNam is: Tue Mar 18 16:50:10 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:10
+[0;32mI (111823) example: The current date/time in VietNam is: Tue Mar 18 16:50:11 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:11
+[0;32mI (111833) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (111833) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 4 47 0
+[0;32mI (112823) example: The current date/time in VietNam is: Tue Mar 18 16:50:12 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:12
+[0;32mI (113823) example: The current date/time in VietNam is: Tue Mar 18 16:50:13 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:13
+[0;32mI (114823) example: The current date/time in VietNam is: Tue Mar 18 16:50:14 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:14
+[0;32mI (115823) example: The current date/time in VietNam is: Tue Mar 18 16:50:15 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:15
+[0;32mI (116753) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (116753) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 47 0
+[0;32mI (116823) example: The current date/time in VietNam is: Tue Mar 18 16:50:16 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:16
+[0;32mI (117823) example: The current date/time in VietNam is: Tue Mar 18 16:50:17 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:17
+[0;32mI (118823) example: The current date/time in VietNam is: Tue Mar 18 16:50:18 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:18
+[0;32mI (119623) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (119623) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 47 0
+[0;32mI (119823) example: The current date/time in VietNam is: Tue Mar 18 16:50:19 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:19
+[0;32mI (120823) example: The current date/time in VietNam is: Tue Mar 18 16:50:20 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:20
+[0;32mI (121823) example: The current date/time in VietNam is: Tue Mar 18 16:50:21 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:21
+[0;32mI (122823) example: The current date/time in VietNam is: Tue Mar 18 16:50:22 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:22
+[0;32mI (123823) example: The current date/time in VietNam is: Tue Mar 18 16:50:23 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:23
+[0;32mI (124533) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (124533) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 50 0
+[0;32mI (124823) example: The current date/time in VietNam is: Tue Mar 18 16:50:24 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:24
+[0;32mI (125823) example: The current date/time in VietNam is: Tue Mar 18 16:50:25 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:25
+[0;32mI (126823) example: The current date/time in VietNam is: Tue Mar 18 16:50:26 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:26
+[0;32mI (127823) example: The current date/time in VietNam is: Tue Mar 18 16:50:27 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:27
+[0;32mI (128823) example: The current date/time in VietNam is: Tue Mar 18 16:50:28 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:28
+[0;32mI (129823) example: The current date/time in VietNam is: Tue Mar 18 16:50:29 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:29
+[0;32mI (130473) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (130473) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (130823) example: The current date/time in VietNam is: Tue Mar 18 16:50:30 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:30
+[0;32mI (131823) example: The current date/time in VietNam is: Tue Mar 18 16:50:31 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:31
+[0;32mI (132823) example: The current date/time in VietNam is: Tue Mar 18 16:50:32 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:32
+[0;32mI (133823) example: The current date/time in VietNam is: Tue Mar 18 16:50:33 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:33
+[0;32mI (133993) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (133993) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (134823) example: The current date/time in VietNam is: Tue Mar 18 16:50:34 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:34
+[0;32mI (135823) example: The current date/time in VietNam is: Tue Mar 18 16:50:35 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:35
+[0;32mI (136823) example: The current date/time in VietNam is: Tue Mar 18 16:50:36 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:36
+[0;32mI (137823) example: The current date/time in VietNam is: Tue Mar 18 16:50:37 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:37
+[0;32mI (138823) example: The current date/time in VietNam is: Tue Mar 18 16:50:38 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:38
+[0;32mI (139483) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (139483) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 51 0
+[0;32mI (139823) example: The current date/time in VietNam is: Tue Mar 18 16:50:39 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:39
+[0;32mI (140823) example: The current date/time in VietNam is: Tue Mar 18 16:50:40 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:40
+[0;32mI (141823) example: The current date/time in VietNam is: Tue Mar 18 16:50:41 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:41
+[0;32mI (142823) example: The current date/time in VietNam is: Tue Mar 18 16:50:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:42
+[0;32mI (143823) example: The current date/time in VietNam is: Tue Mar 18 16:50:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:43
+[0;32mI (144823) example: The current date/time in VietNam is: Tue Mar 18 16:50:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:44
+[0;32mI (145823) example: The current date/time in VietNam is: Tue Mar 18 16:50:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:45
+[0;32mI (146823) example: The current date/time in VietNam is: Tue Mar 18 16:50:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:46
+[0;32mI (147823) example: The current date/time in VietNam is: Tue Mar 18 16:50:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:47
+[0;32mI (148823) example: The current date/time in VietNam is: Tue Mar 18 16:50:48 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:48
+[0;32mI (149823) example: The current date/time in VietNam is: Tue Mar 18 16:50:49 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:49
+[0;32mI (150823) example: The current date/time in VietNam is: Tue Mar 18 16:50:50 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:50
+[0;32mI (151823) example: The current date/time in VietNam is: Tue Mar 18 16:50:51 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:51
+[0;32mI (152823) example: The current date/time in VietNam is: Tue Mar 18 16:50:52 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:52
+[0;32mI (153823) example: The current date/time in VietNam is: Tue Mar 18 16:50:53 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:53
+[0;32mI (154823) example: The current date/time in VietNam is: Tue Mar 18 16:50:54 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:54
+[0;32mI (155823) example: The current date/time in VietNam is: Tue Mar 18 16:50:55 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:55
+[0;32mI (156823) example: The current date/time in VietNam is: Tue Mar 18 16:50:56 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:56
+[0;32mI (157823) example: The current date/time in VietNam is: Tue Mar 18 16:50:57 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:57
+[0;32mI (158823) example: The current date/time in VietNam is: Tue Mar 18 16:50:58 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:58
+[0;32mI (159823) example: The current date/time in VietNam is: Tue Mar 18 16:50:59 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:50:59
+[0;32mI (160823) example: The current date/time in VietNam is: Tue Mar 18 16:51:00 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:00
+[0;32mI (161823) example: The current date/time in VietNam is: Tue Mar 18 16:51:01 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:01
+[0;32mI (162823) example: The current date/time in VietNam is: Tue Mar 18 16:51:02 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:02
+[0;32mI (163823) example: The current date/time in VietNam is: Tue Mar 18 16:51:03 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:03
+[0;32mI (164823) example: The current date/time in VietNam is: Tue Mar 18 16:51:04 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:04
+[0;32mI (165823) example: The current date/time in VietNam is: Tue Mar 18 16:51:05 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:05
+[0;32mI (166743) mqtts_example: MQTT_EVENT_DATA[0m
+End time: 16 50 0
+[0;33mW (166743) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (166823) example: The current date/time in VietNam is: Tue Mar 18 16:51:06 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:06
+[0;32mI (167823) example: The current date/time in VietNam is: Tue Mar 18 16:51:07 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:07
+[0;32mI (168823) example: The current date/time in VietNam is: Tue Mar 18 16:51:08 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:08
+[0;32mI (169823) example: The current date/time in VietNam is: Tue Mar 18 16:51:09 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:09
+[0;32mI (170813) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (170813) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (170823) example: The current date/time in VietNam is: Tue Mar 18 16:51:10 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:10
+[0;32mI (171823) example: The current date/time in VietNam is: Tue Mar 18 16:51:11 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:11
+[0;32mI (172823) example: The current date/time in VietNam is: Tue Mar 18 16:51:12 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:12
+[0;32mI (173823) example: The current date/time in VietNam is: Tue Mar 18 16:51:13 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:13
+[0;32mI (174823) example: The current date/time in VietNam is: Tue Mar 18 16:51:14 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:14
+[0;32mI (175823) example: The current date/time in VietNam is: Tue Mar 18 16:51:15 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:15
+[0;32mI (176373) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (176373) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (176823) example: The current date/time in VietNam is: Tue Mar 18 16:51:16 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:16
+[0;32mI (177823) example: The current date/time in VietNam is: Tue Mar 18 16:51:17 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:17
+[0;32mI (178823) example: The current date/time in VietNam is: Tue Mar 18 16:51:18 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:18
+[0;32mI (179823) example: The current date/time in VietNam is: Tue Mar 18 16:51:19 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:19
+[0;32mI (180823) example: The current date/time in VietNam is: Tue Mar 18 16:51:20 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:20
+[0;32mI (181673) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (181673) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 51 0
+[0;32mI (181823) example: The current date/time in VietNam is: Tue Mar 18 16:51:21 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:21
+[0;32mI (182823) example: The current date/time in VietNam is: Tue Mar 18 16:51:22 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:22
+[0;32mI (183823) example: The current date/time in VietNam is: Tue Mar 18 16:51:23 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:23
+[0;32mI (184823) example: The current date/time in VietNam is: Tue Mar 18 16:51:24 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:24
+[0;32mI (184973) mqtts_example: MQTT_EVENT_DATA[0m
+End time: 16 52 0
+[0;33mW (184973) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (185823) example: The current date/time in VietNam is: Tue Mar 18 16:51:25 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:25
+[0;32mI (186823) example: The current date/time in VietNam is: Tue Mar 18 16:51:26 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:26
+[0;32mI (187823) example: The current date/time in VietNam is: Tue Mar 18 16:51:27 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:27
+[0;32mI (188823) example: The current date/time in VietNam is: Tue Mar 18 16:51:28 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:28
+[0;32mI (189823) example: The current date/time in VietNam is: Tue Mar 18 16:51:29 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:29
+[0;32mI (190823) example: The current date/time in VietNam is: Tue Mar 18 16:51:30 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:30
+[0;32mI (191823) example: The current date/time in VietNam is: Tue Mar 18 16:51:31 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:31
+[0;32mI (192823) example: The current date/time in VietNam is: Tue Mar 18 16:51:32 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:32
+[0;32mI (193823) example: The current date/time in VietNam is: Tue Mar 18 16:51:33 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:33
+[0;32mI (194783) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (194783) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 51 0
+[0;32mI (194823) example: The current date/time in VietNam is: Tue Mar 18 16:51:34 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:34
+[0;32mI (195823) example: The current date/time in VietNam is: Tue Mar 18 16:51:35 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:35
+[0;32mI (196823) example: The current date/time in VietNam is: Tue Mar 18 16:51:36 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:36
+[0;32mI (197823) example: The current date/time in VietNam is: Tue Mar 18 16:51:37 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:37
+[0;32mI (198823) example: The current date/time in VietNam is: Tue Mar 18 16:51:38 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:38
+[0;32mI (199823) example: The current date/time in VietNam is: Tue Mar 18 16:51:39 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:39
+[0;32mI (200823) example: The current date/time in VietNam is: Tue Mar 18 16:51:40 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:40
+[0;32mI (201823) example: The current date/time in VietNam is: Tue Mar 18 16:51:41 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:41
+[0;32mI (202823) example: The current date/time in VietNam is: Tue Mar 18 16:51:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:42
+[0;32mI (203823) example: The current date/time in VietNam is: Tue Mar 18 16:51:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:43
+[0;32mI (204653) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (204653) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (204823) example: The current date/time in VietNam is: Tue Mar 18 16:51:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:44
+[0;32mI (205823) example: The current date/time in VietNam is: Tue Mar 18 16:51:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:45
+[0;32mI (206823) example: The current date/time in VietNam is: Tue Mar 18 16:51:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:46
+[0;32mI (207823) example: The current date/time in VietNam is: Tue Mar 18 16:51:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:47
+[0;32mI (208823) example: The current date/time in VietNam is: Tue Mar 18 16:51:48 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:48
+[0;32mI (209823) example: The current date/time in VietNam is: Tue Mar 18 16:51:49 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:49
+[0;32mI (210823) example: The current date/time in VietNam is: Tue Mar 18 16:51:50 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:50
+[0;32mI (211823) example: The current date/time in VietNam is: Tue Mar 18 16:51:51 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:51
+[0;32mI (212823) example: The current date/time in VietNam is: Tue Mar 18 16:51:52 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:52
+[0;32mI (213823) example: The current date/time in VietNam is: Tue Mar 18 16:51:53 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:53
+[0;32mI (214823) example: The current date/time in VietNam is: Tue Mar 18 16:51:54 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:54
+[0;32mI (215823) example: The current date/time in VietNam is: Tue Mar 18 16:51:55 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:55
+[0;32mI (216823) example: The current date/time in VietNam is: Tue Mar 18 16:51:56 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:56
+[0;32mI (217823) example: The current date/time in VietNam is: Tue Mar 18 16:51:57 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:57
+[0;32mI (218823) example: The current date/time in VietNam is: Tue Mar 18 16:51:58 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:58
+[0;32mI (219823) example: The current date/time in VietNam is: Tue Mar 18 16:51:59 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:51:59
+[0;32mI (220823) example: The current date/time in VietNam is: Tue Mar 18 16:52:00 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:00
+[0;32mI (221823) example: The current date/time in VietNam is: Tue Mar 18 16:52:01 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:01
+[0;32mI (222823) example: The current date/time in VietNam is: Tue Mar 18 16:52:02 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:02
+[0;32mI (223823) example: The current date/time in VietNam is: Tue Mar 18 16:52:03 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:03
+[0;32mI (224823) example: The current date/time in VietNam is: Tue Mar 18 16:52:04 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:04
+[0;32mI (225823) example: The current date/time in VietNam is: Tue Mar 18 16:52:05 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:05
+[0;32mI (226823) example: The current date/time in VietNam is: Tue Mar 18 16:52:06 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:06
+[0;32mI (227823) example: The current date/time in VietNam is: Tue Mar 18 16:52:07 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:07
+[0;32mI (228823) example: The current date/time in VietNam is: Tue Mar 18 16:52:08 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:08
+[0;32mI (229823) example: The current date/time in VietNam is: Tue Mar 18 16:52:09 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:09
+[0;32mI (230823) example: The current date/time in VietNam is: Tue Mar 18 16:52:10 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:10
+[0;32mI (231823) example: The current date/time in VietNam is: Tue Mar 18 16:52:11 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:11
+[0;32mI (232053) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (232053) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 17 30 0
+[0;32mI (232823) example: The current date/time in VietNam is: Tue Mar 18 16:52:12 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:12
+[0;32mI (233823) example: The current date/time in VietNam is: Tue Mar 18 16:52:13 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:13
+[0;32mI (234823) example: The current date/time in VietNam is: Tue Mar 18 16:52:14 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:14
+[0;32mI (235823) example: The current date/time in VietNam is: Tue Mar 18 16:52:15 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:15
+[0;32mI (236603) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (236603) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (236823) example: The current date/time in VietNam is: Tue Mar 18 16:52:16 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:16
+[0;32mI (237823) example: The current date/time in VietNam is: Tue Mar 18 16:52:17 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:17
+[0;32mI (238823) example: The current date/time in VietNam is: Tue Mar 18 16:52:18 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:18
+[0;32mI (239823) example: The current date/time in VietNam is: Tue Mar 18 16:52:19 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:19
+[0;32mI (240823) example: The current date/time in VietNam is: Tue Mar 18 16:52:20 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:20
+[0;32mI (241823) example: The current date/time in VietNam is: Tue Mar 18 16:52:21 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:21
+[0;32mI (242823) example: The current date/time in VietNam is: Tue Mar 18 16:52:22 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:22
+[0;32mI (243823) example: The current date/time in VietNam is: Tue Mar 18 16:52:23 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:23
+[0;32mI (244823) example: The current date/time in VietNam is: Tue Mar 18 16:52:24 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:24
+[0;32mI (245823) example: The current date/time in VietNam is: Tue Mar 18 16:52:25 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:25
+[0;32mI (246823) example: The current date/time in VietNam is: Tue Mar 18 16:52:26 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:26
+[0;32mI (247413) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (247413) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 17 30 0
+[0;32mI (247823) example: The current date/time in VietNam is: Tue Mar 18 16:52:27 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:27
+[0;32mI (248823) example: The current date/time in VietNam is: Tue Mar 18 16:52:28 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:28
+[0;32mI (249823) example: The current date/time in VietNam is: Tue Mar 18 16:52:29 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:29
+[0;32mI (249903) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (249903) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (250823) example: The current date/time in VietNam is: Tue Mar 18 16:52:30 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:30
+[0;32mI (251823) example: The current date/time in VietNam is: Tue Mar 18 16:52:31 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:31
+[0;32mI (252823) example: The current date/time in VietNam is: Tue Mar 18 16:52:32 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:32
+[0;32mI (253613) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (253613) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 16 30 0
+[0;32mI (253823) example: The current date/time in VietNam is: Tue Mar 18 16:52:33 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:33
+[0;32mI (254823) example: The current date/time in VietNam is: Tue Mar 18 16:52:34 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:34
+[0;32mI (255823) example: The current date/time in VietNam is: Tue Mar 18 16:52:35 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:35
+[0;32mI (256823) example: The current date/time in VietNam is: Tue Mar 18 16:52:36 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:36
+[0;32mI (257823) example: The current date/time in VietNam is: Tue Mar 18 16:52:37 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:37
+[0;32mI (258513) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (258513) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (258823) example: The current date/time in VietNam is: Tue Mar 18 16:52:38 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:38
+[0;32mI (259823) example: The current date/time in VietNam is: Tue Mar 18 16:52:39 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:39
+[0;32mI (260113) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (260113) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (260823) example: The current date/time in VietNam is: Tue Mar 18 16:52:40 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:40
+[0;32mI (261823) example: The current date/time in VietNam is: Tue Mar 18 16:52:41 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:41
+[0;32mI (261953) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (261953) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 16 52 0
+[0;32mI (262823) example: The current date/time in VietNam is: Tue Mar 18 16:52:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:42
+[0;32mI (263823) example: The current date/time in VietNam is: Tue Mar 18 16:52:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:43
+[0;32mI (264823) example: The current date/time in VietNam is: Tue Mar 18 16:52:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:44
+[0;32mI (265823) example: The current date/time in VietNam is: Tue Mar 18 16:52:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:45
+[0;32mI (266823) example: The current date/time in VietNam is: Tue Mar 18 16:52:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:46
+[0;32mI (267823) example: The current date/time in VietNam is: Tue Mar 18 16:52:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:52:47

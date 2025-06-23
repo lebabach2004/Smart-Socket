@@ -1,0 +1,161 @@
+PI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:2�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22818h (141336) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=00042840 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00042864 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00046884 vaddr=40080000 size=09794h ( 38804) load[0m
+[0;32mI (201) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b12b4h (725684) map[0m
+[0;32mI (458) esp_image: segment 5: paddr=001012dc vaddr=40089794 size=0e288h ( 57992) load[0m
+[0;32mI (493) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (515) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (515) boot: Checking flash encryption...[0m
+[0;32mI (515) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (519) boot: Disabling RNG early entropy source...[0m
+[0;32mI (535) cpu_start: Multicore app[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) app_init: Application information:[0m
+[0;32mI (544) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (549) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (554) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (559) app_init: ELF file SHA256:  68409393f...[0m
+[0;32mI (564) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (569) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (573) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (577) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (581) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (587) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (592) heap_init: At 3FFB8BE0 len 00027420 (157 KiB): DRAM[0m
+[0;32mI (597) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (603) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (608) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (620) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (627) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) Sonoff: [APP] Startup..[0m
+[0;32mI (646) Sonoff: [APP] Free memory: 275652 bytes[0m
+[0;32mI (646) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (696) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (706) wifi:wifi driver task: 3ffc0e0c, prio:23, stack:6656, core=0[0m
+[0;32mI (726) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (726) wifi:wifi certification version: v7.0[0m
+[0;32mI (726) wifi:config NVS flash: enabled[0m
+[0;32mI (726) wifi:config nano formatting: disabled[0m
+[0;32mI (736) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (736) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (746) wifi:Init management short buffer num: 32[0m
+[0;32mI (746) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (746) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (756) wifi:Init static rx buffer num: 10[0m
+[0;32mI (756) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (766) wifi_init: rx ba win: 6[0m
+[0;32mI (766) wifi_init: accept mbox: 6[0m
+[0;32mI (766) wifi_init: tcpip mbox: 32[0m
+[0;32mI (776) wifi_init: udp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp mbox: 6[0m
+[0;32mI (776) wifi_init: tcp tx win: 5760[0m
+[0;32mI (776) wifi_init: tcp rx win: 5760[0m
+[0;32mI (786) wifi_init: tcp mss: 1440[0m
+[0;32mI (786) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (786) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (796) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (876) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (876) wifi:enable tsf[0m
+[0;32mI (886) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (896) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (896) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (906) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (906) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (926) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3346) wifi:new:<11,0>, old:<11,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3346) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3366) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3376) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3396) wifi:connected with lmht, aid = 1, channel 11, BW20, bssid = e6:7d:6f:31:af:39[0m
+[0;32mI (3406) wifi:security: WPA2-PSK, phy: bgn, rssi: -68[0m
+[0;32mI (3406) wifi:pm start, type: 1[0m
+
+[0;32mI (3406) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3446) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3446) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4446) esp_netif_handlers: sta ip: 192.168.161.177, mask: 255.255.255.0, gw: 192.168.161.180[0m
+[0;32mI (4446) TEST: wifi connect[0m
+[0;32mI (4446) example: Initializing and starting SNTP[0m
+[0;32mI (6196) example: Notification of a time synchronization event[0m
+[0;32mI (6206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:42 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:42
+[0;32mI (6206) mqtts_example: [APP] Free memory: 221704 bytes[0m
+[0;32mI (6216) mqtts_example: Other event id:7[0m
+[0;32mI (6216) main_task: Returned from app_main()[0m
+[0;32mI (7206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:43 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:43
+[0;32mI (7746) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7756) mqtts_example: sent subscribe successful, msg_id=58324[0m
+[0;33mW (7756) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (8166) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=59997[0m
+[0;32mI (8166) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8166) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:44 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:44
+[0;32mI (8576) wifi:<ba-add>idx:0 (ifx:0, e6:7d:6f:31:af:39), tid:0, ssn:16, winSize:64[0m
+[0;32mI (8576) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=6622[0m
+[0;32mI (8576) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8576) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8586) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=20661[0m
+[0;32mI (8586) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8596) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8596) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=58324[0m
+[0;32mI (8976) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (8986) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:45 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:45
+[0;32mI (9386) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9396) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9396) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9396) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:46 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:46
+[0;32mI (11206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:47 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:47
+[0;32mI (12206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:48 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:48
+[0;32mI (13206) Sonoff: The current date/time in VietNam is: Tue Mar 18 16:31:49 2025[0m
+The current date/time in VietNam is: 2025:03:18 16:31:49

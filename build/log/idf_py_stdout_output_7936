@@ -1,0 +1,94 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\esp32-idf\Espressif\frameworks\esp-idf-v5.4\examples\get-started\Do_an\build\bootloader\esp-idf\esptool_py && D:\esp32-idf\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/partition_table/check_sizes.py --offset 0xa000 bootloader 0x1000 D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/build/bootloader/bootloader.bin"
+Bootloader binary size 0x8df0 bytes. 0x210 bytes (1%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_main.c.obj
+[5/10] Linking C static library esp-idf\main\libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable mqtt_ssl_mutual_auth.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/build/mqtt_ssl_mutual_auth.bin
+[9/10] C:\Windows\system32\cmd.exe /C "cd /D D:\esp32-idf\Espressif\frameworks\esp-idf-v5.4\examples\get-started\Do_an\build\esp-idf\esptool_py && D:\esp32-idf\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/partition_table/check_sizes.py --offset 0xa000 partition --type app D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/build/partition_table/partition-table.bin D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/build/mqtt_ssl_mutual_auth.bin"
+mqtt_ssl_mutual_auth.bin binary size 0xee270 bytes. Smallest app partition is 0x160000 bytes. 0x71d90 bytes (32%) free.
+[9/10] C:\Windows\system32\cmd.exe /C "cd /D D:\esp32-idf\Espressif\frameworks\esp-idf-v5.4\components\esptool_py && D:\esp32-idf\Espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4 -D SERIAL_TOOL=D:/esp32-idf/Espressif/python_env/idf5.4_py3.11_env/Scripts/python.exe;;D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=no_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/build -P D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32 -p COM5 -b 460800 --before=default_reset --after=no_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x20000 mqtt_ssl_mutual_auth.bin 0xa000 partition_table/partition-table.bin 0xf000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port COM5
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:4f:00:3d:39:60
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00009fff...
+Flash will be erased from 0x00020000 to 0x0010efff...
+Flash will be erased from 0x0000a000 to 0x0000afff...
+Flash will be erased from 0x0000f000 to 0x00010fff...
+SHA digest in image updated
+Compressed 36336 bytes to 22524...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007d01... (100 %)
+Wrote 36336 bytes (22524 compressed) at 0x00001000 in 0.9 seconds (effective 323.0 kbit/s)...
+Hash of data verified.
+Compressed 975472 bytes to 612626...
+Writing at 0x00020000... (2 %)
+Writing at 0x0002cf44... (5 %)
+Writing at 0x00038c5c... (7 %)
+Writing at 0x00041db9... (10 %)
+Writing at 0x0004a4c4... (13 %)
+Writing at 0x0004fdcf... (15 %)
+Writing at 0x0005584f... (18 %)
+Writing at 0x0005b691... (21 %)
+Writing at 0x00061454... (23 %)
+Writing at 0x00067064... (26 %)
+Writing at 0x0006d46f... (28 %)
+Writing at 0x00072e9e... (31 %)
+Writing at 0x00078e47... (34 %)
+Writing at 0x0007f373... (36 %)
+Writing at 0x000852fb... (39 %)
+Writing at 0x0008af7b... (42 %)
+Writing at 0x000900a7... (44 %)
+Writing at 0x000953b6... (47 %)
+Writing at 0x0009aace... (50 %)
+Writing at 0x000a0391... (52 %)
+Writing at 0x000a5696... (55 %)
+Writing at 0x000aad14... (57 %)
+Writing at 0x000b095d... (60 %)
+Writing at 0x000b6381... (63 %)
+Writing at 0x000bbccc... (65 %)
+Writing at 0x000c1722... (68 %)
+Writing at 0x000c7375... (71 %)
+Writing at 0x000cd0dc... (73 %)
+Writing at 0x000d2a9e... (76 %)
+Writing at 0x000d8613... (78 %)
+Writing at 0x000de3d3... (81 %)
+Writing at 0x000e3d1a... (84 %)
+Writing at 0x000ea143... (86 %)
+Writing at 0x000f46cd... (89 %)
+Writing at 0x000fac7e... (92 %)
+Writing at 0x001008cd... (94 %)
+Writing at 0x00106b14... (97 %)
+Writing at 0x0010bda0... (100 %)
+Wrote 975472 bytes (612626 compressed) at 0x00020000 in 15.8 seconds (effective 492.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 157...
+Writing at 0x0000a000... (100 %)
+Wrote 3072 bytes (157 compressed) at 0x0000a000 in 0.1 seconds (effective 262.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000f000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000f000 in 0.1 seconds (effective 597.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Staying in bootloader.

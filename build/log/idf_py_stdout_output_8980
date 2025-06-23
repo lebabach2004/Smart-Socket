@@ -1,0 +1,1765 @@
+RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tai�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22828h (141352) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=00042850 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=00042874 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00046894 vaddr=40080000 size=09784h ( 38788) load[0m
+[0;32mI (197) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b14a8h (726184) map[0m
+[0;32mI (454) esp_image: segment 5: paddr=001014d0 vaddr=40089784 size=0e298h ( 58008) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (489) boot: Checking flash encryption...[0m
+[0;32mI (489) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (494) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (519) cpu_start: Pro cpu start user code[0m
+[0;32mI (519) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (519) app_init: Application information:[0m
+[0;32mI (519) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (524) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (529) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (534) app_init: ELF file SHA256:  d4ecf6e1c...[0m
+[0;32mI (539) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (544) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (548) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (552) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (556) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (562) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (567) heap_init: At 3FFB8BD0 len 00027430 (157 KiB): DRAM[0m
+[0;32mI (572) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (578) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (592) spi_flash: flash io: dio[0m
+[0;33mW (595) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (602) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (611) main_task: Started on CPU0[0m
+[0;32mI (621) main_task: Calling app_main()[0m
+[0;32mI (621) Sonoff: [APP] Startup..[0m
+[0;32mI (621) Sonoff: [APP] Free memory: 275668 bytes[0m
+[0;32mI (621) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (651) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (671) wifi:wifi driver task: 3ffc0e80, prio:23, stack:6656, core=0[0m
+[0;32mI (691) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (691) wifi:wifi certification version: v7.0[0m
+[0;32mI (691) wifi:config NVS flash: enabled[0m
+[0;32mI (691) wifi:config nano formatting: disabled[0m
+[0;32mI (691) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (701) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (701) wifi:Init management short buffer num: 32[0m
+[0;32mI (701) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (711) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (711) wifi:Init static rx buffer num: 10[0m
+[0;32mI (721) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: accept mbox: 6[0m
+[0;32mI (731) wifi_init: tcpip mbox: 32[0m
+[0;32mI (731) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (741) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (751) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (831) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (831) wifi:enable tsf[0m
+[0;32mI (921) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (921) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (931) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (951) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2051) wifi:connected with Le Cung, aid = 3, channel 9, BW20, bssid = 24:43:e2:d8:83:50[0m
+[0;32mI (2051) wifi:security: WPA2-PSK, phy: bgn, rssi: -84[0m
+[0;32mI (2061) wifi:pm start, type: 1[0m
+
+[0;32mI (2061) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2141) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2191) wifi:<ba-add>idx:0 (ifx:0, 24:43:e2:d8:83:50), tid:7, ssn:3, winSize:64[0m
+[0;32mI (3271) esp_netif_handlers: sta ip: 192.168.1.13, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (3271) TEST: wifi connect[0m
+[0;32mI (3271) example: Initializing and starting SNTP[0m
+[0;32mI (5271) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (7271) example: Waiting for system time to be set... (2/15)[0m
+[0;32mI (7881) wifi:<ba-add>idx:1 (ifx:0, 24:43:e2:d8:83:50), tid:5, ssn:1, winSize:64[0m
+[0;32mI (7911) example: Notification of a time synchronization event[0m
+[0;32mI (7911) example: The current date/time in VietNam is: Wed Mar 19 17:15:57 2025[0m
+Timer setting flag: 0
+[0;32mI (7921) wifi:<ba-del>idx:1, tid:5[0m
+[0;32mI (7921) mqtts_example: [APP] Free memory: 221168 bytes[0m
+[0;32mI (7921) wifi:<ba-add>idx:1 (ifx:0, 24:43:e2:d8:83:50), tid:0, ssn:1, winSize:64[0m
+[0;32mI (7931) mqtts_example: Other event id:7[0m
+[0;32mI (7941) main_task: Returned from app_main()[0m
+[0;32mI (8921) example: The current date/time in VietNam is: Wed Mar 19 17:15:58 2025[0m
+Timer setting flag: 0
+[0;32mI (9161) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (9171) mqtts_example: sent subscribe successful, msg_id=10974[0m
+[0;33mW (9181) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (9491) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=40240[0m
+[0;32mI (9491) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (9491) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (9771) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=1789[0m
+[0;32mI (9781) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (9781) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (9781) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=42377[0m
+[0;32mI (9781) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (9791) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (9791) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=48182[0m
+[0;32mI (9801) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (9801) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (9811) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=10974[0m
+[0;32mI (9921) example: The current date/time in VietNam is: Wed Mar 19 17:15:59 2025[0m
+Timer setting flag: 0
+[0;32mI (10171) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (10171) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10491) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (10491) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10501) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (10501) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10501) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (10501) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (10921) example: The current date/time in VietNam is: Wed Mar 19 17:16:00 2025[0m
+Timer setting flag: 0
+[0;32mI (11071) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (11081) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (11781) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (11781) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (11921) example: The current date/time in VietNam is: Wed Mar 19 17:16:01 2025[0m
+Timer setting flag: 0
+[0;32mI (12801) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (12801) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (12921) example: The current date/time in VietNam is: Wed Mar 19 17:16:02 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62162
+[0;32mI (13241) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=47534[0m
+[0;32mI (13921) example: The current date/time in VietNam is: Wed Mar 19 17:16:03 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62163
+Start time: 0 End time:0 Current time:62163
+[0;32mI (14921) example: The current date/time in VietNam is: Wed Mar 19 17:16:04 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62164
+Start time: 0 End time:0 Current time:62164
+[0;32mI (15921) example: The current date/time in VietNam is: Wed Mar 19 17:16:05 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62165
+Start time: 0 End time:0 Current time:62165
+[0;32mI (16531) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (16531) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (16921) example: The current date/time in VietNam is: Wed Mar 19 17:16:06 2025[0m
+Timer setting flag: 0
+[0;32mI (17611) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (17621) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (17921) example: The current date/time in VietNam is: Wed Mar 19 17:16:07 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62167
+Start time: 0 End time:0 Current time:62167
+[0;32mI (18921) example: The current date/time in VietNam is: Wed Mar 19 17:16:08 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62168
+Start time: 0 End time:0 Current time:62168
+[0;32mI (19051) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (19051) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (19921) example: The current date/time in VietNam is: Wed Mar 19 17:16:09 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62169
+[0;32mI (20281) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=17443[0m
+[0;32mI (20921) example: The current date/time in VietNam is: Wed Mar 19 17:16:10 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62170
+Start time: 0 End time:0 Current time:62170
+[0;32mI (21921) example: The current date/time in VietNam is: Wed Mar 19 17:16:11 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62171
+Start time: 0 End time:0 Current time:62171
+[0;32mI (22921) example: The current date/time in VietNam is: Wed Mar 19 17:16:12 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62172
+Start time: 0 End time:0 Current time:62172
+[0;32mI (23401) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (23401) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (23921) example: The current date/time in VietNam is: Wed Mar 19 17:16:13 2025[0m
+Timer setting flag: 0
+[0;32mI (24921) example: The current date/time in VietNam is: Wed Mar 19 17:16:14 2025[0m
+Timer setting flag: 0
+[0;32mI (25921) example: The current date/time in VietNam is: Wed Mar 19 17:16:15 2025[0m
+Timer setting flag: 0
+[0;32mI (26321) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (26321) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (26461) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (26461) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (26921) example: The current date/time in VietNam is: Wed Mar 19 17:16:16 2025[0m
+Timer setting flag: 0
+[0;32mI (27921) example: The current date/time in VietNam is: Wed Mar 19 17:16:17 2025[0m
+Timer setting flag: 0
+[0;32mI (28921) example: The current date/time in VietNam is: Wed Mar 19 17:16:18 2025[0m
+Timer setting flag: 0
+[0;32mI (28921) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (28921) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (29921) example: The current date/time in VietNam is: Wed Mar 19 17:16:19 2025[0m
+Timer setting flag: 0
+[0;32mI (30921) example: The current date/time in VietNam is: Wed Mar 19 17:16:20 2025[0m
+Timer setting flag: 0
+[0;32mI (31921) example: The current date/time in VietNam is: Wed Mar 19 17:16:21 2025[0m
+Timer setting flag: 0
+[0;32mI (32921) example: The current date/time in VietNam is: Wed Mar 19 17:16:22 2025[0m
+Timer setting flag: 0
+[0;32mI (33921) example: The current date/time in VietNam is: Wed Mar 19 17:16:23 2025[0m
+Timer setting flag: 0
+[0;32mI (34521) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (34521) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (34921) example: The current date/time in VietNam is: Wed Mar 19 17:16:24 2025[0m
+Timer setting flag: 0
+[0;32mI (35781) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (35781) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (35921) example: The current date/time in VietNam is: Wed Mar 19 17:16:25 2025[0m
+Timer setting flag: 0
+[0;32mI (36921) example: The current date/time in VietNam is: Wed Mar 19 17:16:26 2025[0m
+Timer setting flag: 0
+[0;32mI (37921) example: The current date/time in VietNam is: Wed Mar 19 17:16:27 2025[0m
+Timer setting flag: 0
+[0;32mI (38921) example: The current date/time in VietNam is: Wed Mar 19 17:16:28 2025[0m
+Timer setting flag: 0
+[0;32mI (39331) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (39331) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (39871) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (39871) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (39921) example: The current date/time in VietNam is: Wed Mar 19 17:16:29 2025[0m
+Timer setting flag: 0
+[0;32mI (40921) example: The current date/time in VietNam is: Wed Mar 19 17:16:30 2025[0m
+Timer setting flag: 0
+[0;32mI (41181) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (41181) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (41921) example: The current date/time in VietNam is: Wed Mar 19 17:16:31 2025[0m
+Timer setting flag: 0
+[0;32mI (42871) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (42871) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (42881) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (42881) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (42921) example: The current date/time in VietNam is: Wed Mar 19 17:16:32 2025[0m
+Timer setting flag: 0
+[0;32mI (43241) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (43241) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (43921) example: The current date/time in VietNam is: Wed Mar 19 17:16:33 2025[0m
+Timer setting flag: 0
+[0;32mI (44891) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (44891) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (44921) example: The current date/time in VietNam is: Wed Mar 19 17:16:34 2025[0m
+Timer setting flag: 0
+[0;32mI (45921) example: The current date/time in VietNam is: Wed Mar 19 17:16:35 2025[0m
+Timer setting flag: 0
+[0;32mI (46701) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (46701) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (46921) example: The current date/time in VietNam is: Wed Mar 19 17:16:36 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62196
+[0;32mI (47221) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=2536[0m
+[0;32mI (47921) example: The current date/time in VietNam is: Wed Mar 19 17:16:37 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62197
+Start time: 0 End time:0 Current time:62197
+[0;32mI (48921) example: The current date/time in VietNam is: Wed Mar 19 17:16:38 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62198
+Start time: 0 End time:0 Current time:62198
+[0;32mI (49921) example: The current date/time in VietNam is: Wed Mar 19 17:16:39 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62199
+Start time: 0 End time:0 Current time:62199
+[0;32mI (50921) example: The current date/time in VietNam is: Wed Mar 19 17:16:40 2025[0m
+Timer setting flag: 1
+Start time: 0 End time:0 Current time:62200
+Start time: 0 End time:0 Current time:62200
+[0;32mI (51301) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (51311) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 17 15 0
+[0;32mI (51921) example: The current date/time in VietNam is: Wed Mar 19 17:16:41 2025[0m
+Timer setting flag: 1
+Start time: 62100 End time:0 Current time:62201
+Start time: 62100 End time:0 Current time:62201
+[0;32mI (52921) example: The current date/time in VietNam is: Wed Mar 19 17:16:42 2025[0m
+Timer setting flag: 1
+Start time: 62100 End time:0 Current time:62202
+Start time: 62100 End time:0 Current time:62202
+[0;32mI (53921) example: The current date/time in VietNam is: Wed Mar 19 17:16:43 2025[0m
+Timer setting flag: 1
+Start time: 62100 End time:0 Current time:62203
+Start time: 62100 End time:0 Current time:62203
+[0;32mI (54101) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (54101) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 16 12 0
+[0;32mI (54921) example: The current date/time in VietNam is: Wed Mar 19 17:16:44 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:0 Current time:62204
+Start time: 58320 End time:0 Current time:62204
+[0;32mI (55921) example: The current date/time in VietNam is: Wed Mar 19 17:16:45 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:0 Current time:62205
+Start time: 58320 End time:0 Current time:62205
+[0;32mI (56921) example: The current date/time in VietNam is: Wed Mar 19 17:16:46 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:0 Current time:62206
+Start time: 58320 End time:0 Current time:62206
+[0;32mI (57921) example: The current date/time in VietNam is: Wed Mar 19 17:16:47 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:0 Current time:62207
+Start time: 58320 End time:0 Current time:62207
+[0;32mI (58471) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (58471) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 17 12 0
+[0;32mI (58921) example: The current date/time in VietNam is: Wed Mar 19 17:16:48 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62208
+Start time: 58320 End time:61920 Current time:62208
+[0;32mI (59391) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=53057[0m
+[0;32mI (59931) example: The current date/time in VietNam is: Wed Mar 19 17:16:49 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62209
+Start time: 58320 End time:61920 Current time:62209
+[0;32mI (60931) example: The current date/time in VietNam is: Wed Mar 19 17:16:50 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62210
+Start time: 58320 End time:61920 Current time:62210
+[0;32mI (61171) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (61171) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (61931) example: The current date/time in VietNam is: Wed Mar 19 17:16:51 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62211
+Start time: 58320 End time:61920 Current time:62211
+[0;32mI (62271) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=2472[0m
+[0;32mI (62941) example: The current date/time in VietNam is: Wed Mar 19 17:16:52 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62212
+Start time: 58320 End time:61920 Current time:62212
+[0;32mI (63941) example: The current date/time in VietNam is: Wed Mar 19 17:16:53 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62213
+Start time: 58320 End time:61920 Current time:62213
+[0;32mI (64941) example: The current date/time in VietNam is: Wed Mar 19 17:16:54 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62214
+Start time: 58320 End time:61920 Current time:62214
+[0;32mI (65941) example: The current date/time in VietNam is: Wed Mar 19 17:16:55 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62215
+Start time: 58320 End time:61920 Current time:62215
+[0;32mI (66941) example: The current date/time in VietNam is: Wed Mar 19 17:16:56 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62216
+Start time: 58320 End time:61920 Current time:62216
+[0;32mI (67941) example: The current date/time in VietNam is: Wed Mar 19 17:16:57 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62217
+Start time: 58320 End time:61920 Current time:62217
+[0;32mI (68941) example: The current date/time in VietNam is: Wed Mar 19 17:16:58 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62218
+Start time: 58320 End time:61920 Current time:62218
+[0;32mI (69941) example: The current date/time in VietNam is: Wed Mar 19 17:16:59 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62219
+Start time: 58320 End time:61920 Current time:62219
+[0;32mI (70941) example: The current date/time in VietNam is: Wed Mar 19 17:17:00 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62220
+Start time: 58320 End time:61920 Current time:62220
+[0;32mI (71281) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (71281) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (71891) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (71891) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (71941) example: The current date/time in VietNam is: Wed Mar 19 17:17:01 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62221
+Start time: 58320 End time:61920 Current time:62221
+[0;32mI (72301) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=44352[0m
+[0;32mI (72951) example: The current date/time in VietNam is: Wed Mar 19 17:17:02 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62222
+Start time: 58320 End time:61920 Current time:62222
+[0;32mI (73951) example: The current date/time in VietNam is: Wed Mar 19 17:17:03 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62223
+Start time: 58320 End time:61920 Current time:62223
+[0;32mI (74581) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (74581) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (74951) example: The current date/time in VietNam is: Wed Mar 19 17:17:04 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62224
+Start time: 58320 End time:61920 Current time:62224
+[0;32mI (75951) example: The current date/time in VietNam is: Wed Mar 19 17:17:05 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62225
+Start time: 58320 End time:61920 Current time:62225
+[0;32mI (76311) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (76311) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (76911) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (76911) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (76951) example: The current date/time in VietNam is: Wed Mar 19 17:17:06 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62226
+Start time: 58320 End time:61920 Current time:62226
+[0;32mI (77311) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=33828[0m
+[0;32mI (77961) example: The current date/time in VietNam is: Wed Mar 19 17:17:07 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62227
+Start time: 58320 End time:61920 Current time:62227
+[0;32mI (78541) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (78541) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (78961) example: The current date/time in VietNam is: Wed Mar 19 17:17:08 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62228
+Start time: 58320 End time:61920 Current time:62228
+[0;32mI (79961) example: The current date/time in VietNam is: Wed Mar 19 17:17:09 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62229
+Start time: 58320 End time:61920 Current time:62229
+[0;32mI (80961) example: The current date/time in VietNam is: Wed Mar 19 17:17:10 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62230
+Start time: 58320 End time:61920 Current time:62230
+[0;32mI (81001) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (81011) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (81511) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (81511) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (81961) example: The current date/time in VietNam is: Wed Mar 19 17:17:11 2025[0m
+Timer setting flag: 0
+[0;32mI (82961) example: The current date/time in VietNam is: Wed Mar 19 17:17:12 2025[0m
+Timer setting flag: 0
+[0;32mI (83961) example: The current date/time in VietNam is: Wed Mar 19 17:17:13 2025[0m
+Timer setting flag: 0
+[0;32mI (83981) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (83981) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (84961) example: The current date/time in VietNam is: Wed Mar 19 17:17:14 2025[0m
+Timer setting flag: 0
+[0;32mI (85961) example: The current date/time in VietNam is: Wed Mar 19 17:17:15 2025[0m
+Timer setting flag: 0
+[0;32mI (86961) example: The current date/time in VietNam is: Wed Mar 19 17:17:16 2025[0m
+Timer setting flag: 0
+[0;32mI (87081) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (87081) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (87961) example: The current date/time in VietNam is: Wed Mar 19 17:17:17 2025[0m
+Timer setting flag: 0
+[0;32mI (87981) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (87981) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (88961) example: The current date/time in VietNam is: Wed Mar 19 17:17:18 2025[0m
+Timer setting flag: 0
+[0;32mI (89451) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (89451) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (89961) example: The current date/time in VietNam is: Wed Mar 19 17:17:19 2025[0m
+Timer setting flag: 0
+[0;32mI (90961) example: The current date/time in VietNam is: Wed Mar 19 17:17:20 2025[0m
+Timer setting flag: 0
+[0;32mI (91961) example: The current date/time in VietNam is: Wed Mar 19 17:17:21 2025[0m
+Timer setting flag: 0
+[0;32mI (92961) example: The current date/time in VietNam is: Wed Mar 19 17:17:22 2025[0m
+Timer setting flag: 0
+[0;32mI (93961) example: The current date/time in VietNam is: Wed Mar 19 17:17:23 2025[0m
+Timer setting flag: 0
+[0;32mI (94961) example: The current date/time in VietNam is: Wed Mar 19 17:17:24 2025[0m
+Timer setting flag: 0
+[0;32mI (95961) example: The current date/time in VietNam is: Wed Mar 19 17:17:25 2025[0m
+Timer setting flag: 0
+[0;32mI (96961) example: The current date/time in VietNam is: Wed Mar 19 17:17:26 2025[0m
+Timer setting flag: 0
+[0;32mI (97961) example: The current date/time in VietNam is: Wed Mar 19 17:17:27 2025[0m
+Timer setting flag: 0
+[0;32mI (98751) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (98751) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (98961) example: The current date/time in VietNam is: Wed Mar 19 17:17:28 2025[0m
+Timer setting flag: 0
+[0;32mI (99961) example: The current date/time in VietNam is: Wed Mar 19 17:17:29 2025[0m
+Timer setting flag: 0
+[0;32mI (100481) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (100481) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (100961) example: The current date/time in VietNam is: Wed Mar 19 17:17:30 2025[0m
+Timer setting flag: 0
+[0;32mI (101961) example: The current date/time in VietNam is: Wed Mar 19 17:17:31 2025[0m
+Timer setting flag: 0
+[0;32mI (102961) example: The current date/time in VietNam is: Wed Mar 19 17:17:32 2025[0m
+Timer setting flag: 0
+[0;32mI (103961) example: The current date/time in VietNam is: Wed Mar 19 17:17:33 2025[0m
+Timer setting flag: 0
+[0;32mI (104961) example: The current date/time in VietNam is: Wed Mar 19 17:17:34 2025[0m
+Timer setting flag: 0
+[0;32mI (105961) example: The current date/time in VietNam is: Wed Mar 19 17:17:35 2025[0m
+Timer setting flag: 0
+[0;32mI (106961) example: The current date/time in VietNam is: Wed Mar 19 17:17:36 2025[0m
+Timer setting flag: 0
+[0;32mI (107961) example: The current date/time in VietNam is: Wed Mar 19 17:17:37 2025[0m
+Timer setting flag: 0
+[0;32mI (108961) example: The current date/time in VietNam is: Wed Mar 19 17:17:38 2025[0m
+Timer setting flag: 0
+[0;32mI (109961) example: The current date/time in VietNam is: Wed Mar 19 17:17:39 2025[0m
+Timer setting flag: 0
+[0;32mI (110961) example: The current date/time in VietNam is: Wed Mar 19 17:17:40 2025[0m
+Timer setting flag: 0
+[0;32mI (111961) example: The current date/time in VietNam is: Wed Mar 19 17:17:41 2025[0m
+Timer setting flag: 0
+[0;32mI (112961) example: The current date/time in VietNam is: Wed Mar 19 17:17:42 2025[0m
+Timer setting flag: 0
+[0;32mI (113961) example: The current date/time in VietNam is: Wed Mar 19 17:17:43 2025[0m
+Timer setting flag: 0
+[0;32mI (114961) example: The current date/time in VietNam is: Wed Mar 19 17:17:44 2025[0m
+Timer setting flag: 0
+[0;32mI (115961) example: The current date/time in VietNam is: Wed Mar 19 17:17:45 2025[0m
+Timer setting flag: 0
+[0;32mI (116961) example: The current date/time in VietNam is: Wed Mar 19 17:17:46 2025[0m
+Timer setting flag: 0
+[0;32mI (117961) example: The current date/time in VietNam is: Wed Mar 19 17:17:47 2025[0m
+Timer setting flag: 0
+[0;32mI (118961) example: The current date/time in VietNam is: Wed Mar 19 17:17:48 2025[0m
+Timer setting flag: 0
+[0;32mI (119961) example: The current date/time in VietNam is: Wed Mar 19 17:17:49 2025[0m
+Timer setting flag: 0
+[0;32mI (120961) example: The current date/time in VietNam is: Wed Mar 19 17:17:50 2025[0m
+Timer setting flag: 0
+[0;32mI (121961) example: The current date/time in VietNam is: Wed Mar 19 17:17:51 2025[0m
+Timer setting flag: 0
+[0;32mI (122961) example: The current date/time in VietNam is: Wed Mar 19 17:17:52 2025[0m
+Timer setting flag: 0
+[0;32mI (123961) example: The current date/time in VietNam is: Wed Mar 19 17:17:53 2025[0m
+Timer setting flag: 0
+[0;32mI (124961) example: The current date/time in VietNam is: Wed Mar 19 17:17:54 2025[0m
+Timer setting flag: 0
+[0;32mI (125961) example: The current date/time in VietNam is: Wed Mar 19 17:17:55 2025[0m
+Timer setting flag: 0
+[0;32mI (126961) example: The current date/time in VietNam is: Wed Mar 19 17:17:56 2025[0m
+Timer setting flag: 0
+[0;32mI (127961) example: The current date/time in VietNam is: Wed Mar 19 17:17:57 2025[0m
+Timer setting flag: 0
+[0;32mI (128961) example: The current date/time in VietNam is: Wed Mar 19 17:17:58 2025[0m
+Timer setting flag: 0
+[0;32mI (129961) example: The current date/time in VietNam is: Wed Mar 19 17:17:59 2025[0m
+Timer setting flag: 0
+[0;32mI (130961) example: The current date/time in VietNam is: Wed Mar 19 17:18:00 2025[0m
+Timer setting flag: 0
+[0;32mI (131961) example: The current date/time in VietNam is: Wed Mar 19 17:18:01 2025[0m
+Timer setting flag: 0
+[0;32mI (132961) example: The current date/time in VietNam is: Wed Mar 19 17:18:02 2025[0m
+Timer setting flag: 0
+[0;32mI (133961) example: The current date/time in VietNam is: Wed Mar 19 17:18:03 2025[0m
+Timer setting flag: 0
+[0;32mI (134961) example: The current date/time in VietNam is: Wed Mar 19 17:18:04 2025[0m
+Timer setting flag: 0
+[0;32mI (135961) example: The current date/time in VietNam is: Wed Mar 19 17:18:05 2025[0m
+Timer setting flag: 0
+[0;32mI (136961) example: The current date/time in VietNam is: Wed Mar 19 17:18:06 2025[0m
+Timer setting flag: 0
+[0;32mI (137961) example: The current date/time in VietNam is: Wed Mar 19 17:18:07 2025[0m
+Timer setting flag: 0
+[0;32mI (138961) example: The current date/time in VietNam is: Wed Mar 19 17:18:08 2025[0m
+Timer setting flag: 0
+[0;32mI (139961) example: The current date/time in VietNam is: Wed Mar 19 17:18:09 2025[0m
+Timer setting flag: 0
+[0;32mI (140961) example: The current date/time in VietNam is: Wed Mar 19 17:18:10 2025[0m
+Timer setting flag: 0
+[0;32mI (141961) example: The current date/time in VietNam is: Wed Mar 19 17:18:11 2025[0m
+Timer setting flag: 0
+[0;32mI (142961) example: The current date/time in VietNam is: Wed Mar 19 17:18:12 2025[0m
+Timer setting flag: 0
+[0;32mI (143961) example: The current date/time in VietNam is: Wed Mar 19 17:18:13 2025[0m
+Timer setting flag: 0
+[0;32mI (144961) example: The current date/time in VietNam is: Wed Mar 19 17:18:14 2025[0m
+Timer setting flag: 0
+[0;32mI (145961) example: The current date/time in VietNam is: Wed Mar 19 17:18:15 2025[0m
+Timer setting flag: 0
+[0;32mI (146961) example: The current date/time in VietNam is: Wed Mar 19 17:18:16 2025[0m
+Timer setting flag: 0
+[0;32mI (147961) example: The current date/time in VietNam is: Wed Mar 19 17:18:17 2025[0m
+Timer setting flag: 0
+[0;32mI (148961) example: The current date/time in VietNam is: Wed Mar 19 17:18:18 2025[0m
+Timer setting flag: 0
+[0;32mI (149961) example: The current date/time in VietNam is: Wed Mar 19 17:18:19 2025[0m
+Timer setting flag: 0
+[0;32mI (150961) example: The current date/time in VietNam is: Wed Mar 19 17:18:20 2025[0m
+Timer setting flag: 0
+[0;32mI (151961) example: The current date/time in VietNam is: Wed Mar 19 17:18:21 2025[0m
+Timer setting flag: 0
+[0;32mI (152961) example: The current date/time in VietNam is: Wed Mar 19 17:18:22 2025[0m
+Timer setting flag: 0
+[0;32mI (153961) example: The current date/time in VietNam is: Wed Mar 19 17:18:23 2025[0m
+Timer setting flag: 0
+[0;32mI (154961) example: The current date/time in VietNam is: Wed Mar 19 17:18:24 2025[0m
+Timer setting flag: 0
+[0;32mI (155961) example: The current date/time in VietNam is: Wed Mar 19 17:18:25 2025[0m
+Timer setting flag: 0
+[0;32mI (156961) example: The current date/time in VietNam is: Wed Mar 19 17:18:26 2025[0m
+Timer setting flag: 0
+[0;32mI (157961) example: The current date/time in VietNam is: Wed Mar 19 17:18:27 2025[0m
+Timer setting flag: 0
+[0;32mI (158961) example: The current date/time in VietNam is: Wed Mar 19 17:18:28 2025[0m
+Timer setting flag: 0
+[0;32mI (159961) example: The current date/time in VietNam is: Wed Mar 19 17:18:29 2025[0m
+Timer setting flag: 0
+[0;32mI (160961) example: The current date/time in VietNam is: Wed Mar 19 17:18:30 2025[0m
+Timer setting flag: 0
+[0;32mI (161961) example: The current date/time in VietNam is: Wed Mar 19 17:18:31 2025[0m
+Timer setting flag: 0
+[0;32mI (162961) example: The current date/time in VietNam is: Wed Mar 19 17:18:32 2025[0m
+Timer setting flag: 0
+[0;32mI (163961) example: The current date/time in VietNam is: Wed Mar 19 17:18:33 2025[0m
+Timer setting flag: 0
+[0;32mI (164961) example: The current date/time in VietNam is: Wed Mar 19 17:18:34 2025[0m
+Timer setting flag: 0
+[0;32mI (165961) example: The current date/time in VietNam is: Wed Mar 19 17:18:35 2025[0m
+Timer setting flag: 0
+[0;32mI (166961) example: The current date/time in VietNam is: Wed Mar 19 17:18:36 2025[0m
+Timer setting flag: 0
+[0;32mI (167961) example: The current date/time in VietNam is: Wed Mar 19 17:18:37 2025[0m
+Timer setting flag: 0
+[0;32mI (168961) example: The current date/time in VietNam is: Wed Mar 19 17:18:38 2025[0m
+Timer setting flag: 0
+[0;32mI (169961) example: The current date/time in VietNam is: Wed Mar 19 17:18:39 2025[0m
+Timer setting flag: 0
+[0;32mI (170961) example: The current date/time in VietNam is: Wed Mar 19 17:18:40 2025[0m
+Timer setting flag: 0
+[0;32mI (171961) example: The current date/time in VietNam is: Wed Mar 19 17:18:41 2025[0m
+Timer setting flag: 0
+[0;32mI (172961) example: The current date/time in VietNam is: Wed Mar 19 17:18:42 2025[0m
+Timer setting flag: 0
+[0;32mI (173961) example: The current date/time in VietNam is: Wed Mar 19 17:18:43 2025[0m
+Timer setting flag: 0
+[0;32mI (174961) example: The current date/time in VietNam is: Wed Mar 19 17:18:44 2025[0m
+Timer setting flag: 0
+[0;32mI (175961) example: The current date/time in VietNam is: Wed Mar 19 17:18:45 2025[0m
+Timer setting flag: 0
+[0;32mI (176961) example: The current date/time in VietNam is: Wed Mar 19 17:18:46 2025[0m
+Timer setting flag: 0
+[0;32mI (177961) example: The current date/time in VietNam is: Wed Mar 19 17:18:47 2025[0m
+Timer setting flag: 0
+[0;32mI (178961) example: The current date/time in VietNam is: Wed Mar 19 17:18:48 2025[0m
+Timer setting flag: 0
+[0;32mI (179961) example: The current date/time in VietNam is: Wed Mar 19 17:18:49 2025[0m
+Timer setting flag: 0
+[0;32mI (180961) example: The current date/time in VietNam is: Wed Mar 19 17:18:50 2025[0m
+Timer setting flag: 0
+[0;32mI (181961) example: The current date/time in VietNam is: Wed Mar 19 17:18:51 2025[0m
+Timer setting flag: 0
+[0;32mI (182961) example: The current date/time in VietNam is: Wed Mar 19 17:18:52 2025[0m
+Timer setting flag: 0
+[0;32mI (183961) example: The current date/time in VietNam is: Wed Mar 19 17:18:53 2025[0m
+Timer setting flag: 0
+[0;32mI (184961) example: The current date/time in VietNam is: Wed Mar 19 17:18:54 2025[0m
+Timer setting flag: 0
+[0;32mI (185961) example: The current date/time in VietNam is: Wed Mar 19 17:18:55 2025[0m
+Timer setting flag: 0
+[0;32mI (186961) example: The current date/time in VietNam is: Wed Mar 19 17:18:56 2025[0m
+Timer setting flag: 0
+[0;32mI (187961) example: The current date/time in VietNam is: Wed Mar 19 17:18:57 2025[0m
+Timer setting flag: 0
+[0;32mI (188961) example: The current date/time in VietNam is: Wed Mar 19 17:18:58 2025[0m
+Timer setting flag: 0
+[0;32mI (189541) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (189551) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (189961) example: The current date/time in VietNam is: Wed Mar 19 17:18:59 2025[0m
+Timer setting flag: 0
+[0;32mI (190771) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (190771) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (190961) example: The current date/time in VietNam is: Wed Mar 19 17:19:00 2025[0m
+Timer setting flag: 0
+[0;32mI (191961) example: The current date/time in VietNam is: Wed Mar 19 17:19:01 2025[0m
+Timer setting flag: 0
+[0;32mI (192961) example: The current date/time in VietNam is: Wed Mar 19 17:19:02 2025[0m
+Timer setting flag: 0
+[0;32mI (193161) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (193161) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (193961) example: The current date/time in VietNam is: Wed Mar 19 17:19:03 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62343
+Start time: 58320 End time:61920 Current time:62343
+[0;32mI (194961) example: The current date/time in VietNam is: Wed Mar 19 17:19:04 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62344
+Start time: 58320 End time:61920 Current time:62344
+[0;32mI (195961) example: The current date/time in VietNam is: Wed Mar 19 17:19:05 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62345
+Start time: 58320 End time:61920 Current time:62345
+[0;32mI (196961) example: The current date/time in VietNam is: Wed Mar 19 17:19:06 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:61920 Current time:62346
+Start time: 58320 End time:61920 Current time:62346
+[0;32mI (197461) mqtts_example: MQTT_EVENT_DATA[0m
+End time: 17 18 0
+[0;33mW (197461) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (197961) example: The current date/time in VietNam is: Wed Mar 19 17:19:07 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:62280 Current time:62347
+Start time: 58320 End time:62280 Current time:62347
+[0;32mI (198961) example: The current date/time in VietNam is: Wed Mar 19 17:19:08 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:62280 Current time:62348
+Start time: 58320 End time:62280 Current time:62348
+[0;32mI (199961) example: The current date/time in VietNam is: Wed Mar 19 17:19:09 2025[0m
+Timer setting flag: 1
+Start time: 58320 End time:62280 Current time:62349
+Start time: 58320 End time:62280 Current time:62349
+[0;32mI (200311) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (200311) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 17 18 0
+[0;32mI (200961) example: The current date/time in VietNam is: Wed Mar 19 17:19:10 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62350
+[0;32mI (201421) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=22648[0m
+[0;32mI (201971) example: The current date/time in VietNam is: Wed Mar 19 17:19:11 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62351
+Start time: 62280 End time:62280 Current time:62351
+[0;32mI (202971) example: The current date/time in VietNam is: Wed Mar 19 17:19:12 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62352
+Start time: 62280 End time:62280 Current time:62352
+[0;32mI (203971) example: The current date/time in VietNam is: Wed Mar 19 17:19:13 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62353
+Start time: 62280 End time:62280 Current time:62353
+[0;32mI (204971) example: The current date/time in VietNam is: Wed Mar 19 17:19:14 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62354
+Start time: 62280 End time:62280 Current time:62354
+[0;32mI (205841) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (205841) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (205971) example: The current date/time in VietNam is: Wed Mar 19 17:19:15 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62355
+[0;32mI (206971) example: The current date/time in VietNam is: Wed Mar 19 17:19:16 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62356
+Start time: 62280 End time:62280 Current time:62356
+[0;32mI (207971) example: The current date/time in VietNam is: Wed Mar 19 17:19:17 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62357
+Start time: 62280 End time:62280 Current time:62357
+[0;32mI (207981) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=9118[0m
+[0;32mI (208971) example: The current date/time in VietNam is: Wed Mar 19 17:19:18 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62358
+Start time: 62280 End time:62280 Current time:62358
+[0;32mI (209971) example: The current date/time in VietNam is: Wed Mar 19 17:19:19 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62359
+Start time: 62280 End time:62280 Current time:62359
+[0;32mI (210971) example: The current date/time in VietNam is: Wed Mar 19 17:19:20 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62360
+Start time: 62280 End time:62280 Current time:62360
+[0;32mI (211971) example: The current date/time in VietNam is: Wed Mar 19 17:19:21 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62361
+Start time: 62280 End time:62280 Current time:62361
+[0;32mI (212971) example: The current date/time in VietNam is: Wed Mar 19 17:19:22 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62362
+Start time: 62280 End time:62280 Current time:62362
+[0;32mI (213971) example: The current date/time in VietNam is: Wed Mar 19 17:19:23 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62363
+Start time: 62280 End time:62280 Current time:62363
+[0;32mI (214971) example: The current date/time in VietNam is: Wed Mar 19 17:19:24 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62364
+Start time: 62280 End time:62280 Current time:62364
+[0;32mI (215971) example: The current date/time in VietNam is: Wed Mar 19 17:19:25 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62365
+Start time: 62280 End time:62280 Current time:62365
+[0;32mI (216971) example: The current date/time in VietNam is: Wed Mar 19 17:19:26 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62366
+Start time: 62280 End time:62280 Current time:62366
+[0;32mI (217971) example: The current date/time in VietNam is: Wed Mar 19 17:19:27 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62367
+Start time: 62280 End time:62280 Current time:62367
+[0;32mI (218971) example: The current date/time in VietNam is: Wed Mar 19 17:19:28 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62368
+Start time: 62280 End time:62280 Current time:62368
+[0;32mI (219971) example: The current date/time in VietNam is: Wed Mar 19 17:19:29 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62369
+Start time: 62280 End time:62280 Current time:62369
+[0;32mI (220971) example: The current date/time in VietNam is: Wed Mar 19 17:19:30 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62370
+Start time: 62280 End time:62280 Current time:62370
+[0;32mI (221971) example: The current date/time in VietNam is: Wed Mar 19 17:19:31 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62371
+Start time: 62280 End time:62280 Current time:62371
+[0;32mI (222971) example: The current date/time in VietNam is: Wed Mar 19 17:19:32 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62372
+Start time: 62280 End time:62280 Current time:62372
+[0;32mI (223971) example: The current date/time in VietNam is: Wed Mar 19 17:19:33 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62373
+Start time: 62280 End time:62280 Current time:62373
+[0;32mI (224971) example: The current date/time in VietNam is: Wed Mar 19 17:19:34 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62374
+Start time: 62280 End time:62280 Current time:62374
+[0;32mI (225971) example: The current date/time in VietNam is: Wed Mar 19 17:19:35 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62375
+Start time: 62280 End time:62280 Current time:62375
+[0;32mI (226971) example: The current date/time in VietNam is: Wed Mar 19 17:19:36 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62376
+Start time: 62280 End time:62280 Current time:62376
+[0;32mI (227971) example: The current date/time in VietNam is: Wed Mar 19 17:19:37 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62377
+Start time: 62280 End time:62280 Current time:62377
+[0;32mI (228971) example: The current date/time in VietNam is: Wed Mar 19 17:19:38 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62378
+Start time: 62280 End time:62280 Current time:62378
+[0;32mI (229921) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (229921) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (229971) example: The current date/time in VietNam is: Wed Mar 19 17:19:39 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62379
+[0;32mI (230301) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=35949[0m
+[0;32mI (230971) example: The current date/time in VietNam is: Wed Mar 19 17:19:40 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62380
+Start time: 62280 End time:62280 Current time:62380
+[0;32mI (231971) example: The current date/time in VietNam is: Wed Mar 19 17:19:41 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62381
+Start time: 62280 End time:62280 Current time:62381
+[0;32mI (232971) example: The current date/time in VietNam is: Wed Mar 19 17:19:42 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62382
+Start time: 62280 End time:62280 Current time:62382
+[0;32mI (233971) example: The current date/time in VietNam is: Wed Mar 19 17:19:43 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62383
+Start time: 62280 End time:62280 Current time:62383
+[0;32mI (234971) example: The current date/time in VietNam is: Wed Mar 19 17:19:44 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62384
+Start time: 62280 End time:62280 Current time:62384
+[0;32mI (235971) example: The current date/time in VietNam is: Wed Mar 19 17:19:45 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62385
+Start time: 62280 End time:62280 Current time:62385
+[0;32mI (236971) example: The current date/time in VietNam is: Wed Mar 19 17:19:46 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62280 Current time:62386
+Start time: 62280 End time:62280 Current time:62386
+[0;32mI (237571) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (237571) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 17 19 0
+[0;32mI (237971) example: The current date/time in VietNam is: Wed Mar 19 17:19:47 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62340 Current time:62387
+Start time: 62280 End time:62340 Current time:62387
+[0;32mI (238311) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=37424[0m
+[0;32mI (238981) example: The current date/time in VietNam is: Wed Mar 19 17:19:48 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62340 Current time:62388
+Start time: 62280 End time:62340 Current time:62388
+[0;32mI (239981) example: The current date/time in VietNam is: Wed Mar 19 17:19:49 2025[0m
+Timer setting flag: 1
+Start time: 62280 End time:62340 Current time:62389
+Start time: 62280 End time:62340 Current time:62389
+[0;32mI (240371) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (240371) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (240981) example: The current date/time in VietNam is: Wed Mar 19 17:19:50 2025[0m
+Timer setting flag: 0
+[0;32mI (241981) example: The current date/time in VietNam is: Wed Mar 19 17:19:51 2025[0m
+Timer setting flag: 0
+[0;32mI (242981) example: The current date/time in VietNam is: Wed Mar 19 17:19:52 2025[0m
+Timer setting flag: 0
+[0;32mI (243981) example: The current date/time in VietNam is: Wed Mar 19 17:19:53 2025[0m
+Timer setting flag: 0
+[0;32mI (244981) example: The current date/time in VietNam is: Wed Mar 19 17:19:54 2025[0m
+Timer setting flag: 0
+[0;32mI (245981) example: The current date/time in VietNam is: Wed Mar 19 17:19:55 2025[0m
+Timer setting flag: 0
+[0;32mI (246981) example: The current date/time in VietNam is: Wed Mar 19 17:19:56 2025[0m
+Timer setting flag: 0
+[0;32mI (247981) example: The current date/time in VietNam is: Wed Mar 19 17:19:57 2025[0m
+Timer setting flag: 0
+[0;32mI (248981) example: The current date/time in VietNam is: Wed Mar 19 17:19:58 2025[0m
+Timer setting flag: 0
+[0;32mI (249981) example: The current date/time in VietNam is: Wed Mar 19 17:19:59 2025[0m
+Timer setting flag: 0
+[0;32mI (250981) example: The current date/time in VietNam is: Wed Mar 19 17:20:00 2025[0m
+Timer setting flag: 0
+[0;32mI (251981) example: The current date/time in VietNam is: Wed Mar 19 17:20:01 2025[0m
+Timer setting flag: 0
+[0;32mI (252981) example: The current date/time in VietNam is: Wed Mar 19 17:20:02 2025[0m
+Timer setting flag: 0
+[0;32mI (253981) example: The current date/time in VietNam is: Wed Mar 19 17:20:03 2025[0m
+Timer setting flag: 0
+[0;32mI (254981) example: The current date/time in VietNam is: Wed Mar 19 17:20:04 2025[0m
+Timer setting flag: 0
+[0;32mI (255981) example: The current date/time in VietNam is: Wed Mar 19 17:20:05 2025[0m
+Timer setting flag: 0
+[0;32mI (256981) example: The current date/time in VietNam is: Wed Mar 19 17:20:06 2025[0m
+Timer setting flag: 0
+[0;32mI (257981) example: The current date/time in VietNam is: Wed Mar 19 17:20:07 2025[0m
+Timer setting flag: 0
+[0;32mI (258981) example: The current date/time in VietNam is: Wed Mar 19 17:20:08 2025[0m
+Timer setting flag: 0
+[0;32mI (259981) example: The current date/time in VietNam is: Wed Mar 19 17:20:09 2025[0m
+Timer setting flag: 0
+[0;32mI (260981) example: The current date/time in VietNam is: Wed Mar 19 17:20:10 2025[0m
+Timer setting flag: 0
+[0;32mI (261981) example: The current date/time in VietNam is: Wed Mar 19 17:20:11 2025[0m
+Timer setting flag: 0
+[0;32mI (262981) example: The current date/time in VietNam is: Wed Mar 19 17:20:12 2025[0m
+Timer setting flag: 0
+[0;32mI (263981) example: The current date/time in VietNam is: Wed Mar 19 17:20:13 2025[0m
+Timer setting flag: 0
+[0;32mI (264981) example: The current date/time in VietNam is: Wed Mar 19 17:20:14 2025[0m
+Timer setting flag: 0
+[0;32mI (265981) example: The current date/time in VietNam is: Wed Mar 19 17:20:15 2025[0m
+Timer setting flag: 0
+[0;32mI (266981) example: The current date/time in VietNam is: Wed Mar 19 17:20:16 2025[0m
+Timer setting flag: 0
+[0;32mI (267981) example: The current date/time in VietNam is: Wed Mar 19 17:20:17 2025[0m
+Timer setting flag: 0
+[0;32mI (268981) example: The current date/time in VietNam is: Wed Mar 19 17:20:18 2025[0m
+Timer setting flag: 0
+[0;32mI (269981) example: The current date/time in VietNam is: Wed Mar 19 17:20:19 2025[0m
+Timer setting flag: 0
+[0;32mI (270981) example: The current date/time in VietNam is: Wed Mar 19 17:20:20 2025[0m
+Timer setting flag: 0
+[0;32mI (271981) example: The current date/time in VietNam is: Wed Mar 19 17:20:21 2025[0m
+Timer setting flag: 0
+[0;32mI (272981) example: The current date/time in VietNam is: Wed Mar 19 17:20:22 2025[0m
+Timer setting flag: 0
+[0;32mI (273981) example: The current date/time in VietNam is: Wed Mar 19 17:20:23 2025[0m
+Timer setting flag: 0
+[0;32mI (274981) example: The current date/time in VietNam is: Wed Mar 19 17:20:24 2025[0m
+Timer setting flag: 0
+[0;32mI (275981) example: The current date/time in VietNam is: Wed Mar 19 17:20:25 2025[0m
+Timer setting flag: 0
+[0;32mI (276981) example: The current date/time in VietNam is: Wed Mar 19 17:20:26 2025[0m
+Timer setting flag: 0
+[0;32mI (277981) example: The current date/time in VietNam is: Wed Mar 19 17:20:27 2025[0m
+Timer setting flag: 0
+[0;32mI (278981) example: The current date/time in VietNam is: Wed Mar 19 17:20:28 2025[0m
+Timer setting flag: 0
+[0;32mI (279981) example: The current date/time in VietNam is: Wed Mar 19 17:20:29 2025[0m
+Timer setting flag: 0
+[0;32mI (280981) example: The current date/time in VietNam is: Wed Mar 19 17:20:30 2025[0m
+Timer setting flag: 0
+[0;32mI (281981) example: The current date/time in VietNam is: Wed Mar 19 17:20:31 2025[0m
+Timer setting flag: 0
+[0;32mI (282981) example: The current date/time in VietNam is: Wed Mar 19 17:20:32 2025[0m
+Timer setting flag: 0
+[0;32mI (283981) example: The current date/time in VietNam is: Wed Mar 19 17:20:33 2025[0m
+Timer setting flag: 0
+[0;32mI (284981) example: The current date/time in VietNam is: Wed Mar 19 17:20:34 2025[0m
+Timer setting flag: 0
+[0;32mI (285981) example: The current date/time in VietNam is: Wed Mar 19 17:20:35 2025[0m
+Timer setting flag: 0
+[0;32mI (286981) example: The current date/time in VietNam is: Wed Mar 19 17:20:36 2025[0m
+Timer setting flag: 0
+[0;32mI (287981) example: The current date/time in VietNam is: Wed Mar 19 17:20:37 2025[0m
+Timer setting flag: 0
+[0;32mI (288981) example: The current date/time in VietNam is: Wed Mar 19 17:20:38 2025[0m
+Timer setting flag: 0
+[0;32mI (289981) example: The current date/time in VietNam is: Wed Mar 19 17:20:39 2025[0m
+Timer setting flag: 0
+[0;32mI (290981) example: The current date/time in VietNam is: Wed Mar 19 17:20:40 2025[0m
+Timer setting flag: 0
+[0;32mI (291981) example: The current date/time in VietNam is: Wed Mar 19 17:20:41 2025[0m
+Timer setting flag: 0
+[0;32mI (292981) example: The current date/time in VietNam is: Wed Mar 19 17:20:42 2025[0m
+Timer setting flag: 0
+[0;32mI (293981) example: The current date/time in VietNam is: Wed Mar 19 17:20:43 2025[0m
+Timer setting flag: 0
+[0;32mI (294981) example: The current date/time in VietNam is: Wed Mar 19 17:20:44 2025[0m
+Timer setting flag: 0
+[0;32mI (295981) example: The current date/time in VietNam is: Wed Mar 19 17:20:45 2025[0m
+Timer setting flag: 0
+[0;32mI (296981) example: The current date/time in VietNam is: Wed Mar 19 17:20:46 2025[0m
+Timer setting flag: 0
+[0;32mI (297981) example: The current date/time in VietNam is: Wed Mar 19 17:20:47 2025[0m
+Timer setting flag: 0
+[0;32mI (298981) example: The current date/time in VietNam is: Wed Mar 19 17:20:48 2025[0m
+Timer setting flag: 0
+[0;32mI (299981) example: The current date/time in VietNam is: Wed Mar 19 17:20:49 2025[0m
+Timer setting flag: 0
+[0;32mI (300981) example: The current date/time in VietNam is: Wed Mar 19 17:20:50 2025[0m
+Timer setting flag: 0
+[0;32mI (301981) example: The current date/time in VietNam is: Wed Mar 19 17:20:51 2025[0m
+Timer setting flag: 0
+[0;32mI (302981) example: The current date/time in VietNam is: Wed Mar 19 17:20:52 2025[0m
+Timer setting flag: 0
+[0;32mI (303981) example: The current date/time in VietNam is: Wed Mar 19 17:20:53 2025[0m
+Timer setting flag: 0
+[0;32mI (304981) example: The current date/time in VietNam is: Wed Mar 19 17:20:54 2025[0m
+Timer setting flag: 0
+[0;32mI (305981) example: The current date/time in VietNam is: Wed Mar 19 17:20:55 2025[0m
+Timer setting flag: 0
+[0;32mI (306981) example: The current date/time in VietNam is: Wed Mar 19 17:20:56 2025[0m
+Timer setting flag: 0
+[0;32mI (307981) example: The current date/time in VietNam is: Wed Mar 19 17:20:57 2025[0m
+Timer setting flag: 0
+[0;32mI (308981) example: The current date/time in VietNam is: Wed Mar 19 17:20:58 2025[0m
+Timer setting flag: 0
+[0;32mI (309981) example: The current date/time in VietNam is: Wed Mar 19 17:20:59 2025[0m
+Timer setting flag: 0
+[0;32mI (310981) example: The current date/time in VietNam is: Wed Mar 19 17:21:00 2025[0m
+Timer setting flag: 0
+[0;32mI (311981) example: The current date/time in VietNam is: Wed Mar 19 17:21:01 2025[0m
+Timer setting flag: 0
+[0;32mI (312981) example: The current date/time in VietNam is: Wed Mar 19 17:21:02 2025[0m
+Timer setting flag: 0
+[0;32mI (313981) example: The current date/time in VietNam is: Wed Mar 19 17:21:03 2025[0m
+Timer setting flag: 0
+[0;32mI (314981) example: The current date/time in VietNam is: Wed Mar 19 17:21:04 2025[0m
+Timer setting flag: 0
+[0;32mI (315981) example: The current date/time in VietNam is: Wed Mar 19 17:21:05 2025[0m
+Timer setting flag: 0
+[0;32mI (316981) example: The current date/time in VietNam is: Wed Mar 19 17:21:06 2025[0m
+Timer setting flag: 0
+[0;32mI (317981) example: The current date/time in VietNam is: Wed Mar 19 17:21:07 2025[0m
+Timer setting flag: 0
+[0;32mI (318981) example: The current date/time in VietNam is: Wed Mar 19 17:21:08 2025[0m
+Timer setting flag: 0
+[0;32mI (319981) example: The current date/time in VietNam is: Wed Mar 19 17:21:09 2025[0m
+Timer setting flag: 0
+[0;32mI (320981) example: The current date/time in VietNam is: Wed Mar 19 17:21:10 2025[0m
+Timer setting flag: 0
+[0;32mI (321981) example: The current date/time in VietNam is: Wed Mar 19 17:21:11 2025[0m
+Timer setting flag: 0
+[0;32mI (322981) example: The current date/time in VietNam is: Wed Mar 19 17:21:12 2025[0m
+Timer setting flag: 0
+[0;32mI (323981) example: The current date/time in VietNam is: Wed Mar 19 17:21:13 2025[0m
+Timer setting flag: 0
+[0;32mI (324981) example: The current date/time in VietNam is: Wed Mar 19 17:21:14 2025[0m
+Timer setting flag: 0
+[0;32mI (325981) example: The current date/time in VietNam is: Wed Mar 19 17:21:15 2025[0m
+Timer setting flag: 0
+[0;32mI (326981) example: The current date/time in VietNam is: Wed Mar 19 17:21:16 2025[0m
+Timer setting flag: 0
+[0;32mI (327981) example: The current date/time in VietNam is: Wed Mar 19 17:21:17 2025[0m
+Timer setting flag: 0
+[0;32mI (328981) example: The current date/time in VietNam is: Wed Mar 19 17:21:18 2025[0m
+Timer setting flag: 0
+[0;32mI (329981) example: The current date/time in VietNam is: Wed Mar 19 17:21:19 2025[0m
+Timer setting flag: 0
+[0;32mI (330981) example: The current date/time in VietNam is: Wed Mar 19 17:21:20 2025[0m
+Timer setting flag: 0
+[0;32mI (331981) example: The current date/time in VietNam is: Wed Mar 19 17:21:21 2025[0m
+Timer setting flag: 0
+[0;32mI (332981) example: The current date/time in VietNam is: Wed Mar 19 17:21:22 2025[0m
+Timer setting flag: 0
+[0;32mI (333981) example: The current date/time in VietNam is: Wed Mar 19 17:21:23 2025[0m
+Timer setting flag: 0
+[0;32mI (334981) example: The current date/time in VietNam is: Wed Mar 19 17:21:24 2025[0m
+Timer setting flag: 0
+[0;32mI (335981) example: The current date/time in VietNam is: Wed Mar 19 17:21:25 2025[0m
+Timer setting flag: 0
+[0;32mI (336981) example: The current date/time in VietNam is: Wed Mar 19 17:21:26 2025[0m
+Timer setting flag: 0
+[0;32mI (337981) example: The current date/time in VietNam is: Wed Mar 19 17:21:27 2025[0m
+Timer setting flag: 0
+[0;32mI (338981) example: The current date/time in VietNam is: Wed Mar 19 17:21:28 2025[0m
+Timer setting flag: 0
+[0;32mI (339981) example: The current date/time in VietNam is: Wed Mar 19 17:21:29 2025[0m
+Timer setting flag: 0
+[0;32mI (340981) example: The current date/time in VietNam is: Wed Mar 19 17:21:30 2025[0m
+Timer setting flag: 0
+[0;32mI (341981) example: The current date/time in VietNam is: Wed Mar 19 17:21:31 2025[0m
+Timer setting flag: 0
+[0;32mI (342981) example: The current date/time in VietNam is: Wed Mar 19 17:21:32 2025[0m
+Timer setting flag: 0
+[0;32mI (343981) example: The current date/time in VietNam is: Wed Mar 19 17:21:33 2025[0m
+Timer setting flag: 0
+[0;32mI (344981) example: The current date/time in VietNam is: Wed Mar 19 17:21:34 2025[0m
+Timer setting flag: 0
+[0;32mI (345981) example: The current date/time in VietNam is: Wed Mar 19 17:21:35 2025[0m
+Timer setting flag: 0
+[0;32mI (346981) example: The current date/time in VietNam is: Wed Mar 19 17:21:36 2025[0m
+Timer setting flag: 0
+[0;32mI (347981) example: The current date/time in VietNam is: Wed Mar 19 17:21:37 2025[0m
+Timer setting flag: 0
+[0;32mI (348981) example: The current date/time in VietNam is: Wed Mar 19 17:21:38 2025[0m
+Timer setting flag: 0
+[0;32mI (349981) example: The current date/time in VietNam is: Wed Mar 19 17:21:39 2025[0m
+Timer setting flag: 0
+[0;32mI (350981) example: The current date/time in VietNam is: Wed Mar 19 17:21:40 2025[0m
+Timer setting flag: 0
+[0;32mI (351981) example: The current date/time in VietNam is: Wed Mar 19 17:21:41 2025[0m
+Timer setting flag: 0
+[0;32mI (352981) example: The current date/time in VietNam is: Wed Mar 19 17:21:42 2025[0m
+Timer setting flag: 0
+[0;32mI (353981) example: The current date/time in VietNam is: Wed Mar 19 17:21:43 2025[0m
+Timer setting flag: 0
+[0;32mI (354981) example: The current date/time in VietNam is: Wed Mar 19 17:21:44 2025[0m
+Timer setting flag: 0
+[0;32mI (355981) example: The current date/time in VietNam is: Wed Mar 19 17:21:45 2025[0m
+Timer setting flag: 0
+[0;32mI (356981) example: The current date/time in VietNam is: Wed Mar 19 17:21:46 2025[0m
+Timer setting flag: 0
+[0;32mI (357981) example: The current date/time in VietNam is: Wed Mar 19 17:21:47 2025[0m
+Timer setting flag: 0
+[0;32mI (358981) example: The current date/time in VietNam is: Wed Mar 19 17:21:48 2025[0m
+Timer setting flag: 0
+[0;32mI (359981) example: The current date/time in VietNam is: Wed Mar 19 17:21:49 2025[0m
+Timer setting flag: 0
+[0;32mI (360981) example: The current date/time in VietNam is: Wed Mar 19 17:21:50 2025[0m
+Timer setting flag: 0
+[0;32mI (361981) example: The current date/time in VietNam is: Wed Mar 19 17:21:51 2025[0m
+Timer setting flag: 0
+[0;32mI (362981) example: The current date/time in VietNam is: Wed Mar 19 17:21:52 2025[0m
+Timer setting flag: 0
+[0;32mI (363981) example: The current date/time in VietNam is: Wed Mar 19 17:21:53 2025[0m
+Timer setting flag: 0
+[0;32mI (364981) example: The current date/time in VietNam is: Wed Mar 19 17:21:54 2025[0m
+Timer setting flag: 0
+[0;32mI (365981) example: The current date/time in VietNam is: Wed Mar 19 17:21:55 2025[0m
+Timer setting flag: 0
+[0;32mI (366981) example: The current date/time in VietNam is: Wed Mar 19 17:21:56 2025[0m
+Timer setting flag: 0
+[0;32mI (367981) example: The current date/time in VietNam is: Wed Mar 19 17:21:57 2025[0m
+Timer setting flag: 0
+[0;32mI (368981) example: The current date/time in VietNam is: Wed Mar 19 17:21:58 2025[0m
+Timer setting flag: 0
+[0;32mI (369981) example: The current date/time in VietNam is: Wed Mar 19 17:21:59 2025[0m
+Timer setting flag: 0
+[0;32mI (370981) example: The current date/time in VietNam is: Wed Mar 19 17:22:00 2025[0m
+Timer setting flag: 0
+[0;32mI (371981) example: The current date/time in VietNam is: Wed Mar 19 17:22:01 2025[0m
+Timer setting flag: 0
+[0;32mI (372981) example: The current date/time in VietNam is: Wed Mar 19 17:22:02 2025[0m
+Timer setting flag: 0
+[0;32mI (373981) example: The current date/time in VietNam is: Wed Mar 19 17:22:03 2025[0m
+Timer setting flag: 0
+[0;32mI (374981) example: The current date/time in VietNam is: Wed Mar 19 17:22:04 2025[0m
+Timer setting flag: 0
+[0;32mI (375981) example: The current date/time in VietNam is: Wed Mar 19 17:22:05 2025[0m
+Timer setting flag: 0
+[0;32mI (376981) example: The current date/time in VietNam is: Wed Mar 19 17:22:06 2025[0m
+Timer setting flag: 0
+[0;32mI (377981) example: The current date/time in VietNam is: Wed Mar 19 17:22:07 2025[0m
+Timer setting flag: 0
+[0;32mI (378981) example: The current date/time in VietNam is: Wed Mar 19 17:22:08 2025[0m
+Timer setting flag: 0
+[0;32mI (379981) example: The current date/time in VietNam is: Wed Mar 19 17:22:09 2025[0m
+Timer setting flag: 0
+[0;32mI (380981) example: The current date/time in VietNam is: Wed Mar 19 17:22:10 2025[0m
+Timer setting flag: 0
+[0;32mI (381981) example: The current date/time in VietNam is: Wed Mar 19 17:22:11 2025[0m
+Timer setting flag: 0
+[0;32mI (382981) example: The current date/time in VietNam is: Wed Mar 19 17:22:12 2025[0m
+Timer setting flag: 0
+[0;32mI (383981) example: The current date/time in VietNam is: Wed Mar 19 17:22:13 2025[0m
+Timer setting flag: 0
+[0;32mI (384981) example: The current date/time in VietNam is: Wed Mar 19 17:22:14 2025[0m
+Timer setting flag: 0
+[0;32mI (385981) example: The current date/time in VietNam is: Wed Mar 19 17:22:15 2025[0m
+Timer setting flag: 0
+[0;32mI (386981) example: The current date/time in VietNam is: Wed Mar 19 17:22:16 2025[0m
+Timer setting flag: 0
+[0;32mI (387981) example: The current date/time in VietNam is: Wed Mar 19 17:22:17 2025[0m
+Timer setting flag: 0
+[0;32mI (388981) example: The current date/time in VietNam is: Wed Mar 19 17:22:18 2025[0m
+Timer setting flag: 0
+[0;32mI (389981) example: The current date/time in VietNam is: Wed Mar 19 17:22:19 2025[0m
+Timer setting flag: 0
+[0;32mI (390981) example: The current date/time in VietNam is: Wed Mar 19 17:22:20 2025[0m
+Timer setting flag: 0
+[0;32mI (391981) example: The current date/time in VietNam is: Wed Mar 19 17:22:21 2025[0m
+Timer setting flag: 0
+[0;32mI (392981) example: The current date/time in VietNam is: Wed Mar 19 17:22:22 2025[0m
+Timer setting flag: 0
+[0;32mI (393981) example: The current date/time in VietNam is: Wed Mar 19 17:22:23 2025[0m
+Timer setting flag: 0
+[0;32mI (394981) example: The current date/time in VietNam is: Wed Mar 19 17:22:24 2025[0m
+Timer setting flag: 0
+[0;32mI (395981) example: The current date/time in VietNam is: Wed Mar 19 17:22:25 2025[0m
+Timer setting flag: 0
+[0;32mI (396981) example: The current date/time in VietNam is: Wed Mar 19 17:22:26 2025[0m
+Timer setting flag: 0
+[0;32mI (397981) example: The current date/time in VietNam is: Wed Mar 19 17:22:27 2025[0m
+Timer setting flag: 0
+[0;32mI (398981) example: The current date/time in VietNam is: Wed Mar 19 17:22:28 2025[0m
+Timer setting flag: 0
+[0;32mI (399981) example: The current date/time in VietNam is: Wed Mar 19 17:22:29 2025[0m
+Timer setting flag: 0
+[0;32mI (400981) example: The current date/time in VietNam is: Wed Mar 19 17:22:30 2025[0m
+Timer setting flag: 0
+[0;32mI (401981) example: The current date/time in VietNam is: Wed Mar 19 17:22:31 2025[0m
+Timer setting flag: 0
+[0;32mI (402981) example: The current date/time in VietNam is: Wed Mar 19 17:22:32 2025[0m
+Timer setting flag: 0
+[0;32mI (403981) example: The current date/time in VietNam is: Wed Mar 19 17:22:33 2025[0m
+Timer setting flag: 0
+[0;32mI (404981) example: The current date/time in VietNam is: Wed Mar 19 17:22:34 2025[0m
+Timer setting flag: 0
+[0;32mI (405981) example: The current date/time in VietNam is: Wed Mar 19 17:22:35 2025[0m
+Timer setting flag: 0
+[0;32mI (406981) example: The current date/time in VietNam is: Wed Mar 19 17:22:36 2025[0m
+Timer setting flag: 0
+[0;32mI (407981) example: The current date/time in VietNam is: Wed Mar 19 17:22:37 2025[0m
+Timer setting flag: 0
+[0;32mI (408981) example: The current date/time in VietNam is: Wed Mar 19 17:22:38 2025[0m
+Timer setting flag: 0
+[0;32mI (409981) example: The current date/time in VietNam is: Wed Mar 19 17:22:39 2025[0m
+Timer setting flag: 0
+[0;32mI (410981) example: The current date/time in VietNam is: Wed Mar 19 17:22:40 2025[0m
+Timer setting flag: 0
+[0;32mI (411981) example: The current date/time in VietNam is: Wed Mar 19 17:22:41 2025[0m
+Timer setting flag: 0
+[0;32mI (412981) example: The current date/time in VietNam is: Wed Mar 19 17:22:42 2025[0m
+Timer setting flag: 0
+[0;32mI (413981) example: The current date/time in VietNam is: Wed Mar 19 17:22:43 2025[0m
+Timer setting flag: 0
+[0;32mI (414981) example: The current date/time in VietNam is: Wed Mar 19 17:22:44 2025[0m
+Timer setting flag: 0
+[0;32mI (415981) example: The current date/time in VietNam is: Wed Mar 19 17:22:45 2025[0m
+Timer setting flag: 0
+[0;32mI (416981) example: The current date/time in VietNam is: Wed Mar 19 17:22:46 2025[0m
+Timer setting flag: 0
+[0;32mI (417981) example: The current date/time in VietNam is: Wed Mar 19 17:22:47 2025[0m
+Timer setting flag: 0
+[0;32mI (418981) example: The current date/time in VietNam is: Wed Mar 19 17:22:48 2025[0m
+Timer setting flag: 0
+[0;32mI (419981) example: The current date/time in VietNam is: Wed Mar 19 17:22:49 2025[0m
+Timer setting flag: 0
+[0;32mI (420981) example: The current date/time in VietNam is: Wed Mar 19 17:22:50 2025[0m
+Timer setting flag: 0
+[0;32mI (421981) example: The current date/time in VietNam is: Wed Mar 19 17:22:51 2025[0m
+Timer setting flag: 0
+[0;32mI (422981) example: The current date/time in VietNam is: Wed Mar 19 17:22:52 2025[0m
+Timer setting flag: 0
+[0;32mI (423981) example: The current date/time in VietNam is: Wed Mar 19 17:22:53 2025[0m
+Timer setting flag: 0
+[0;32mI (424981) example: The current date/time in VietNam is: Wed Mar 19 17:22:54 2025[0m
+Timer setting flag: 0
+[0;32mI (425981) example: The current date/time in VietNam is: Wed Mar 19 17:22:55 2025[0m
+Timer setting flag: 0
+[0;32mI (426761) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (426761) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4000c677  PS      : 0x00060230  A0      : 0x800d92c2  A1      : 0x3ffcb350  
+A2      : 0x00000000  A3      : 0x3f403e08  A4      : 0x00000005  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x3ffbe3dc  A8      : 0x8017e370  A9      : 0x3ffcb2f0  
+A10     : 0x00000001  A11     : 0x3ffcb330  A12     : 0xffffffff  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbd668  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400012e5  LEND    : 0x40001309  LCOUNT  : 0x800d9f9a  
+
+
+Backtrace: 0x4000c674:0x3ffcb350 0x400d92bf:0x3ffcb370 0x400d9fa9:0x3ffcb390 0x4017e3ed:0x3ffcb3d0 0x4017de8b:0x3ffcb400 0x400da4d2:0x3ffcb440 0x400db024:0x3ffcb460 0x400db18f:0x3ffcb490 0x400db630:0x3ffcb4c0 0x4008a20d:0x3ffcb4f0
+
+
+
+
+ELF file SHA256: d4ecf6e1c
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (102) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22828h (141352) map[0m
+[0;32mI (170) esp_image: segment 1: paddr=00042850 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=00042874 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00046894 vaddr=40080000 size=09784h ( 38788) load[0m
+[0;32mI (197) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b14a8h (726184) map[0m
+[0;32mI (454) esp_image: segment 5: paddr=001014d0 vaddr=40089784 size=0e298h ( 58008) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (489) boot: Checking flash encryption...[0m
+[0;32mI (489) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (493) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (519) cpu_start: Pro cpu start user code[0m
+[0;32mI (519) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (519) app_init: Application information:[0m
+[0;32mI (519) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (524) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (529) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (534) app_init: ELF file SHA256:  d4ecf6e1c...[0m
+[0;32mI (539) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (544) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (548) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (552) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (556) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (562) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (567) heap_init: At 3FFB8BD0 len 00027430 (157 KiB): DRAM[0m
+[0;32mI (572) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (578) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (592) spi_flash: flash io: dio[0m
+[0;33mW (595) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (602) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (611) main_task: Started on CPU0[0m
+[0;32mI (621) main_task: Calling app_main()[0m
+[0;32mI (621) Sonoff: [APP] Startup..[0m
+[0;32mI (621) Sonoff: [APP] Free memory: 275668 bytes[0m
+[0;32mI (621) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (651) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (671) wifi:wifi driver task: 3ffc0e80, prio:23, stack:6656, core=0[0m
+[0;32mI (691) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (691) wifi:wifi certification version: v7.0[0m
+[0;32mI (691) wifi:config NVS flash: enabled[0m
+[0;32mI (691) wifi:config nano formatting: disabled[0m
+[0;32mI (691) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (701) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (701) wifi:Init management short buffer num: 32[0m
+[0;32mI (701) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (711) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (711) wifi:Init static rx buffer num: 10[0m
+[0;32mI (721) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: accept mbox: 6[0m
+[0;32mI (731) wifi_init: tcpip mbox: 32[0m
+[0;32mI (731) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (741) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (751) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (831) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (861) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (861) wifi:enable tsf[0m
+[0;32mI (881) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (881) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (911) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (921) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1061) wifi:connected with Le Cung, aid = 3, channel 9, BW20, bssid = 24:43:e2:d8:83:50[0m
+[0;32mI (1061) wifi:security: WPA2-PSK, phy: bgn, rssi: -84[0m
+[0;32mI (1061) wifi:pm start, type: 1[0m
+
+[0;32mI (1061) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1071) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1201) wifi:<ba-add>idx:0 (ifx:0, 24:43:e2:d8:83:50), tid:7, ssn:3, winSize:64[0m
+[0;32mI (1481) wifi:<ba-add>idx:1 (ifx:0, 24:43:e2:d8:83:50), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2251) esp_netif_handlers: sta ip: 192.168.1.13, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2251) TEST: wifi connect[0m
+[0;32mI (2251) example: Initializing and starting SNTP[0m
+[0;32mI (4251) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (5321) example: Notification of a time synchronization event[0m
+[0;32mI (5321) example: The current date/time in VietNam is: Wed Mar 19 17:22:55 2025[0m
+Timer setting flag: 0
+[0;32mI (5331) mqtts_example: [APP] Free memory: 221460 bytes[0m
+[0;32mI (5331) mqtts_example: Other event id:7[0m
+[0;32mI (5341) main_task: Returned from app_main()[0m
+[0;32mI (6331) example: The current date/time in VietNam is: Wed Mar 19 17:22:56 2025[0m
+Timer setting flag: 0
+[0;32mI (6341) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (6341) mqtts_example: sent subscribe successful, msg_id=23471[0m
+[0;33mW (6351) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (7331) example: The current date/time in VietNam is: Wed Mar 19 17:22:57 2025[0m
+Timer setting flag: 0
+[0;32mI (7841) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=11085[0m
+[0;32mI (7841) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (7841) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8151) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=39916[0m
+[0;32mI (8151) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8151) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8151) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=20455[0m
+[0;32mI (8161) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8161) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8161) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=15685[0m
+[0;32mI (8171) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (8171) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (8331) example: The current date/time in VietNam is: Wed Mar 19 17:22:58 2025[0m
+Timer setting flag: 0
+[0;32mI (8681) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=23471[0m
+[0;32mI (8691) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (8691) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9021) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9021) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9021) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9021) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9021) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (9021) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (9331) example: The current date/time in VietNam is: Wed Mar 19 17:22:59 2025[0m
+Timer setting flag: 0
+[0;32mI (10331) example: The current date/time in VietNam is: Wed Mar 19 17:23:00 2025[0m
+Timer setting flag: 0
+[0;32mI (11331) example: The current date/time in VietNam is: Wed Mar 19 17:23:01 2025[0m
+Timer setting flag: 0
+[0;32mI (12331) example: The current date/time in VietNam is: Wed Mar 19 17:23:02 2025[0m
+Timer setting flag: 0
+[0;32mI (13331) example: The current date/time in VietNam is: Wed Mar 19 17:23:03 2025[0m
+Timer setting flag: 0
+[0;32mI (14331) example: The current date/time in VietNam is: Wed Mar 19 17:23:04 2025[0m
+Timer setting flag: 0
+[0;32mI (15331) example: The current date/time in VietNam is: Wed Mar 19 17:23:05 2025[0m
+Timer setting flag: 0
+[0;32mI (16331) example: The current date/time in VietNam is: Wed Mar 19 17:23:06 2025[0m
+Timer setting flag: 0
+[0;32mI (17331) example: The current date/time in VietNam is: Wed Mar 19 17:23:07 2025[0m
+Timer setting flag: 0
+[0;32mI (18331) example: The current date/time in VietNam is: Wed Mar 19 17:23:08 2025[0m
+Timer setting flag: 0
+[0;32mI (19331) example: The current date/time in VietNam is: Wed Mar 19 17:23:09 2025[0m
+Timer setting flag: 0
+[0;32mI (20331) example: The current date/time in VietNam is: Wed Mar 19 17:23:10 2025[0m
+Timer setting flag: 0
+[0;32mI (21331) example: The current date/time in VietNam is: Wed Mar 19 17:23:11 2025[0m
+Timer setting flag: 0
+[0;32mI (22331) example: The current date/time in VietNam is: Wed Mar 19 17:23:12 2025[0m
+Timer setting flag: 0
+[0;32mI (23331) example: The current date/time in VietNam is: Wed Mar 19 17:23:13 2025[0m
+Timer setting flag: 0
+[0;32mI (24331) example: The current date/time in VietNam is: Wed Mar 19 17:23:14 2025[0m
+Timer setting flag: 0
+[0;32mI (25331) example: The current date/time in VietNam is: Wed Mar 19 17:23:15 2025[0m
+Timer setting flag: 0
+[0;32mI (26331) example: The current date/time in VietNam is: Wed Mar 19 17:23:16 2025[0m
+Timer setting flag: 0
+[0;32mI (27331) example: The current date/time in VietNam is: Wed Mar 19 17:23:17 2025[0m
+Timer setting flag: 0
+[0;32mI (28331) example: The current date/time in VietNam is: Wed Mar 19 17:23:18 2025[0m
+Timer setting flag: 0
+[0;32mI (29331) example: The current date/time in VietNam is: Wed Mar 19 17:23:19 2025[0m
+Timer setting flag: 0
+[0;32mI (30331) example: The current date/time in VietNam is: Wed Mar 19 17:23:20 2025[0m
+Timer setting flag: 0
+[0;32mI (31331) example: The current date/time in VietNam is: Wed Mar 19 17:23:21 2025[0m
+Timer setting flag: 0
+[0;32mI (31931) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (31941) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4000c677  PS      : 0x00060d30  A0      : 0x800d92c2  A1      : 0x3ffcb340  
+A2      : 0x00000000  A3      : 0x3f403e08  A4      : 0x00000005  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x3ffbe3dc  A8      : 0x8017e370  A9      : 0x3ffcb2e0  
+A10     : 0x00000001  A11     : 0x3ffcb320  A12     : 0xffffffff  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0x3ffbd668  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400012e5  LEND    : 0x40001309  LCOUNT  : 0x800d9f9a  
+
+
+Backtrace: 0x4000c674:0x3ffcb340 0x400d92bf:0x3ffcb360 0x400d9fa9:0x3ffcb380 0x4017e3ed:0x3ffcb3c0 0x4017de8b:0x3ffcb3f0 0x400da4d2:0x3ffcb430 0x400db024:0x3ffcb450 0x400db18f:0x3ffcb480 0x400db630:0x3ffcb4b0 0x4008a20d:0x3ffcb4e0
+
+
+
+
+ELF file SHA256: d4ecf6e1c
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (76) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (89) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (102) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+I (113) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22828h (141352) map
+[0;32mI (170) esp_image: segment 1: paddr=00042850 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=00042874 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00046894 vaddr=40080000 size=09784h ( 38788) load[0m
+[0;32mI (197) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b14a8h (726184) map[0m
+[0;32mI (454) esp_image: segment 5: paddr=001014d0 vaddr=40089784 size=0e298h ( 58008) load[0m
+[0;32mI (489) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (489) boot: Checking flash encryption...[0m
+[0;32mI (489) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (493) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (519) cpu_start: Pro cpu start user code[0m
+[0;32mI (519) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (519) app_init: Application information:[0m
+[0;32mI (519) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (524) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (529) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (534) app_init: ELF file SHA256:  d4ecf6e1c...[0m
+[0;32mI (538) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (544) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (548) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (552) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (556) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (562) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (567) heap_init: At 3FFB8BD0 len 00027430 (157 KiB): DRAM[0m
+[0;32mI (572) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (578) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (583) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (590) spi_flash: detected chip: generic[0m
+[0;32mI (592) spi_flash: flash io: dio[0m
+[0;33mW (595) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (602) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (611) main_task: Started on CPU0[0m
+[0;32mI (621) main_task: Calling app_main()[0m
+[0;32mI (621) Sonoff: [APP] Startup..[0m
+[0;32mI (621) Sonoff: [APP] Free memory: 275668 bytes[0m
+[0;32mI (621) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (651) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (671) wifi:wifi driver task: 3ffc0e80, prio:23, stack:6656, core=0[0m
+[0;32mI (691) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (691) wifi:wifi certification version: v7.0[0m
+[0;32mI (691) wifi:config NVS flash: enabled[0m
+[0;32mI (691) wifi:config nano formatting: disabled[0m
+[0;32mI (691) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (701) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (701) wifi:Init management short buffer num: 32[0m
+[0;32mI (701) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (711) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (711) wifi:Init static rx buffer num: 10[0m
+[0;32mI (721) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (721) wifi_init: rx ba win: 6[0m
+[0;32mI (721) wifi_init: accept mbox: 6[0m
+[0;32mI (731) wifi_init: tcpip mbox: 32[0m
+[0;32mI (731) wifi_init: udp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp mbox: 6[0m
+[0;32mI (731) wifi_init: tcp tx win: 5760[0m
+[0;32mI (741) wifi_init: tcp rx win: 5760[0m
+[0;32mI (741) wifi_init: tcp mss: 1440[0m
+[0;32mI (741) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (751) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (751) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (831) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (831) wifi:enable tsf[0m
+[0;32mI (901) wifi:new:<9,0>, old:<1,0>, ap:<255,255>, sta:<9,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (901) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (941) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (991) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1101) wifi:connected with Le Cung, aid = 3, channel 9, BW20, bssid = 24:43:e2:d8:83:50[0m
+[0;32mI (1101) wifi:security: WPA2-PSK, phy: bgn, rssi: -91[0m
+[0;32mI (1111) wifi:pm start, type: 1[0m
+
+[0;32mI (1111) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1191) wifi:<ba-add>idx:0 (ifx:0, 24:43:e2:d8:83:50), tid:7, ssn:3, winSize:64[0m
+[0;32mI (1201) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1531) wifi:<ba-add>idx:1 (ifx:0, 24:43:e2:d8:83:50), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2311) esp_netif_handlers: sta ip: 192.168.1.13, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2311) TEST: wifi connect[0m
+[0;32mI (2311) example: Initializing and starting SNTP[0m
+[0;32mI (4311) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (6311) example: Waiting for system time to be set... (2/15)[0m
+[0;32mI (8311) example: Waiting for system time to be set... (3/15)[0m
+[0;32mI (9061) example: Notification of a time synchronization event[0m
+[0;32mI (9071) example: The current date/time in VietNam is: Wed Mar 19 17:23:31 2025[0m
+Timer setting flag: 0
+[0;32mI (9071) mqtts_example: [APP] Free memory: 221332 bytes[0m
+[0;32mI (9081) mqtts_example: Other event id:7[0m
+[0;32mI (9081) main_task: Returned from app_main()[0m
+[0;32mI (10071) example: The current date/time in VietNam is: Wed Mar 19 17:23:32 2025[0m
+Timer setting flag: 0
+[0;32mI (11071) example: The current date/time in VietNam is: Wed Mar 19 17:23:33 2025[0m
+Timer setting flag: 0
+[0;32mI (11351) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (11361) mqtts_example: sent subscribe successful, msg_id=22168[0m
+[0;33mW (11361) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (11761) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=24353[0m
+[0;32mI (11771) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (11771) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (12071) example: The current date/time in VietNam is: Wed Mar 19 17:23:34 2025[0m
+Timer setting flag: 0
+[0;32mI (12471) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=5061[0m
+[0;32mI (12481) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (12481) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (12481) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=9145[0m
+[0;32mI (12491) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (12491) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (12501) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=36623[0m
+[0;32mI (12501) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (12501) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (12511) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=22168[0m
+[0;32mI (13031) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (13031) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (13071) example: The current date/time in VietNam is: Wed Mar 19 17:23:35 2025[0m
+Timer setting flag: 0
+[0;32mI (13431) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (13431) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (13441) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (13441) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (13441) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (13441) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (14071) example: The current date/time in VietNam is: Wed Mar 19 17:23:36 2025[0m
+Timer setting flag: 0
+[0;32mI (15071) example: The current date/time in VietNam is: Wed Mar 19 17:23:37 2025[0m
+Timer setting flag: 0
+[0;32mI (16071) example: The current date/time in VietNam is: Wed Mar 19 17:23:38 2025[0m
+Timer setting flag: 0
+[0;32mI (17071) example: The current date/time in VietNam is: Wed Mar 19 17:23:39 2025[0m
+Timer setting flag: 0
+[0;32mI (18071) example: The current date/time in VietNam is: Wed Mar 19 17:23:40 2025[0m
+Timer setting flag: 0
+[0;32mI (19071) example: The current date/time in VietNam is: Wed Mar 19 17:23:41 2025[0m
+Timer setting flag: 0
+[0;32mI (20071) example: The current date/time in VietNam is: Wed Mar 19 17:23:42 2025[0m
+Timer setting flag: 0
+[0;32mI (21071) example: The current date/time in VietNam is: Wed Mar 19 17:23:43 2025[0m
+Timer setting flag: 0
+[0;32mI (22071) example: The current date/time in VietNam is: Wed Mar 19 17:23:44 2025[0m
+Timer setting flag: 0
+[0;32mI (23071) example: The current date/time in VietNam is: Wed Mar 19 17:23:45 2025[0m
+Timer setting flag: 0
+[0;32mI (24071) example: The current date/time in VietNam is: Wed Mar 19 17:23:46 2025[0m
+Timer setting flag: 0
+[0;32mI (25071) example: The current date/time in VietNam is: Wed Mar 19 17:23:47 2025[0m
+Timer setting flag: 0
+[0;32mI (26071) example: The current date/time in VietNam is: Wed Mar 19 17:23:48 2025[0m
+Timer setting flag: 0
+[0;32mI (27071) example: The current date/time in VietNam is: Wed Mar 19 17:23:49 2025[0m
+Timer setting flag: 0
+[0;32mI (28071) example: The current date/time in VietNam is: Wed Mar 19 17:23:50 2025[0m
+Timer setting flag: 0
+[0;32mI (29071) example: The current date/time in VietNam is: Wed Mar 19 17:23:51 2025[0m
+Timer setting flag: 0
+[0;32mI (30071) example: The current date/time in VietNam is: Wed Mar 19 17:23:52 2025[0m
+Timer setting flag: 0
+[0;32mI (31071) example: The current date/time in VietNam is: Wed Mar 19 17:23:53 2025[0m
+Timer setting flag: 0
+[0;32mI (32071) example: The current date/time in VietNam is: Wed Mar 19 17:23:54 2025[0m
+Timer setting flag: 0
+[0;32mI (33071) example: The current date/time in VietNam is: Wed Mar 19 17:23:55 2025[0m
+Timer setting flag: 0
+[0;32mI (34071) example: The current date/time in VietNam is: Wed Mar 19 17:23:56 2025[0m
+Timer setting flag: 0
+[0;32mI (35071) example: The current date/time in VietNam is: Wed Mar 19 17:23:57 2025[0m
+Timer setting flag: 0
+[0;32mI (36071) example: The current date/time in VietNam is: Wed Mar 19 17:23:58 2025[0m
+Timer setting flag: 0
+[0;32mI (37071) example: The current date/time in VietNam is: Wed Mar 19 17:23:59 2025[0m
+Timer setting flag: 0
+[0;32mI (38071) example: The current date/time in VietNam is: Wed Mar 19 17:24:00 2025[0m
+Timer setting flag: 0
+[0;32mI (39071) example: The current date/time in VietNam is: Wed Mar 19 17:24:01 2025[0m
+Timer setting flag: 0
+[0;32mI (40071) example: The current date/time in VietNam is: Wed Mar 19 17:24:02 2025[0m
+Timer setting flag: 0
+[0;32mI (41071) example: The current date/time in VietNam is: Wed Mar 19 17:24:03 2025[0m
+Timer setting flag: 0
+[0;32mI (42071) example: The current date/time in VietNam is: Wed Mar 19 17:24:04 2025[0m
+Timer setting flag: 0
+[0;32mI (43071) example: The current date/time in VietNam is: Wed Mar 19 17:24:05 2025[0m
+Timer setting flag: 0
+[0;32mI (44071) example: The current date/time in VietNam is: Wed Mar 19 17:24:06 2025[0m
+Timer setting flag: 0
+[0;32mI (45071) example: The current date/time in VietNam is: Wed Mar 19 17:24:07 2025[0m
+Timer setting flag: 0
+[0;32mI (46071) example: The current date/time in VietNam is: Wed Mar 19 17:24:08 2025[0m
+Timer setting flag: 0
+[0;32mI (47071) example: The current date/time in VietNam is: Wed Mar 19 17:24:09 2025[0m
+Timer setting flag: 0
+[0;32mI (48071) example: The current date/time in VietNam is: Wed Mar 19 17:24:10 2025[0m
+Timer setting flag: 0
+[0;32mI (49071) example: The current date/time in VietNam is: Wed Mar 19 17:24:11 2025[0m
+Timer setting flag: 0
+[0;32mI (50071) example: The current date/time in VietNam is: Wed Mar 19 17:24:12 2025[0m
+Timer setting flag: 0
+[0;32mI (51071) example: The current date/time in VietNam is: Wed Mar 19 17:24:13 2025[0m
+Timer setting flag: 0
+[0;32mI (52071) example: The current date/time in VietNam is: Wed Mar 19 17:24:14 2025[0m
+Timer setting flag: 0
+[0;32mI (53071) example: The current date/time in VietNam is: Wed Mar 19 17:24:15 2025[0m
+Timer setting flag: 0
+[0;32mI (54071) example: The current date/time in VietNam is: Wed Mar 19 17:24:16 2025[0m
+Timer setting flag: 0
+[0;32mI (55071) example: The current date/time in VietNam is: Wed Mar 19 17:24:17 2025[0m
+Timer setting flag: 0
+[0;32mI (56071) example: The current date/time in VietNam is: Wed Mar 19 17:24:18 2025[0m
+Timer setting flag: 0
+[0;32mI (57071) example: The current date/time in VietNam is: Wed Mar 19 17:24:19 2025[0m
+Timer setting flag: 0
+[0;32mI (58071) example: The current date/time in VietNam is: Wed Mar 19 17:24:20 2025[0m
+Timer setting flag: 0
+[0;32mI (59071) example: The current date/time in VietNam is: Wed Mar 19 17:24:21 2025[0m
+Timer setting flag: 0
+[0;32mI (60071) example: The current date/time in VietNam is: Wed Mar 19 17:24:22 2025[0m
+Timer setting flag: 0
+[0;32mI (61071) example: The current date/time in VietNam is: Wed Mar 19 17:24:23 2025[0m
+Timer setting flag: 0
+[0;32mI (62071) example: The current date/time in VietNam is: Wed Mar 19 17:24:24 2025[0m
+Timer setting flag: 0
+[0;32mI (63071) example: The current date/time in VietNam is: Wed Mar 19 17:24:25 2025[0m
+Timer setting flag: 0
+[0;32mI (64071) example: The current date/time in VietNam is: Wed Mar 19 17:24:27 2025[0m
+Timer setting flag: 0
+[0;32mI (65071) example: The current date/time in VietNam is: Wed Mar 19 17:24:28 2025[0m
+Timer setting flag: 0
+[0;32mI (66071) example: The current date/time in VietNam is: Wed Mar 19 17:24:29 2025[0m
+Timer setting flag: 0
+[0;32mI (67071) example: The current date/time in VietNam is: Wed Mar 19 17:24:30 2025[0m
+Timer setting flag: 0
+[0;32mI (68071) example: The current date/time in VietNam is: Wed Mar 19 17:24:31 2025[0m
+Timer setting flag: 0

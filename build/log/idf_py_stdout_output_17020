@@ -1,0 +1,350 @@
+OT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 taiets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Mar 17 2025 23:37:59[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=227f8h (141304) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=00042820 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00042844 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00046864 vaddr=40080000 size=097b4h ( 38836) load[0m
+[0;32mI (201) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b1364h (725860) map[0m
+[0;32mI (458) esp_image: segment 5: paddr=0010138c vaddr=400897b4 size=0e268h ( 57960) load[0m
+[0;32mI (493) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (514) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (514) boot: Checking flash encryption...[0m
+[0;32mI (515) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (518) boot: Disabling RNG early entropy source...[0m
+[0;32mI (535) cpu_start: Multicore app[0m
+[0;32mI (543) cpu_start: Pro cpu start user code[0m
+[0;32mI (543) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (543) app_init: Application information:[0m
+[0;32mI (544) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (549) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (554) app_init: Compile time:     Mar 17 2025 23:37:13[0m
+[0;32mI (559) app_init: ELF file SHA256:  12c3aa4a7...[0m
+[0;32mI (563) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (569) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (572) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (576) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (581) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (587) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (592) heap_init: At 3FFB8BC0 len 00027440 (157 KiB): DRAM[0m
+[0;32mI (597) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (602) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (608) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (615) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;33mW (620) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (627) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (636) main_task: Started on CPU0[0m
+[0;32mI (646) main_task: Calling app_main()[0m
+[0;32mI (646) Sonoff: [APP] Startup..[0m
+[0;32mI (646) Sonoff: [APP] Free memory: 275684 bytes[0m
+[0;32mI (646) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;33mW (646) nvs: Failed to read NVS security cfg: [0x1116] (ESP_ERR_NVS_KEYS_NOT_INITIALIZED)[0m
+[0;32mI (656) nvs: Generating NVS encr-keys...[0m
+[0;32mI (686) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (706) wifi:wifi driver task: 3ffc0cb0, prio:23, stack:6656, core=0[0m
+[0;32mI (706) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (706) wifi:wifi certification version: v7.0[0m
+[0;32mI (706) wifi:config NVS flash: enabled[0m
+[0;32mI (706) wifi:config nano formatting: disabled[0m
+[0;32mI (716) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (716) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (726) wifi:Init management short buffer num: 32[0m
+[0;32mI (726) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (736) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (736) wifi:Init static rx buffer num: 10[0m
+[0;32mI (736) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (746) wifi_init: rx ba win: 6[0m
+[0;32mI (746) wifi_init: accept mbox: 6[0m
+[0;32mI (746) wifi_init: tcpip mbox: 32[0m
+[0;32mI (756) wifi_init: udp mbox: 6[0m
+[0;32mI (756) wifi_init: tcp mbox: 6[0m
+[0;32mI (756) wifi_init: tcp tx win: 5760[0m
+[0;32mI (766) wifi_init: tcp rx win: 5760[0m
+[0;32mI (766) wifi_init: tcp mss: 1440[0m
+[0;32mI (766) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (776) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (776) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (776) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (856) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (866) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (876) wifi:enable tsf[0m
+[0;32mI (926) smartconfig: SC version: V3.0.2[0m
+[0;32mI (5766) wifi:ic_enable_sniffer[0m
+[0;32mI (5766) smartconfig: Start to find channel...[0m
+[0;32mI (5766) TEST: Scan done[0m
+[0;32mI (47606) smartconfig: TYPE: ESPTOUCH[0m
+[0;32mI (47606) smartconfig: T|PHONE MAC:92:3d:78:46:a5:f5[0m
+[0;32mI (47606) smartconfig: T|AP MAC:cc:71:90:21:2f:d0[0m
+[0;32mI (47606) smartconfig: Found channel on 7-0. Start to get ssid and password...[0m
+[0;32mI (47616) TEST: Found channel[0m
+[0;32mI (56536) smartconfig: T|pswd: tdlhk12345[0m
+[0;32mI (56536) smartconfig: T|ssid: Dinh Loi 2.4G[0m
+[0;32mI (56536) smartconfig: T|bssid: cc:71:90:21:2f:d0[0m
+[0;32mI (56536) wifi:ic_disable_sniffer[0m
+[0;32mI (56536) TEST: Got SSID and password[0m
+[0;32mI (56546) TEST: SSID:Dinh Loi 2.4G[0m
+[0;32mI (56546) TEST: PASSWORD:tdlhk12345[0m
+[0;33mW (56556) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (57596) wifi:new:<7,0>, old:<7,0>, ap:<255,255>, sta:<7,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (57596) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (57616) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (57626) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (57736) wifi:connected with Dinh Loi 2.4G, aid = 5, channel 7, BW20, bssid = cc:71:90:21:2f:d0[0m
+[0;32mI (57736) wifi:security: WPA2-PSK, phy: bgn, rssi: -34[0m
+[0;32mI (57756) wifi:pm start, type: 1[0m
+
+[0;32mI (57756) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (57816) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (58926) esp_netif_handlers: sta ip: 192.168.1.2, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (59726) wifi:<ba-add>idx:0 (ifx:0, cc:71:90:21:2f:d0), tid:0, ssn:5, winSize:64[0m
+[0;32mI (59726) wifi:<ba-add>idx:1 (ifx:0, cc:71:90:21:2f:d0), tid:6, ssn:1, winSize:64[0m
+[0;32mI (61996) TEST: wifi connect[0m
+[0;32mI (61996) example: Initializing and starting SNTP[0m
+[0;32mI (62496) example: Notification of a time synchronization event[0m
+[0;32mI (62496) example: The current date/time in VietNam is: Tue Mar 18 20:33:57 2025[0m
+Start time: 0 End time:0 Current time:74037
+[0;32mI (62496) mqtts_example: [APP] Free memory: 221552 bytes[0m
+[0;32mI (62506) mqtts_example: Other event id:7[0m
+[0;32mI (62516) main_task: Returned from app_main()[0m
+[0;32mI (63246) mqtts_example: MQTT_EVENT_CONNECTED[0m
+[0;32mI (63256) mqtts_example: sent subscribe successful, msg_id=62458[0m
+[0;33mW (63256) Sonoff: MQTT_DEV_EVENT_CONNECTED[0m
+[0;32mI (63496) example: The current date/time in VietNam is: Tue Mar 18 20:33:58 2025[0m
+Start time: 0 End time:0 Current time:74038
+[0;32mI (63566) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=22651[0m
+[0;32mI (63566) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (63566) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (63966) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=55634[0m
+[0;32mI (63976) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (63976) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (63976) mqtts_example: MQTT_EVENT_SUBSCRIBED, msg_id=44738[0m
+[0;32mI (63976) mqtts_example: sent publish successful, msg_id=0[0m
+[0;33mW (63986) Sonoff: MQTT_DEV_EVENT_SUBSCRIBED[0m
+[0;32mI (63986) mqtts_example: MQTT_EVENT_PUBLISHED, msg_id=62458[0m
+[0;32mI (64276) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (64276) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (64496) example: The current date/time in VietNam is: Tue Mar 18 20:33:59 2025[0m
+Start time: 0 End time:0 Current time:74039
+[0;32mI (64586) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (64586) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (64586) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (64586) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (65496) example: The current date/time in VietNam is: Tue Mar 18 20:34:00 2025[0m
+Start time: 0 End time:0 Current time:74040
+[0;32mI (66496) example: The current date/time in VietNam is: Tue Mar 18 20:34:01 2025[0m
+Start time: 0 End time:0 Current time:74041
+[0;32mI (67496) example: The current date/time in VietNam is: Tue Mar 18 20:34:02 2025[0m
+Start time: 0 End time:0 Current time:74042
+[0;32mI (68496) example: The current date/time in VietNam is: Tue Mar 18 20:34:03 2025[0m
+Start time: 0 End time:0 Current time:74043
+[0;32mI (69496) example: The current date/time in VietNam is: Tue Mar 18 20:34:04 2025[0m
+Start time: 0 End time:0 Current time:74044
+[0;32mI (70496) example: The current date/time in VietNam is: Tue Mar 18 20:34:05 2025[0m
+Start time: 0 End time:0 Current time:74045
+[0;32mI (71496) example: The current date/time in VietNam is: Tue Mar 18 20:34:06 2025[0m
+Start time: 0 End time:0 Current time:74046
+[0;32mI (72496) example: The current date/time in VietNam is: Tue Mar 18 20:34:07 2025[0m
+Start time: 0 End time:0 Current time:74047
+[0;32mI (73496) example: The current date/time in VietNam is: Tue Mar 18 20:34:08 2025[0m
+Start time: 0 End time:0 Current time:74048
+[0;32mI (74006) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (74006) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (74306) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (74306) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (74496) example: The current date/time in VietNam is: Tue Mar 18 20:34:09 2025[0m
+Start time: 0 End time:0 Current time:74049
+[0;32mI (75336) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (75336) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (75496) example: The current date/time in VietNam is: Tue Mar 18 20:34:10 2025[0m
+Start time: 0 End time:0 Current time:74050
+[0;32mI (76496) example: The current date/time in VietNam is: Tue Mar 18 20:34:11 2025[0m
+Start time: 0 End time:0 Current time:74051
+[0;32mI (77496) example: The current date/time in VietNam is: Tue Mar 18 20:34:12 2025[0m
+Start time: 0 End time:0 Current time:74052
+[0;32mI (78496) example: The current date/time in VietNam is: Tue Mar 18 20:34:13 2025[0m
+Start time: 0 End time:0 Current time:74053
+[0;32mI (79496) example: The current date/time in VietNam is: Tue Mar 18 20:34:14 2025[0m
+Start time: 0 End time:0 Current time:74054
+[0;32mI (80496) example: The current date/time in VietNam is: Tue Mar 18 20:34:15 2025[0m
+Start time: 0 End time:0 Current time:74055
+[0;32mI (81496) example: The current date/time in VietNam is: Tue Mar 18 20:34:16 2025[0m
+Start time: 0 End time:0 Current time:74056
+[0;32mI (82496) example: The current date/time in VietNam is: Tue Mar 18 20:34:17 2025[0m
+Start time: 0 End time:0 Current time:74057
+[0;32mI (83496) example: The current date/time in VietNam is: Tue Mar 18 20:34:18 2025[0m
+Start time: 0 End time:0 Current time:74058
+[0;32mI (83736) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (83736) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 20 26 0
+[0;32mI (84496) example: The current date/time in VietNam is: Tue Mar 18 20:34:19 2025[0m
+Start time: 73560 End time:0 Current time:74059
+[0;32mI (85496) example: The current date/time in VietNam is: Tue Mar 18 20:34:20 2025[0m
+Start time: 73560 End time:0 Current time:74060
+[0;32mI (86496) example: The current date/time in VietNam is: Tue Mar 18 20:34:21 2025[0m
+Start time: 73560 End time:0 Current time:74061
+[0;32mI (87496) example: The current date/time in VietNam is: Tue Mar 18 20:34:22 2025[0m
+Start time: 73560 End time:0 Current time:74062
+[0;32mI (88496) example: The current date/time in VietNam is: Tue Mar 18 20:34:23 2025[0m
+Start time: 73560 End time:0 Current time:74063
+[0;32mI (89496) example: The current date/time in VietNam is: Tue Mar 18 20:34:24 2025[0m
+Start time: 73560 End time:0 Current time:74064
+[0;32mI (90496) example: The current date/time in VietNam is: Tue Mar 18 20:34:25 2025[0m
+Start time: 73560 End time:0 Current time:74065
+[0;32mI (91496) example: The current date/time in VietNam is: Tue Mar 18 20:34:26 2025[0m
+Start time: 73560 End time:0 Current time:74066
+[0;32mI (92236) mqtts_example: MQTT_EVENT_DATA[0m
+Start time: 20 26 0
+[0;33mW (92236) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (92496) example: The current date/time in VietNam is: Tue Mar 18 20:34:27 2025[0m
+Start time: 73560 End time:0 Current time:74067
+[0;32mI (93496) example: The current date/time in VietNam is: Tue Mar 18 20:34:28 2025[0m
+Start time: 73560 End time:0 Current time:74068
+[0;32mI (94496) example: The current date/time in VietNam is: Tue Mar 18 20:34:29 2025[0m
+Start time: 73560 End time:0 Current time:74069
+[0;32mI (95496) example: The current date/time in VietNam is: Tue Mar 18 20:34:30 2025[0m
+Start time: 73560 End time:0 Current time:74070
+[0;32mI (96496) example: The current date/time in VietNam is: Tue Mar 18 20:34:31 2025[0m
+Start time: 73560 End time:0 Current time:74071
+[0;32mI (97356) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (97356) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 20 34 0
+[0;32mI (97496) example: The current date/time in VietNam is: Tue Mar 18 20:34:32 2025[0m
+Start time: 73560 End time:74040 Current time:74072
+[0;32mI (98496) example: The current date/time in VietNam is: Tue Mar 18 20:34:33 2025[0m
+Start time: 73560 End time:74040 Current time:74073
+[0;32mI (99496) example: The current date/time in VietNam is: Tue Mar 18 20:34:34 2025[0m
+Start time: 73560 End time:74040 Current time:74074
+[0;32mI (100496) example: The current date/time in VietNam is: Tue Mar 18 20:34:35 2025[0m
+Start time: 73560 End time:74040 Current time:74075
+[0;32mI (101356) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (101356) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (101496) example: The current date/time in VietNam is: Tue Mar 18 20:34:36 2025[0m
+Start time: 73560 End time:74040 Current time:74076
+[0;32mI (101956) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (101956) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (102496) example: The current date/time in VietNam is: Tue Mar 18 20:34:37 2025[0m
+Start time: 73560 End time:74040 Current time:74077
+[0;32mI (103496) example: The current date/time in VietNam is: Tue Mar 18 20:34:38 2025[0m
+Start time: 73560 End time:74040 Current time:74078
+[0;32mI (104106) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (104106) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (104496) example: The current date/time in VietNam is: Tue Mar 18 20:34:39 2025[0m
+Start time: 73560 End time:74040 Current time:74079
+[0;32mI (104826) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (104826) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (105496) example: The current date/time in VietNam is: Tue Mar 18 20:34:40 2025[0m
+Start time: 73560 End time:74040 Current time:74080
+[0;32mI (106496) example: The current date/time in VietNam is: Tue Mar 18 20:34:41 2025[0m
+Start time: 73560 End time:74040 Current time:74081
+[0;32mI (107496) example: The current date/time in VietNam is: Tue Mar 18 20:34:42 2025[0m
+Start time: 73560 End time:74040 Current time:74082
+[0;32mI (108496) example: The current date/time in VietNam is: Tue Mar 18 20:34:43 2025[0m
+Start time: 73560 End time:74040 Current time:74083
+[0;32mI (109496) example: The current date/time in VietNam is: Tue Mar 18 20:34:44 2025[0m
+Start time: 73560 End time:74040 Current time:74084
+[0;32mI (109746) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (109746) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 20 34 0
+[0;32mI (110496) example: The current date/time in VietNam is: Tue Mar 18 20:34:45 2025[0m
+Start time: 73560 End time:74040 Current time:74085
+[0;32mI (111496) example: The current date/time in VietNam is: Tue Mar 18 20:34:46 2025[0m
+Start time: 73560 End time:74040 Current time:74086
+[0;32mI (112496) example: The current date/time in VietNam is: Tue Mar 18 20:34:47 2025[0m
+Start time: 73560 End time:74040 Current time:74087
+[0;32mI (113496) example: The current date/time in VietNam is: Tue Mar 18 20:34:48 2025[0m
+Start time: 73560 End time:74040 Current time:74088
+[0;32mI (114456) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (114456) Sonoff: MQTT_DEV_EVENT_DATA[0m
+Start time: 20 29 0
+[0;32mI (114496) example: The current date/time in VietNam is: Tue Mar 18 20:34:49 2025[0m
+Start time: 73740 End time:74040 Current time:74089
+[0;32mI (115496) example: The current date/time in VietNam is: Tue Mar 18 20:34:50 2025[0m
+Start time: 73740 End time:74040 Current time:74090
+[0;32mI (116496) example: The current date/time in VietNam is: Tue Mar 18 20:34:51 2025[0m
+Start time: 73740 End time:74040 Current time:74091
+[0;32mI (117496) example: The current date/time in VietNam is: Tue Mar 18 20:34:52 2025[0m
+Start time: 73740 End time:74040 Current time:74092
+[0;32mI (118496) example: The current date/time in VietNam is: Tue Mar 18 20:34:53 2025[0m
+Start time: 73740 End time:74040 Current time:74093
+[0;32mI (119496) example: The current date/time in VietNam is: Tue Mar 18 20:34:54 2025[0m
+Start time: 73740 End time:74040 Current time:74094
+[0;32mI (120396) mqtts_example: MQTT_EVENT_DATA[0m
+Start time: 20 29 0
+[0;33mW (120396) Sonoff: MQTT_DEV_EVENT_DATA[0m
+[0;32mI (120496) example: The current date/time in VietNam is: Tue Mar 18 20:34:55 2025[0m
+Start time: 73740 End time:74040 Current time:74095
+[0;32mI (121496) example: The current date/time in VietNam is: Tue Mar 18 20:34:56 2025[0m
+Start time: 73740 End time:74040 Current time:74096
+[0;32mI (122496) example: The current date/time in VietNam is: Tue Mar 18 20:34:57 2025[0m
+Start time: 73740 End time:74040 Current time:74097
+[0;32mI (123496) example: The current date/time in VietNam is: Tue Mar 18 20:34:58 2025[0m
+Start time: 73740 End time:74040 Current time:74098
+[0;32mI (124496) example: The current date/time in VietNam is: Tue Mar 18 20:34:59 2025[0m
+Start time: 73740 End time:74040 Current time:74099
+[0;32mI (125206) mqtts_example: MQTT_EVENT_DATA[0m
+[0;33mW (125206) Sonoff: MQTT_DEV_EVENT_DATA[0m
+End time: 20 32 0
+[0;32mI (125496) example: The current date/time in VietNam is: Tue Mar 18 20:35:00 2025[0m
+Start time: 73740 End time:73920 Current time:74100
+[0;32mI (126496) example: The current date/time in VietNam is: Tue Mar 18 20:35:01 2025[0m
+Start time: 73740 End time:73920 Current time:74101
+[0;32mI (127496) example: The current date/time in VietNam is: Tue Mar 18 20:35:02 2025[0m
+Start time: 73740 End time:73920 Current time:74102
+[0;32mI (128496) example: The current date/time in VietNam is: Tue Mar 18 20:35:03 2025[0m
+Start time: 73740 End time:73920 Current time:74103
+[0;32mI (129496) example: The current date/time in VietNam is: Tue Mar 18 20:35:04 2025[0m
+Start time: 73740 End time:73920 Current time:74104
+[0;32mI (130496) example: The current date/time in VietNam is: Tue Mar 18 20:35:05 2025[0m
+Start time: 73740 End time:73920 Current time:74105
+[0;32mI (131496) example: The current date/time in VietNam is: Tue Mar 18 20:35:06 2025[0m
+Start time: 73740 End time:73920 Current time:74106
+[0;32mI (132496) example: The current date/time in VietNam is: Tue Mar 18 20:35:07 2025[0m
+Start time: 73740 End time:73920 Current time:74107
+[0;32mI (133496) example: The current date/time in VietNam is: Tue Mar 18 20:35:08 2025[0m
+Start time: 73740 End time:73920 Current time:74108
+[0;32mI (134496) example: The current date/time in VietNam is: Tue Mar 18 20:35:09 2025[0m
+Start time: 73740 End time:73920 Current time:74109
+[0;32mI (135496) example: The current date/time in VietNam is: Tue Mar 18 20:35:10 2025[0m
+Start time: 73740 End time:73920 Current time:74110
+[0;32mI (136496) example: The current date/time in VietNam is: Tue Mar 18 20:35:11 2025[0m
+Start time: 73740 End time:73920 Current time:74111
+[0;32mI (137496) example: The current date/time in VietNam is: Tue Mar 18 20:35:12 2025[0m
+Start time: 73740 End time:73920 Current time:74112
+[0;32mI (138496) example: The current date/time in VietNam is: Tue Mar 18 20:35:13 2025[0m
+Start time: 73740 End time:73920 Current time:74113
+[0;32mI (139496) example: The current date/time in VietNam is: Tue Mar 18 20:35:14 2025[0m
+Start time: 73740 End time:73920 Current time:74114

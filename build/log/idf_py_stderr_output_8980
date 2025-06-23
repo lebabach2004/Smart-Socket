@@ -1,0 +1,43 @@
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM5 instead...[0m
+[0;33m--- esp-idf-monitor 1.5.0 on \\.\COM5 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c677: strstr in ROM
+[0m
+[0;33m--- 0x400012e5: strcmp in ROM
+0x40001309: strcmp in ROM
+[0m
+[0;33m--- 0x4000c674: strstr in ROM
+0x400d92bf: mqtt_data_callback at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/main/app_main.c:74
+0x400d9fa9: mqtt_event_handler at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/common/app_mqtt.c:104
+0x4017e3ed: handler_execute at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esp_event/esp_event.c:135
+0x4017de8b: esp_event_loop_run at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esp_event/esp_event.c:584
+0x400da4d2: esp_mqtt_dispatch_event at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1041
+0x400db024: deliver_publish at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1108
+0x400db18f: mqtt_process_receive at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1386
+0x400db630: esp_mqtt_task at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1653
+0x4008a20d: vPortTaskWrapper at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4000c677: strstr in ROM
+[0m
+[0;33m--- 0x400012e5: strcmp in ROM
+0x40001309: strcmp in ROM
+[0m
+[0;33m--- 0x4000c674: strstr in ROM
+0x400d92bf: mqtt_data_callback at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/main/app_main.c:74
+0x400d9fa9: mqtt_event_handler at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/examples/get-started/Do_an/common/app_mqtt.c:104
+0x4017e3ed: handler_execute at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esp_event/esp_event.c:135
+0x4017de8b: esp_event_loop_run at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/esp_event/esp_event.c:584
+0x400da4d2: esp_mqtt_dispatch_event at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1041
+0x400db024: deliver_publish at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1108
+0x400db18f: mqtt_process_receive at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1386
+0x400db630: esp_mqtt_task at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/mqtt/esp-mqtt/mqtt_client.c:1653
+0x4008a20d: vPortTaskWrapper at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

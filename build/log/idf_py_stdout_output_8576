@@ -1,0 +1,106 @@
+gsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 30 2025 15:15:25[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=22828h (141352) map[0m
+[0;32mI (174) esp_image: segment 1: paddr=00042850 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (174) esp_image: segment 2: paddr=00042874 vaddr=3ffb0000 size=04018h ( 16408) load[0m
+[0;32mI (184) esp_image: segment 3: paddr=00046894 vaddr=40080000 size=09784h ( 38788) load[0m
+[0;32mI (201) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=b14a8h (726184) map[0m
+[0;32mI (458) esp_image: segment 5: paddr=001014d0 vaddr=40089784 size=0e298h ( 58008) load[0m
+[0;32mI (493) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (518) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (518) boot: Checking flash encryption...[0m
+[0;32mI (518) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (522) boot: Disabling RNG early entropy source...[0m
+[0;32mI (539) cpu_start: Multicore app[0m
+[0;32mI (547) cpu_start: Pro cpu start user code[0m
+[0;32mI (547) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (547) app_init: Application information:[0m
+[0;32mI (547) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (552) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (558) app_init: Compile time:     Mar 30 2025 15:15:23[0m
+[0;32mI (563) app_init: ELF file SHA256:  878cfe69a...[0m
+[0;32mI (567) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (572) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (576) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (580) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (584) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (590) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (595) heap_init: At 3FFB8BD0 len 00027430 (157 KiB): DRAM[0m
+[0;32mI (601) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (611) heap_init: At 40097A1C len 000085E4 (33 KiB): IRAM[0m
+[0;32mI (618) spi_flash: detected chip: generic[0m
+[0;32mI (620) spi_flash: flash io: dio[0m
+[0;33mW (624) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (630) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (639) main_task: Started on CPU0[0m
+[0;32mI (649) main_task: Calling app_main()[0m
+[0;32mI (649) Sonoff: [APP] Startup..[0m
+[0;32mI (649) Sonoff: [APP] Free memory: 275668 bytes[0m
+[0;32mI (649) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;33mW (649) nvs: Failed to read NVS security cfg: [0x1117] (ESP_ERR_NVS_CORRUPT_KEY_PART)[0m
+[0;32mI (659) nvs: Generating NVS encr-keys...[0m
+[0;32mI (699) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (749) wifi:wifi driver task: 3ffc0cc0, prio:23, stack:6656, core=0[0m
+[0;32mI (749) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (749) wifi:wifi certification version: v7.0[0m
+[0;32mI (749) wifi:config NVS flash: enabled[0m
+[0;32mI (749) wifi:config nano formatting: disabled[0m
+[0;32mI (759) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (759) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (769) wifi:Init management short buffer num: 32[0m
+[0;32mI (769) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (779) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (779) wifi:Init static rx buffer num: 10[0m
+[0;32mI (779) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (789) wifi_init: rx ba win: 6[0m
+[0;32mI (789) wifi_init: accept mbox: 6[0m
+[0;32mI (789) wifi_init: tcpip mbox: 32[0m
+[0;32mI (799) wifi_init: udp mbox: 6[0m
+[0;32mI (799) wifi_init: tcp mbox: 6[0m
+[0;32mI (799) wifi_init: tcp tx win: 5760[0m
+[0;32mI (809) wifi_init: tcp rx win: 5760[0m
+[0;32mI (809) wifi_init: tcp mss: 1440[0m
+[0;32mI (809) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (819) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (819) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (819) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (899) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+[0;32mI (909) wifi:mode : sta (8c:4f:00:3d:39:60)[0m
+[0;32mI (919) wifi:enable tsf[0m
+[0;32mI (969) smartconfig: SC version: V3.0.2[0m
+[0;32mI (5809) wifi:ic_enable_sniffer[0m
+[0;32mI (5809) smartconfig: Start to find channel...[0m
+[0;32mI (5809) TEST: Scan done[0m

@@ -1,0 +1,482 @@
+46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff00c0,len:10316
+ho 0 tail 12 room 4
+load:0x40078000,len:22064
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-1-ge33cb68d2a-dirty 2nd stage bootloader[0m
+[0;32mI (34) boot: compile time Mar 30 2025 15:15:25[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 0000b000 00004000[0m
+[0;32mI (70) boot:  1 otadata          OTA data         01 00 0000f000 00002000[0m
+[0;32mI (77) boot:  2 phy_init         RF data          01 01 00011000 00001000[0m
+[0;32mI (83) boot:  3 nvs_keys         NVS keys         01 04 00012000 00001000[0m
+[0;32mI (90) boot:  4 ota_0            OTA app          00 10 00020000 00160000[0m
+[0;32mI (96) boot:  5 ota_1            OTA app          00 11 00180000 00160000[0m
+[0;32mI (103) boot:  6 storage          WiFi data        01 02 002e0000 00030000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (113) boot: No factory image, trying OTA 0[0m
+[0;32mI (117) esp_image: segment 0: paddr=00020020 vaddr=3f400020 size=0f94ch ( 63820) map[0m
+[0;32mI (147) esp_image: segment 1: paddr=0002f974 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (147) esp_image: segment 2: paddr=0002f998 vaddr=3ffb0000 size=00680h (  1664) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=2c848h (182344) map[0m
+[0;32mI (223) esp_image: segment 4: paddr=0005c870 vaddr=3ffb0680 size=01e14h (  7700) load[0m
+[0;32mI (226) esp_image: segment 5: paddr=0005e68c vaddr=40080000 size=0e7e0h ( 59360) load[0m
+[0;32mI (257) boot: Loaded app from partition at offset 0x20000[0m
+[0;32mI (279) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (279) boot: Checking flash encryption...[0m
+[0;32mI (279) flash_encrypt: flash encryption is enabled (0 plaintext flashes left)[0m
+[0;32mI (283) boot: Disabling RNG early entropy source...[0m
+[0;32mI (299) cpu_start: Multicore app[0m
+[0;32mI (308) cpu_start: Pro cpu start user code[0m
+[0;32mI (308) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (308) app_init: Application information:[0m
+[0;32mI (308) app_init: Project name:     mqtt_ssl_mutual_auth[0m
+[0;32mI (313) app_init: App version:      v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (318) app_init: Compile time:     Mar 30 2025 15:15:23[0m
+[0;32mI (323) app_init: ELF file SHA256:  9412abc6c...[0m
+[0;32mI (328) app_init: ESP-IDF:          v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (333) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (337) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (341) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (345) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (351) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (356) heap_init: At 3FFB3798 len 0002C868 (178 KiB): DRAM[0m
+[0;32mI (361) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (367) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (372) heap_init: At 4008E7E0 len 00011820 (70 KiB): IRAM[0m
+[0;32mI (379) spi_flash: detected chip: generic[0m
+[0;32mI (381) spi_flash: flash io: dio[0m
+[0;33mW (384) flash_encrypt: Flash encryption mode is DEVELOPMENT (not secure)[0m
+[0;32mI (391) nvs_sec_provider: NVS Encryption - Registering Flash encryption-based scheme...[0m
+[0;32mI (400) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0;32mI (410) Sonoff: [APP] Startup..[0m
+[0;32mI (410) Sonoff: [APP] Free memory: 301792 bytes[0m
+[0;32mI (410) Sonoff: [APP] IDF version: v5.4-1-ge33cb68d2a-dirty[0m
+[0;32mI (420) nvs: NVS partition "nvs" is encrypted.[0m
+[0;32mI (420) main_task: Returned from app_main()[0m
+[0;32mI (2270) Sonoff: Recv str: Helllo: 11[0m
+
+Do dai:12
+[0;32mI (4280) Sonoff: Recv str: Helllo: 12[0m
+
+Do dai:12
+[0;32mI (6300) Sonoff: Recv str: Helllo: 13[0m
+
+Do dai:12
+[0;32mI (8310) Sonoff: Recv str: Helllo: 14[0m
+
+Do dai:12
+[0;32mI (10320) Sonoff: Recv str: Helllo: 15[0m
+
+Do dai:12
+[0;32mI (12340) Sonoff: Recv str: Helllo: 16[0m
+
+Do dai:12
+[0;32mI (14350) Sonoff: Recv str: Helllo: 17[0m
+
+Do dai:12
+[0;32mI (16360) Sonoff: Recv str: Helllo: 18[0m
+
+Do dai:12
+[0;32mI (18380) Sonoff: Recv str: Helllo: 19[0m
+
+Do dai:12
+[0;32mI (20390) Sonoff: Recv str: Helllo: 20[0m
+
+Do dai:12
+[0;32mI (22400) Sonoff: Recv str: Helllo: 21[0m
+
+Do dai:12
+[0;32mI (24410) Sonoff: Recv str: Helllo: 22[0m
+
+Do dai:12
+[0;32mI (26430) Sonoff: Recv str: Helllo: 23[0m
+
+Do dai:12
+[0;32mI (28440) Sonoff: Recv str: Helllo: 24[0m
+
+Do dai:12
+[0;32mI (30450) Sonoff: Recv str: Helllo: 25[0m
+
+Do dai:12
+[0;32mI (32470) Sonoff: Recv str: Helllo: 26[0m
+
+Do dai:12
+[0;32mI (34480) Sonoff: Recv str: Helllo: 27[0m
+
+Do dai:12
+[0;32mI (36490) Sonoff: Recv str: Helllo: 28[0m
+
+Do dai:12
+[0;32mI (38510) Sonoff: Recv str: Helllo: 29[0m
+
+Do dai:12
+[0;32mI (40520) Sonoff: Recv str: Helllo: 30[0m
+
+Do dai:12
+[0;32mI (42530) Sonoff: Recv str: Helllo: 31[0m
+
+Do dai:12
+[0;32mI (44540) Sonoff: Recv str: Helllo: 32[0m
+
+Do dai:12
+[0;32mI (46560) Sonoff: Recv str: Helllo: 33[0m
+
+Do dai:12
+[0;32mI (48570) Sonoff: Recv str: Helllo: 34[0m
+
+Do dai:12
+[0;32mI (50580) Sonoff: Recv str: Helllo: 35[0m
+
+Do dai:12
+[0;32mI (52600) Sonoff: Recv str: Helllo: 36[0m
+
+Do dai:12
+[0;32mI (54610) Sonoff: Recv str: Helllo: 37[0m
+
+Do dai:12
+[0;32mI (55460) Sonoff: Recv str: [0m
+Do dai:10
+[0;32mI (55500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (55950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (56950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (57950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (58950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (59950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60850) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60900) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (60950) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61000) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61050) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61100) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61150) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61200) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61250) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61300) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61350) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61400) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61450) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61500) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61550) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61600) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61650) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61700) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61750) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61800) Sonoff: Recv str: [0m
+Do dai:20
+[0;32mI (61900) Sonoff: Recv str: [0m
+Do dai:19
+[0;32mI (63910) Sonoff: Recv str: Helllo: 1[0m
+
+Do dai:11
+[0;32mI (65920) Sonoff: Recv str: Helllo: 2[0m
+
+Do dai:11
+[0;32mI (67930) Sonoff: Recv str: Helllo: 3[0m
+
+Do dai:11
+[0;32mI (69940) Sonoff: Recv str: Helllo: 4[0m
+
+Do dai:11
+[0;32mI (71950) Sonoff: Recv str: Helllo: 5[0m
+
+Do dai:11
+[0;32mI (73970) Sonoff: Recv str: Helllo: 6[0m
+
+Do dai:11
+[0;32mI (75980) Sonoff: Recv str: Helllo: 7[0m
+
+Do dai:11
+[0;32mI (77990) Sonoff: Recv str: Helllo: 8[0m
+
+Do dai:11
+[0;32mI (80000) Sonoff: Recv str: Helllo: 9[0m
+
+Do dai:11
+[0;32mI (82020) Sonoff: Recv str: Helllo: 10[0m
+
+Do dai:12
+[0;32mI (84030) Sonoff: Recv str: Helllo: 11[0m
+
+Do dai:12
+[0;32mI (86040) Sonoff: Recv str: Helllo: 12[0m
+
+Do dai:12
+[0;32mI (88050) Sonoff: Recv str: Helllo: 13[0m
+
+Do dai:12
+[0;32mI (90070) Sonoff: Recv str: Helllo: 14[0m
+
+Do dai:12
+[0;32mI (92080) Sonoff: Recv str: Helllo: 15[0m
+
+Do dai:12
+[0;32mI (94090) Sonoff: Recv str: Helllo: 16[0m
+
+Do dai:12
+[0;32mI (96110) Sonoff: Recv str: Helllo: 17[0m
+
+Do dai:12
+[0;32mI (98120) Sonoff: Recv str: Helllo: 18[0m
+
+Do dai:12
+[0;32mI (100130) Sonoff: Recv str: Helllo: 19[0m
+
+Do dai:12
+[0;32mI (102150) Sonoff: Recv str: Helllo: 20[0m
+
+Do dai:12
+[0;32mI (104160) Sonoff: Recv str: Helllo: 21[0m
+
+Do dai:12
+[0;32mI (106170) Sonoff: Recv str: Helllo: 22[0m
+
+Do dai:12

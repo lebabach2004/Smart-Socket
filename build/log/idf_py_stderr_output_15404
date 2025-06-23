@@ -1,0 +1,11 @@
+CMake Error at D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/tools/cmake/build.cmake:318 (message):
+  Failed to resolve component 'protocal_exam_common' required by component
+  'Library': unknown name.
+Call Stack (most recent call first):
+  D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/tools/cmake/build.cmake:361 (__build_resolve_and_add_req)
+  D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/tools/cmake/build.cmake:665 (__build_expand_requirements)
+  D:/esp32-idf/Espressif/frameworks/esp-idf-v5.4/tools/cmake/project.cmake:710 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed
