@@ -41,6 +41,7 @@ static mqtt_data_handle_t mqtt_data_time_start = NULL;
 static mqtt_data_handle_t mqtt_data_time_end = NULL; 
 static mqtt_data_handle_t mqtt_data_timer = NULL;
 esp_mqtt_client_handle_t client;
+#define JSON_BUFFER_SIZE 128
 static void log_error_if_nonzero(const char *message, int error_code)
 {
     if (error_code != 0) {
@@ -67,7 +68,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     switch ((esp_mqtt_event_id_t)event_id) {
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
-        msg_id = esp_mqtt_client_subscribe(client, "/bachdz/relay", 0);
+        msg_id = esp_mqtt_client_subscribe(client, "/smart/relay", 0);
         msg_id = esp_mqtt_client_subscribe(client, "/start/time", 0);
         msg_id = esp_mqtt_client_subscribe(client, "/end/time", 0);
         msg_id = esp_mqtt_client_subscribe(client, "/timer/", 0);
@@ -82,7 +83,7 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
 
     case MQTT_EVENT_SUBSCRIBED:
         ESP_LOGI(TAG, "MQTT_EVENT_SUBSCRIBED, msg_id=%d", event->msg_id);
-        msg_id = esp_mqtt_client_publish(client, "/bachdz/relay", "data", 0, 0, 0);
+        msg_id = esp_mqtt_client_publish(client, "/smart/relay", "data", 0, 0, 0);
         ESP_LOGI(TAG, "sent publish successful, msg_id=%d", msg_id);
         esp_event_post(MQTT_DEV_EVENT, MQTT_DEV_EVENT_SUBSCRIBED, NULL, 0, portMAX_DELAY);
         break;
@@ -99,18 +100,41 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         char topic_recv[20];
         strncpy(topic_recv,event->topic,event->topic_len);
         topic_recv[event->topic_len]='\0';
+        char data_recv[256];
+        snprintf(data_recv, sizeof(data_recv), "%.*s", event->data_len, event->data);
+        data_recv[event->data_len]='\0';
         esp_event_post(MQTT_DEV_EVENT, MQTT_DEV_EVENT_DATA, NULL, 0 , portMAX_DELAY);
-        if(strcmp(topic_recv,"/bachdz/relay")==0){
-            mqtt_data_handle(event->data,event->data_len);
+
+        jparse_ctx_t jctx;
+        if (json_parse_start(&jctx, data_recv, strlen(data_recv)) == OS_SUCCESS){
+            if (strcmp(topic_recv, "/bachdz/relay") == 0) {
+                char relay_val[10];
+                if (json_obj_get_string(&jctx, "relay", relay_val, sizeof(relay_val)) == OS_SUCCESS) {
+                    mqtt_data_handle(relay_val,event->data_len);
+                }
+            }
+            if(strcmp(topic_recv,"/start/time")==0){
+                char start[16];
+                if (json_obj_get_string(&jctx, "start", start, sizeof(start)) == OS_SUCCESS) {
+                    mqtt_data_time_start(start,event->data_len);
+                }
+            }
+            if(strcmp(topic_recv,"/end/time")==0){
+                char end[16];
+                if (json_obj_get_string(&jctx, "end", end, sizeof(end)) == OS_SUCCESS) {
+                    mqtt_data_time_end(end,event->data_len);
+                }
+            }
+            if(strstr(topic_recv,"/timer/")){
+                char timer_val[20];
+                if (json_obj_get_string(&jctx, "time", timer_val, sizeof(timer_val)) == OS_SUCCESS) {
+                    mqtt_data_timer(timer_val,event->data_len);
+                }
+            }
+            json_parse_end(&jctx);
         }
-        if(strcmp(topic_recv,"/start/time")==0){
-            mqtt_data_time_start(event->data,event->data_len);
-        }
-        if(strcmp(topic_recv,"/end/time")==0){
-            mqtt_data_time_end(event->data,event->data_len);
-        }
-        if(strstr(topic_recv,"/timer/")){
-            mqtt_data_timer(event->data,event->data_len);
+        else {
+            ESP_LOGE(TAG, "JSON Parse Error");
         }
         break;
     case MQTT_EVENT_ERROR:
@@ -148,54 +172,6 @@ void mqtt_app_start(void)
     esp_mqtt_client_register_event(client, ESP_EVENT_ANY_ID, mqtt_event_handler, NULL);
     esp_mqtt_client_start(client);
 }
-static void flush_str(char * buf,void *priv){
-    json_gen_test_result_t *result = (json_gen_test_result_t *)priv;
-    if(result){
-        if(strlen(buf)>sizeof(result->buf)-result->offset){
-            printf("Result buffer too small\r\n");
-            return;
-        }
-        memcpy(result->buf+result->offset,buf,strlen(buf));
-        result->offset+=strlen(buf);
-    }
-}
-void json_gen_test(json_gen_test_result_t *result,char *key1,bool value1,char *key2,int value2, char *key3, char *value3)
-{
-    char buf[20];
-    memset(result,0,sizeof(json_gen_test_result_t));
-    json_gen_str_t jstr;
-    json_gen_str_start(&jstr, buf, sizeof(buf), flush_str, result);
-    json_gen_start_object(&jstr);
-    json_gen_obj_set_bool(&jstr, key1, value1);
-    json_gen_obj_set_int(&jstr, key2, value2);
-    json_gen_obj_set_string(&jstr, key3, value3);
-    json_gen_end_object(&jstr);
-    json_gen_str_end(&jstr);
-    printf("Result: %s\r\n",result->buf);
-}
-void json_gen_test_arr(json_gen_test_result_t *result, char *key1,char *value1,char *key2, int *value2,int size)
-{
-    char buf[100];  // Tăng kích thước bộ đệm để chứa JSON lớn hơn
-    memset(result, 0, sizeof(json_gen_test_result_t));
-    int length=size/sizeof(value2[0]);
-    json_gen_str_t jstr;
-    json_gen_str_start(&jstr, buf, sizeof(buf), flush_str, result);
-    json_gen_start_object(&jstr); // Bắt đầu JSON object
-    json_gen_obj_set_string(&jstr, key1, value1);
-    json_gen_obj_start_object(&jstr, key2); 
-    json_gen_start_array(&jstr); // Bắt đầu mảng dưới key2
-    
-    for (int i = 0; i < length; i++)
-    {
-        json_gen_arr_set_int(&jstr, value2[i]); // Thêm phần tử vào mảng
-    }
-
-    json_gen_end_array(&jstr); // Kết thúc mảng
-    json_gen_end_object(&jstr); // Kết thúc object
-
-    json_gen_str_end(&jstr);
-    printf("Result: %s\r\n", result->buf);
-}
 void app_mqtt_set_data_callback(void *cb){
     mqtt_data_handle = cb;
 }
@@ -210,15 +186,43 @@ void app_mqtt_timer_callback(void *cb){
 }
 void set_high_public_relay(int gpio_num){
     gpio_set_level(gpio_num,1);
-    esp_mqtt_client_publish(client, "/bachdz/turn", "ON", 0, 1, 0);
+    char buf[JSON_BUFFER_SIZE];
+    json_gen_str_t jstr;
+    json_gen_str_start(&jstr, buf, sizeof(buf), NULL, NULL);
+    json_gen_start_object(&jstr);
+    json_gen_obj_set_string(&jstr, "relay", "ON");
+    json_gen_end_object(&jstr);
+    json_gen_str_end(&jstr);
+    esp_mqtt_client_publish(client, "/smart/turn", buf, 0, 1, 0);
 }
 void set_low_public_relay(int gpio_num){
     gpio_set_level(gpio_num,0);
-    esp_mqtt_client_publish(client, "/bachdz/turn", "OFF", 0, 1, 0);
+    char buf[JSON_BUFFER_SIZE];
+    json_gen_str_t jstr;
+    json_gen_str_start(&jstr, buf, sizeof(buf), NULL, NULL);
+    json_gen_start_object(&jstr);
+    json_gen_obj_set_string(&jstr, "relay", "OFF");
+    json_gen_end_object(&jstr);
+    json_gen_str_end(&jstr);
+    esp_mqtt_client_publish(client, "/smart/turn", buf, 0, 1, 0);
 }
 void set_public_power_value(char *data){
-    esp_mqtt_client_publish(client, "/device/power",data, 0, 1, 0);
+    char buf[JSON_BUFFER_SIZE];
+    json_gen_str_t jstr;
+    json_gen_str_start(&jstr, buf, sizeof(buf), NULL, NULL);
+    json_gen_start_object(&jstr);
+    json_gen_obj_set_string(&jstr, "power", data);
+    json_gen_end_object(&jstr);
+    json_gen_str_end(&jstr);
+    esp_mqtt_client_publish(client, "/device/power", buf, 0, 1, 0);
 }
 void set_public_current_value(char *data){
-    esp_mqtt_client_publish(client, "/device/current",data, 0, 1, 0);
+    char buf[JSON_BUFFER_SIZE];
+    json_gen_str_t jstr;
+    json_gen_str_start(&jstr, buf, sizeof(buf), NULL, NULL);
+    json_gen_start_object(&jstr);
+    json_gen_obj_set_string(&jstr, "current", data);
+    json_gen_end_object(&jstr);
+    json_gen_str_end(&jstr);
+    esp_mqtt_client_publish(client, "/device/current", buf, 0, 1, 0);
 }
